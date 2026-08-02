@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": { "contentSize": "900px", "wideSize": "1200px" },
+    "color": {
+      "palette": [
+        { "slug": "ink", "name": "Ink", "color": "#151515" },
+        { "slug": "paper", "name": "Paper", "color": "#f3efe6" },
+        { "slug": "signal-blue", "name": "Signal Blue", "color": "#3155e7" },
+        { "slug": "signal-orange", "name": "Signal Orange", "color": "#f05a2a" },
+        { "slug": "ice", "name": "Ice", "color": "#c9e2e8" }
+      ]
+    },
+    "typography": { "fluid": true, "dropCap": false }
+  },
+  "styles": {
+    "color": { "background": "#f3efe6", "text": "#151515" },
+    "typography": { "fontFamily": "Georgia, 'Times New Roman', serif", "lineHeight": "1.7" }
+  }
+}
