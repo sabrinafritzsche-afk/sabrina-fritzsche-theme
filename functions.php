@@ -12,8 +12,9 @@ function sf_theme_setup() {
 add_action('after_setup_theme', 'sf_theme_setup');
 
 function sf_assets() {
-    wp_enqueue_style('sabrina-fritzsche', get_stylesheet_uri(), [], '1.1.0');
-    wp_enqueue_script('sf-language', get_template_directory_uri() . '/assets/js/language.js', [], '1.1.0', true);
+    $theme_version = wp_get_theme()->get('Version');
+    wp_enqueue_style('sabrina-fritzsche', get_stylesheet_uri(), [], $theme_version);
+    wp_enqueue_script('sf-language', get_template_directory_uri() . '/assets/js/language.js', [], $theme_version, true);
 }
 add_action('wp_enqueue_scripts', 'sf_assets');
 
