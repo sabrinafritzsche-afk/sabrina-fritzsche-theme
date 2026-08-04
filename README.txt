@@ -1,5 +1,5 @@
 SABRINA FRITZSCHE WORDPRESS THEME
-Version 1.1.0
+Version 1.4.0
 
 INSTALLATION
 1. In WordPress open Design > Themes > Add new > Upload theme.
@@ -19,6 +19,15 @@ The landing page includes German and English copy and remembers the visitor's la
 
 NEWSLETTER
 Until a newsletter provider URL is entered under Links & contact, the call to action opens an email to hello@sabrinafritzsche.com.
+
+FORTUNE PORTAL
+1. Create a page with the slug fortune.
+2. Select the page template Fortune Portal.
+3. Publish it. The theme keeps it out of navigation, automatic page lists, site search, REST page search and the WordPress sitemap. It sends noindex, nofollow and noarchive both as page metadata and as an HTTP header.
+
+Anyone who knows the direct URL can open and share the page. This is an unlisted page, not a password-protected or secret page.
+
+The chart is calculated in the visitor's browser using the tropical zodiac, Whole Sign houses, traditional rulers, the Hellenistic sect formulas and a 3 degree conjunction orb. The theme does not store birth details or readings.
 
 SUPPORT
 Theme design for sabrinafritzsche.com. Do not distribute as a generic theme.

@@ -15,8 +15,103 @@ function sf_assets() {
     $theme_version = wp_get_theme()->get('Version');
     wp_enqueue_style('sabrina-fritzsche', get_stylesheet_uri(), [], $theme_version);
     wp_enqueue_script('sf-language', get_template_directory_uri() . '/assets/js/language.js', [], $theme_version, true);
+
+    if (is_page_template('page-fortune.php')) {
+        wp_enqueue_style(
+            'sf-fortune',
+            get_template_directory_uri() . '/assets/css/fortune.css',
+            ['sabrina-fritzsche'],
+            $theme_version
+        );
+        wp_enqueue_script(
+            'sf-astronomy-engine',
+            get_template_directory_uri() . '/assets/vendor/astronomy.browser.min.js',
+            [],
+            '2.1.19',
+            true
+        );
+        wp_enqueue_script(
+            'sf-fortune',
+            get_template_directory_uri() . '/assets/js/fortune.js',
+            ['sf-astronomy-engine'],
+            $theme_version,
+            true
+        );
+        wp_localize_script('sf-fortune', 'sfFortune', [
+            'geocodingUrl' => 'https://geocoding-api.open-meteo.com/v1/search',
+            'locale' => 'de-DE',
+            'houseSystem' => 'Whole Sign',
+            'conjunctionOrb' => 3,
+        ]);
+    }
 }
 add_action('wp_enqueue_scripts', 'sf_assets');
+
+function sf_is_fortune_page(): bool {
+    return is_page_template('page-fortune.php') || is_page('fortune');
+}
+
+function sf_get_fortune_page_id(): int {
+    $fortune = get_page_by_path('fortune');
+    return $fortune instanceof WP_Post ? (int) $fortune->ID : 0;
+}
+
+function sf_fortune_robots(array $robots): array {
+    if (sf_is_fortune_page()) {
+        $robots['noindex'] = true;
+        $robots['nofollow'] = true;
+        $robots['noarchive'] = true;
+    }
+    return $robots;
+}
+add_filter('wp_robots', 'sf_fortune_robots');
+
+function sf_fortune_robot_headers(): void {
+    if (sf_is_fortune_page() && !headers_sent()) {
+        header('X-Robots-Tag: noindex, nofollow, noarchive', true);
+    }
+}
+add_action('template_redirect', 'sf_fortune_robot_headers', 0);
+
+function sf_exclude_fortune_from_sitemap(array $args, string $post_type): array {
+    if ('page' !== $post_type) { return $args; }
+    $fortune_id = sf_get_fortune_page_id();
+    if ($fortune_id) {
+        $excluded = isset($args['post__not_in']) ? (array) $args['post__not_in'] : [];
+        $excluded[] = $fortune_id;
+        $args['post__not_in'] = array_values(array_unique(array_map('intval', $excluded)));
+    }
+    return $args;
+}
+add_filter('wp_sitemaps_posts_query_args', 'sf_exclude_fortune_from_sitemap', 10, 2);
+
+function sf_exclude_fortune_from_page_lists(array $exclude_array): array {
+    $fortune_id = sf_get_fortune_page_id();
+    if ($fortune_id) { $exclude_array[] = $fortune_id; }
+    return array_values(array_unique(array_map('intval', $exclude_array)));
+}
+add_filter('wp_list_pages_excludes', 'sf_exclude_fortune_from_page_lists');
+
+function sf_exclude_fortune_from_search(WP_Query $query): void {
+    if (is_admin() || !$query->is_main_query() || !$query->is_search()) { return; }
+    $fortune_id = sf_get_fortune_page_id();
+    if (!$fortune_id) { return; }
+    $excluded = (array) $query->get('post__not_in');
+    $excluded[] = $fortune_id;
+    $query->set('post__not_in', array_values(array_unique(array_map('intval', $excluded))));
+}
+add_action('pre_get_posts', 'sf_exclude_fortune_from_search');
+
+function sf_exclude_fortune_from_rest_search(array $args, WP_REST_Request $request): array {
+    if ('edit' === $request->get_param('context') && current_user_can('edit_pages')) { return $args; }
+    $fortune_id = sf_get_fortune_page_id();
+    if (!$fortune_id) { return $args; }
+    $excluded = isset($args['post__not_in']) ? (array) $args['post__not_in'] : [];
+    $excluded[] = $fortune_id;
+    $args['post__not_in'] = array_values(array_unique(array_map('intval', $excluded)));
+    return $args;
+}
+add_filter('rest_page_query', 'sf_exclude_fortune_from_rest_search', 10, 2);
 
 function sf_customize_register($wp_customize) {
     $wp_customize->add_section('sf_links', ['title' => __('Links & contact', 'sabrina-fritzsche'), 'priority' => 30]);
