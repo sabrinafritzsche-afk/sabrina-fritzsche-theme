@@ -13,22 +13,22 @@
         { name: 'Löwe', symbol: '♌', element: 'Feuer', mode: 'fix', essence: 'Selbstausdruck und Strahlkraft' },
         { name: 'Jungfrau', symbol: '♍', element: 'Erde', mode: 'veränderlich', essence: 'Präzision und gelebte Fürsorge' },
         { name: 'Waage', symbol: '♎', element: 'Luft', mode: 'kardinal', essence: 'Beziehung und Ausgleich' },
-        { name: 'Skorpion', symbol: '♏', element: 'Wasser', mode: 'fix', essence: 'Tiefe und Transformation' },
+        { name: 'Skorpion', symbol: '♏', element: 'Wasser', mode: 'fix', essence: 'ehrliche Nähe und der Mut zu Veränderung' },
         { name: 'Schütze', symbol: '♐', element: 'Feuer', mode: 'veränderlich', essence: 'Weite und Sinn' },
         { name: 'Steinbock', symbol: '♑', element: 'Erde', mode: 'kardinal', essence: 'Verantwortung und Meisterschaft' },
         { name: 'Wassermann', symbol: '♒', element: 'Luft', mode: 'fix', essence: 'Freiheit und Zukunft' },
-        { name: 'Fische', symbol: '♓', element: 'Wasser', mode: 'veränderlich', essence: 'Hingabe und Intuition' },
+        { name: 'Fische', symbol: '♓', element: 'Wasser', mode: 'veränderlich', essence: 'Intuition, Mitgefühl und bewusstes Loslassen' },
     ];
 
     const HOUSES = [
         'Identität, Körper und unmittelbare Präsenz',
         'Werte, Ressourcen, Geld und Selbstwert',
         'Stimme, Lernen, Denken und nahes Umfeld',
-        'Zuhause, Wurzeln, Familie und innerer Boden',
+        'Zuhause, Herkunft, Familie und emotionale Sicherheit',
         'Kreativität, Freude, Romantik und Selbstausdruck',
         'Alltag, Arbeit, Routinen, Fürsorge und Gesundheit',
         'Beziehungen, Partnerschaft und das Gegenüber',
-        'Intimität, gemeinsame Ressourcen, Krise und Wandlung',
+        'Intimität, gemeinsames Geld, geteilte Verantwortung und Krisen',
         'Sinn, Weltanschauung, Reisen und geistige Weite',
         'Berufung, Verantwortung, Öffentlichkeit und Wirkung',
         'Freundschaft, Community, Visionen und Zukunft',
@@ -54,29 +54,29 @@
     };
 
     const PLANET_STRATEGY = {
-        Sonne: 'Sichtbarkeit, schöpferischen Selbstausdruck und die Erlaubnis, ganz du selbst zu sein',
-        Mond: 'emotionale Ehrlichkeit, Körperwissen, Rhythmus und das, was sich wirklich sicher anfühlt',
-        Merkur: 'Sprache, Fragen, Lernen, kluge Verbindungen und bewegliches Denken',
-        Venus: 'Beziehung, Genuss, Ästhetik, Anziehung und die Fähigkeit, Wert zu erkennen',
-        Mars: 'Mut, klare Grenzen, Initiative und den Moment, in dem aus einem Impuls eine Handlung wird',
-        Jupiter: 'Vertrauen, Sinn, Wachstum, Großzügigkeit und einen Horizont, der weiter ist als die aktuelle Situation',
-        Saturn: 'Verantwortung, Geduld, Struktur, Konsequenz und die Bereitschaft, etwas wirklich zu meistern',
-        Uranus: 'Freiheit, Eigenwilligkeit, Überraschung und den Bruch mit einer Form, die zu eng geworden ist',
-        Neptun: 'Intuition, Bilder, Mitgefühl, Hingabe und das feine Wissen jenseits rein logischer Argumente',
-        Pluto: 'Wahrheit, Machtbewusstsein, radikale Ehrlichkeit und Transformation ohne kosmetische Abkürzungen',
+        Sonne: 'dich zu zeigen, eigene Ideen auszudrücken und Entscheidungen selbstbewusst zu vertreten',
+        Mond: 'deine Gefühle ernst zu nehmen, auf deinen Körper zu achten und dir echte Sicherheit zu schaffen',
+        Merkur: 'offen zu sprechen, Fragen zu stellen, Informationen zu sammeln und dich mit anderen auszutauschen',
+        Venus: 'Beziehungen zu pflegen, zu genießen und klar zu erkennen, was dir wirklich wichtig ist',
+        Mars: 'zu handeln, Grenzen zu setzen und einen ersten konkreten Schritt zu machen',
+        Jupiter: 'größer zu denken, Neues zu lernen und Möglichkeiten zu nutzen, die dich wachsen lassen',
+        Saturn: 'Verantwortung zu übernehmen, klare Strukturen zu schaffen und geduldig dranzubleiben',
+        Uranus: 'eigene Wege zu gehen und Regeln zu verändern, die nicht mehr zu dir passen',
+        Neptun: 'auf deine Intuition zu hören, ohne überprüfbare Fakten und klare Grenzen auszublenden',
+        Pluto: 'schwierige Wahrheiten anzusprechen und Macht, Kontrolle oder Abhängigkeit offen zu klären',
     };
 
     const PLANET_SHADOW = {
-        Sonne: 'Im Schatten wird Sichtbarkeit zur Bestätigungssucht: Du tust nicht mehr, was dich ausdrückt, sondern was dein Bild stabil hält.',
-        Mond: 'Im Schatten regiert das momentane Gefühl die ganze Wirklichkeit. Schutz wird Rückzug, Bedürfnis wird Anspruch und Vertrautheit ersetzt Entwicklung.',
-        Merkur: 'Im Schatten wird Denken zur Distanz: analysieren, erklären und umformulieren, damit keine Entscheidung den Körper erreichen muss.',
-        Venus: 'Im Schatten wird Resonanz zur Anpassung. Schönheit, Gefallen und Harmonie halten etwas zusammen, das eine klare Wertentscheidung bräuchte.',
-        Mars: 'Im Schatten wird Handlung reaktiv. Druck, Kampf oder sexuelle Spannung ersetzen Richtung, weil Verletzlichkeit sich zu langsam oder zu ungeschützt anfühlt.',
-        Jupiter: 'Im Schatten wird Wachstum zur Übertreibung. Mehr Möglichkeiten, größere Versprechen und starke Überzeugungen verdecken Grenzen oder fehlende Erdung.',
-        Saturn: 'Im Schatten wird Verantwortung zu Kontrolle. Du trägst zu viel, verlangst zu viel oder verschiebst Lebendigkeit auf den Tag, an dem endlich alles sicher ist.',
-        Uranus: 'Im Schatten wird Freiheit zum Reflex gegen Bindung. Überraschung und Bruch halten dich autonom, aber nicht unbedingt verbunden oder wirksam.',
-        Neptun: 'Im Schatten verschwimmen Wunsch, Intuition und Projektion. Hingabe wird Selbstverlust, wenn Realität nur noch stört.',
-        Pluto: 'Im Schatten wird Wahrheit zur Machtfrage. Intensität, Kontrolle und ein Alles-oder-nichts-Muster ersetzen das langsamere Risiko echter Gegenseitigkeit.',
+        Sonne: 'Achte darauf, ob du etwas nur noch für Anerkennung tust. Dann zählt das Bild nach außen mehr als das, was wirklich zu dir passt.',
+        Mond: 'Achte darauf, ob ein starkes Gefühl für dich sofort zur unumstößlichen Wahrheit wird. Du darfst fühlen und trotzdem prüfen, was tatsächlich passiert ist.',
+        Merkur: 'Achte darauf, ob du immer weiter analysierst, obwohl eine Entscheidung längst fällig ist. Denken hilft nur, wenn daraus irgendwann ein klarer Schritt entsteht.',
+        Venus: 'Achte darauf, ob du dich anpasst, damit alles harmonisch bleibt. Eine schöne Verbindung ist nicht automatisch eine gute Verbindung.',
+        Mars: 'Achte darauf, ob du aus Druck oder Ärger handelst. Eine klare Handlung braucht ein Ziel und nicht nur Spannung.',
+        Jupiter: 'Achte darauf, ob du zu viel versprichst oder wichtige Grenzen übersiehst. Wachstum ist nur hilfreich, wenn es auch praktisch tragbar ist.',
+        Saturn: 'Achte darauf, ob du zu viel Verantwortung übernimmst und alles kontrollieren willst. Verlässlichkeit bedeutet nicht, dass du alles allein tragen musst.',
+        Uranus: 'Achte darauf, ob du eine Verbindung oder Verpflichtung nur deshalb abbrichst, weil sie sich eng anfühlt. Freiheit braucht klare Absprachen, nicht nur Abstand.',
+        Neptun: 'Achte darauf, Wunschdenken nicht mit Intuition zu verwechseln. Prüfe, was du weißt, was du hoffst und welche Grenze du brauchst.',
+        Pluto: 'Achte darauf, ob du kontrollierst, testest oder Informationen zurückhältst, um dich sicher zu fühlen. Sprich Macht und Abhängigkeit direkt an.',
     };
 
     const LOTS = {
@@ -86,37 +86,37 @@
             subtitle: 'Was dich trägt',
             question: 'Wo kommt dir das Leben entgegen?',
             opening: [
-                'Dein Glück ist kein Zufallsfund. Es hat eine Landschaft, einen Rhythmus und eine ganz eigene Art, dich zu finden.',
-                'Fortune zeigt nicht, wo du dich noch mehr anstrengen musst. Es zeigt, wo das Leben aufhört, gegen dich zu arbeiten.',
-                'Hier beginnt dein natürlicher Flow: körperlich, materiell und erstaunlich konkret.',
+                'Fortune zeigt, welche Bedingungen dir Kraft, Sicherheit und Unterstützung geben.',
+                'Hier geht es nicht darum, dich noch mehr anzustrengen. Es geht darum, besser zu erkennen, was für dich bereits funktioniert.',
+                'Dieser Punkt beschreibt ganz konkret, was dich im Alltag stabilisiert und dir Chancen eröffnet.',
             ],
             signs: [
-                'Dein Flow liebt den ersten Schritt. Chancen entstehen, wenn du nicht auf Erlaubnis wartest, sondern deinem Instinkt vertraust und Bewegung erzeugst. Mut ist bei dir kein hübsches Ideal – er ist ein Öffnungsmechanismus.',
-                'Fülle wächst langsam, sinnlich und belastbar. Dein Körper weiß oft früher als dein Kopf, was richtig ist. Wenn du vereinfachst, verwurzelst und etwas kontinuierlich nährst, beginnt das Leben, dich zurückzunähren.',
-                'Das Leben findet dich über Worte, Informationen und scheinbar zufällige Begegnungen. Beweglichkeit ist dein Glücksfaktor. Solange du fragst, sprichst und verschiedene Türen offen hältst, bleibt auch der Flow in Bewegung.',
-                'Dein Glück braucht einen inneren Boden. Es wächst, wenn du Nähe zulässt, deinem Gefühl glaubst und Räume erschaffst, in denen du nicht funktionieren musst. Weichheit ist hier keine Schwäche, sondern Orientierung.',
-                'Fortune im Löwen antwortet auf Sichtbarkeit. Wenn du spielst, kreierst und großzügig mit deiner Lebendigkeit umgehst, reagiert die Welt. Dein Glück will nicht im Hintergrund verwaltet, sondern verkörpert werden.',
-                'Dein Flow wohnt im Konkreten: in guten Routinen, präziser Arbeit und der Fähigkeit, das Wesentliche im Detail zu erkennen. Du wirst getragen, wenn du verbesserst, ohne dich dabei selbst zum ewigen Problem zu erklären.',
-                'Beziehung ist ein Türöffner. Schönheit, Resonanz und ein echtes Gegenüber bringen dich in Bewegung. Dein Glück wächst nicht durch Selbstaufgabe, sondern dort, wo Verbindung und Selbstachtung gleichzeitig Platz haben.',
-                'In der Tiefe liegen deine Ressourcen. Krisen, Wahrheit und Wandlung können für dich überraschend fruchtbar werden, sobald du aufhörst, das Unvermeidliche oberflächlich zu beruhigen. Dein Flow kennt den Weg durch das Tabu.',
-                'Weite trägt dich. Reisen, Lernen, Humor und ein größerer Sinnzusammenhang öffnen Türen, die unter Kontrolle verschlossen bleiben. Dein Glück wird großzügiger, wenn du dein Leben nicht auf das bereits Bekannte reduzierst.',
-                'Dein Glück ist gebaut, nicht erträumt. Es kommt durch Ausdauer, klare Standards und Entscheidungen, die auch morgen noch tragen. Du erntest vielleicht später – dafür oft mit einer Substanz, die niemand so leicht nehmen kann.',
-                'Dein Flow braucht Freiheit und ein Stück Zukunft. Ungewöhnliche Menschen, Communities und Lösungen außerhalb der Norm können zu echten Glückskanälen werden. Was dich anders macht, ist häufig genau das, was dich trägt.',
-                'Fortune in den Fischen wirkt über Hingabe, Intuition und Synchronizität. Du kannst nicht alles erzwingen, aber du musst lernen, feine Signale von bloßer Flucht zu unterscheiden. Wenn du präsent loslässt, fügt sich oft mehr als geplant.',
+                'Du kommst voran, wenn du selbst den ersten Schritt machst. Warte nicht zu lange auf Erlaubnis oder den perfekten Moment. Eine kleine mutige Handlung bringt dir meist mehr als langes Abwägen.',
+                'Du wirst durch Beständigkeit getragen. Nimm dir Zeit, prüfe dein Körpergefühl und baue Dinge Schritt für Schritt auf. Was ruhig und verlässlich wächst, passt meistens besser zu dir als ein schneller Erfolg.',
+                'Gespräche, Informationen und neue Kontakte bringen dir Chancen. Frage nach, teile deine Gedanken und bleibe offen für mehrere Möglichkeiten. Wichtig ist nur, dass aus dem Austausch irgendwann eine Entscheidung entsteht.',
+                'Du brauchst emotionale Sicherheit, um dich zu entfalten. Menschen und Orte tun dir gut, wenn du dort nicht ständig stark sein oder funktionieren musst. Achte darauf, Bedürfnisse klar auszusprechen, statt zu hoffen, dass andere sie erraten.',
+                'Du profitierst davon, sichtbar zu sein und deine Ideen zu zeigen. Kreativität, Freude und Selbstvertrauen öffnen dir Türen. Du musst dafür keine Show spielen – aber du solltest dich auch nicht kleiner machen, als du bist.',
+                'Gute Routinen, sorgfältige Arbeit und praktische Lösungen geben dir Halt. Du erkennst schnell, was verbessert werden kann. Achte darauf, dich selbst dabei nicht ständig wie ein Problem zu behandeln.',
+                'Gute Beziehungen bringen dir Unterstützung und neue Möglichkeiten. Das funktioniert am besten, wenn beide Seiten offen sprechen und fair miteinander umgehen. Passe dich nicht so stark an, dass deine eigenen Wünsche verschwinden.',
+                'Du kannst auch aus schwierigen Phasen etwas Wertvolles aufbauen. Besonders wichtig sind offene Gespräche über Vertrauen, Geld, Verpflichtungen, Sexualität und Abhängigkeiten. Je klarer diese Themen geregelt sind, desto sicherer können gemeinsame Entscheidungen werden.',
+                'Lernen, Reisen und neue Sichtweisen eröffnen dir Chancen. Du musst nicht alles kontrollieren, bevor du losgehst. Prüfe aber, ob du wirklich wachsen möchtest oder nur vor einem aktuellen Problem ausweichst.',
+                'Du erreichst viel durch Geduld, klare Ziele und verlässliche Arbeit. Ergebnisse kommen bei dir möglicherweise später, halten dafür oft länger. Übernimm Verantwortung, aber nicht automatisch jede Aufgabe.',
+                'Ungewöhnliche Menschen, Gruppen und neue Ideen können dir wichtige Türen öffnen. Du musst nicht in jede Norm passen. Entscheidend ist, dass deine besondere Sichtweise auch praktisch nutzbar wird.',
+                'Ruhe, Intuition und kreative oder spirituelle Erfahrungen können dir Orientierung geben. Lass Raum für das, was du nicht planen kannst. Prüfe trotzdem Fakten und Grenzen, bevor du eine wichtige Entscheidung triffst.',
             ],
             houses: [
                 'Das Leben kommt dir entgegen, wenn du dich selbst bewohnst. Körper, Auftreten und Eigenständigkeit sind keine Nebensache – sie sind dein unmittelbarer Glückskanal. Je weniger du dich für den Raum entschuldigst, den du einnimmst, desto deutlicher kann das Leben überhaupt auf dich reagieren.',
-                'Flow entsteht über Werte, Geld, Besitz und eine ruhige Beziehung zu deinem Körper. Was du nachhaltig aufbaust und wirklich wertschätzt, beginnt auch dich zu halten.',
+                'Geld, Besitz, klare Werte und ein gutes Körpergefühl geben dir Sicherheit. Was du langfristig aufbaust und sorgfältig behandelst, kann dich auch in schwierigen Zeiten stabilisieren.',
                 'Gespräche, Lernen, Schreiben, Nachbarschaft und kurze Wege sind voller Türen. Deine Neugier bringt dich oft genauer ans Ziel als ein vollständig ausgearbeiteter Masterplan. Wichtig ist, dass Information irgendwann Kontakt erzeugt: eine Nachricht, eine Frage oder ein Satz kann hier mehr bewegen als monatelanges inneres Vorbereiten.',
                 'Zuhause, Herkunft und emotionaler Boden tragen dein Fortune. Je sicherer dein inneres Fundament, desto weniger musst du Glück im Außen jagen. Das bedeutet nicht, in alten Familienmustern zu bleiben, sondern bewusst einen Ort und eine innere Zugehörigkeit zu schaffen, die dich heute wirklich halten.',
-                'Spiel, Freude, Dating, Kinder und kreative Sichtbarkeit sind dein Resonanzraum. Wenn du dich traust, etwas einfach aus Lust zu tun, antwortet das Leben besonders deutlich.',
-                'Dein Alltag ist kein Hindernis auf dem Weg zum Glück – er ist der Ort, an dem es entsteht. Gute Routinen, sinnvolle Arbeit und körperliche Fürsorge sind hier echte Magie.',
-                'Menschen sind Türen. Partnerschaften und Begegnungen auf Augenhöhe bringen Chancen, Unterstützung und Spiegel. Der Schlüssel ist, dich in Beziehung nicht selbst zu verlassen. Dein Glück liegt nicht darin, gewählt zu werden, sondern in Verbindungen, in denen Gegenseitigkeit deine Möglichkeiten erweitert und deine Eigenständigkeit bestehen bleibt.',
-                'Fortune liegt in Tiefe, Bindung und dem Mut, gemeinsam durch Wandlung zu gehen. Auch geteilte Ressourcen können tragen – wenn Macht und Abhängigkeit ehrlich benannt werden.',
+                'Spiel, Freude, Dating, Kinder und kreative Projekte tun dir besonders gut. Du bekommst neue Energie und Chancen, wenn du etwas aus echter Freude tust – nicht nur, weil es nützlich ist.',
+                'Dein Alltag ist besonders wichtig für dein Wohlbefinden. Gute Routinen, sinnvolle Arbeit, ausreichend Erholung und körperliche Fürsorge geben dir Kraft und eröffnen neue Möglichkeiten.',
+                'Partnerschaften und faire Begegnungen können dir Chancen und Unterstützung bringen. Eine gute Verbindung erweitert deine Möglichkeiten, ohne dass du deine eigenen Wünsche oder deine Selbstständigkeit aufgeben musst.',
+                'Unterstützung kann durch enge Beziehungen und gemeinsam verwaltete Dinge entstehen – zum Beispiel Geld, Eigentum, Verantwortung oder Fürsorge. Das funktioniert nur, wenn ihr offen klärt, wer was gibt, wer was entscheidet und wo Abhängigkeiten entstehen.',
                 'Reisen, Studium, Lehre und Sinnsuche erweitern dein Feld. Dein Glück taucht häufig dort auf, wo du bereit bist, deine bisherige Sicht auf die Welt zu überschreiten.',
                 'Öffentlichkeit, Verantwortung und Berufung sind Träger deines Fortune. Wenn du deine Rolle annimmst, ohne dich mit Status zu verwechseln, wird Wirkung zu einem natürlichen Strom.',
                 'Freundschaften, Netzwerke und gemeinsame Zukunftsbilder tragen dich. Dein persönliches Glück ist eng mit den Räumen verbunden, die du zusammen mit anderen möglich machst. Achte auf Menschen, die nicht nur deine Gegenwart mögen, sondern Zukunft mit dir denken, Verantwortung teilen und ungewöhnliche Ideen praktisch unterstützen.',
-                'Dein Fortune arbeitet hinter den Kulissen. Rückzug, Träume, Spiritualität und stille Regeneration öffnen einen Flow, der verschwindet, sobald du ihn kontrollieren oder beweisen willst.',
+                'Du findest Unterstützung oft in Ruhe, Rückzug, Schlaf, Träumen oder spiritueller Praxis. Plane bewusst Zeiten ohne Leistung und Außenwirkung ein. Nicht jede hilfreiche Entwicklung muss sofort sichtbar oder messbar sein.',
             ],
             jokers: [
                 'Was würde ich beginnen, wenn ich nicht erst auf absolute Sicherheit warten müsste?',
@@ -126,39 +126,39 @@
                 'Was will heute durch mich sichtbar, spielerisch oder großzügig werden?',
                 'Welche kleine Ordnung würde meinem Körper und meinem Alltag sofort Erleichterung schenken?',
                 'Welche Verbindung fühlt sich gleichzeitig schön, fair und wahr an?',
-                'Welche Wahrheit birgt genau die Ressource, die ich bisher gesucht habe?',
+                'Welches unangenehme Thema muss ich ansprechen, damit Geld, Verantwortung oder Unterstützung fair geregelt werden können?',
                 'Welche Entscheidung macht meinen Horizont größer, ohne dass ich vor meinem jetzigen Leben davonlaufe?',
                 'Welche Entscheidung würde mein zukünftiges Ich respektieren?',
                 'Wo ist mein Anderssein keine Störung, sondern die Lösung?',
                 'Was fügt sich, wenn ich präsent bleibe und den Griff ein wenig lockere?',
             ],
             shadows: [
-                'Der Schatten ist nicht mangelnder Mut, sondern die Sucht nach Vorwärtsbewegung. Du kannst Konflikt, Risiko oder einen Neuanfang erzeugen, nur damit du dich wieder handlungsfähig fühlst. Dann wird Initiative zur Selbstverteidigung und Unterstützung fühlt sich fälschlich wie Schwäche an.',
+                'Du könntest vorschnell handeln, nur um dich wieder stark und handlungsfähig zu fühlen. Dann erzeugst du vielleicht unnötige Konflikte oder Risiken. Prüfe vor dem Start: Willst du wirklich dorthin – oder willst du nur nicht stillstehen?',
                 'Was dich stabil macht, kann dich auch festsetzen. Du hältst möglicherweise an Beziehungen, Besitz oder Routinen fest, weil Veränderung sich körperlich unsicher anfühlt. Genuss kippt in Betäubung, Loyalität in Stillstand und Geduld in das endlose Vertagen einer längst fälligen Bewegung.',
-                'Deine Beweglichkeit kann zur eleganten Flucht vor Tiefe werden. Noch eine Information, noch ein Gespräch, noch eine interessante Option – und niemand merkt, dass du dich nie wirklich festlegen musst. Der Schatten ist nicht Unklarheit, sondern die Gewohnheit, Konsequenz durch Komplexität zu vermeiden.',
+                'Du könntest immer neue Informationen, Gespräche und Optionen suchen, damit du dich nicht festlegen musst. Setze dir einen Zeitpunkt, an dem du entscheidest, auch wenn noch nicht jede Frage beantwortet ist.',
                 'Dein Bedürfnis nach Sicherheit kann dich zum emotionalen Radar für alle anderen machen. Du spürst Stimmungen, übernimmst Fürsorge und hoffst, dadurch selbst gehalten zu werden. Wenn das unausgesprochen bleibt, entstehen Rückzug, Schuld oder subtile Kontrolle statt echter Nähe.',
-                'Sichtbarkeit nährt dich – doch im Schatten wird Resonanz zum Beweis deines Wertes. Dann brauchst du Applaus, romantische Intensität oder eine besondere Rolle, um dich lebendig zu fühlen. Die verletzlichste Übung ist nicht größer zu strahlen, sondern auch ohne Publikum bei dir zu bleiben.',
-                'Kompetenz kann zu einer sehr respektablen Form von Selbstablehnung werden. Du verbesserst, ordnest und hilfst, bis kein Fehler mehr sichtbar ist – und leider auch kaum noch Lust. Der Schatten beginnt dort, wo dein Wert davon abhängt, nützlich, kontrolliert oder unangreifbar zu sein.',
-                'Du kannst so fein auf das Gegenüber reagieren, dass deine eigene Position zur Verhandlungsmasse wird. Harmonie sieht dann schön aus, kostet dich aber Wahrheit. Der Schatten ist nicht Beziehung, sondern die Hoffnung, eine perfekte Balance könne dich vor Ablehnung und klaren Konflikten schützen.',
-                'Tiefe kann berauschen. Du könntest Intensität mit Wahrheit, Misstrauen mit Intuition oder Krise mit echter Intimität verwechseln. Der Schatten sucht Macht über das Unsichere – durch Tests, Geheimnisse, Rückzug oder totale Verschmelzung – statt Verletzlichkeit ohne Garantie zu riskieren.',
-                'Dein Glaube an das Größere kann zur Ausrede werden, das Naheliegende nicht zu leben. Du springst zur nächsten Vision, Reise oder Wahrheit, sobald Alltag, Ambivalenz oder Verantwortung enger werden. Optimismus ist dann kein Vertrauen, sondern Distanz zu dem, was gerade wirklich weh tut.',
-                'Du kannst Last mit Bedeutung verwechseln. Je schwieriger etwas ist, desto wertvoller erscheint es; je mehr du trägst, desto sicherer fühlst du dich in deiner Rolle. Der Schatten ist ein Leben, das von außen souverän aussieht, während innen kaum noch Platz für Abhängigkeit, Spiel oder Empfang bleibt.',
+                'Anerkennung tut dir gut, kann aber zu wichtig werden. Dann brauchst du Applaus, romantisches Drama oder eine besondere Rolle, um dich wertvoll zu fühlen. Übe, auch ohne Publikum hinter dir und deiner Arbeit zu stehen.',
+                'Du kannst so viel verbessern, ordnen und helfen, dass Freude und Erholung verschwinden. Achte darauf, deinen Wert nicht nur daran zu messen, wie nützlich, organisiert oder fehlerfrei du bist.',
+                'Du könntest dich so stark an andere anpassen, dass deine eigene Meinung kaum noch sichtbar ist. Sage früh, was du willst und was für dich nicht passt. Ein offener Konflikt ist oft gesünder als scheinbare Harmonie.',
+                'Starke Gefühle können sich für dich wie besonders echte Nähe anfühlen. Doch Misstrauen, Tests, Geheimnisse oder ständige Krisen sind kein Beweis für Intimität. Sprich offen über Angst, Vertrauen, Grenzen und Verantwortung.',
+                'Neue Pläne, Reisen oder große Ideen können dir helfen – aber auch vom aktuellen Problem ablenken. Prüfe, ob du gerade wirklich wachsen möchtest oder ob du einer unangenehmen Aufgabe, Grenze oder Enttäuschung ausweichst.',
+                'Du könntest glauben, dass etwas nur dann wertvoll ist, wenn es schwer ist. Dadurch übernimmst du zu viel und zeigst deine eigenen Bedürfnisse kaum. Prüfe regelmäßig, welche Verantwortung wirklich zu dir gehört und wobei du Hilfe annehmen darfst.',
                 'Freiheit kann zum Reflex gegen jede Form von Bindung werden. Du erkennst früh, was veraltet ist, aber distanzierst dich vielleicht auch von Menschen, Bedürfnissen oder Verantwortung, bevor sie dich wirklich berühren. Anderssein wird zum Gefängnis, wenn Zugehörigkeit automatisch wie Anpassung wirkt.',
-                'Durchlässigkeit ist deine Gabe und dein Risiko. Du kannst Synchronizität mit Wunschdenken, Mitgefühl mit Selbstaufgabe oder Hingabe mit fehlenden Grenzen verwechseln. Der Schatten ist nicht Sensibilität, sondern das Verschwinden aus dem eigenen Leben, während du auf ein Zeichen wartest.',
+                'Du nimmst Stimmungen und feine Signale stark wahr. Das kann hilfreich sein, aber auch zu Wunschdenken oder fehlenden Grenzen führen. Warte nicht nur auf ein Zeichen: Prüfe Fakten, benenne dein Bedürfnis und triff dann eine Entscheidung.',
             ],
             transfers: [
                 'Wähle eine sichtbare Handlung, die nur dir gehört: eine Grenze, ein Auftreten oder eine körperliche Entscheidung. Frage nicht zuerst, wie sie wirkt – prüfe, ob du dich darin tatsächlich bewohnst.',
-                'Mach einen ehrlichen Ressourcen-Check: Geld, Zeit, Energie, Besitz. Was nährt dich, was beruhigt nur kurzfristig und was bezahlst du längst mit deinem Selbstwert?',
-                'Sprich einen Gedanken aus, bevor er perfekt ist. Schreib, frage, ruf an oder teile die Idee. Dein Transfer beginnt, wenn Neugier eine reale Verbindung erzeugt statt nur weitere innere Schleifen.',
-                'Verändere etwas Konkretes an deinem Zuhause oder deinen emotionalen Routinen, das Sicherheit nicht nur symbolisiert, sondern herstellt. Nähe beginnt bei einem Nervensystem, das nicht ständig auf Alarm bleiben muss.',
-                'Plane Zeit für Freude, Flirt oder Kreativität, bevor alles Produktive erledigt ist. Beobachte, wie viel Erlaubnis du brauchst, um etwas zu tun, das keinen anderen Zweck als Lebendigkeit hat.',
+                'Prüfe ehrlich deine aktuelle Situation: Wie viel Geld, Zeit und Kraft hast du wirklich? Was hilft dir langfristig, was beruhigt dich nur kurz und was kostet dich mehr, als es dir gibt?',
+                'Sprich einen Gedanken aus, bevor er perfekt ist. Schreib eine Nachricht, stelle eine Frage oder ruf jemanden an. Ziel ist ein echtes Gespräch statt weiterer Gedankenschleifen.',
+                'Verändere etwas Konkretes, das dir zu Hause mehr Ruhe gibt. Kläre zum Beispiel eine Grenze, schaffe einen Rückzugsort oder plane verlässliche Zeit für dich. Sicherheit entsteht durch klare Bedingungen, nicht nur durch eine angenehme Atmosphäre.',
+                'Plane Zeit für Freude, Flirt oder Kreativität ein, bevor alle Aufgaben erledigt sind. Beobachte, ob du dir Vergnügen nur erlaubst, wenn du es vorher verdient hast.',
                 'Wähle eine kleine Routine, die täglich zehn Minuten echte Erleichterung schafft. Nicht optimieren, nicht tracken, nicht perfektionieren – sieben Tage lang nur wiederholen und beobachten.',
-                'Führe ein Gespräch, in dem du gleichzeitig verbunden und klar bleibst. Sag, was du willst, was du nicht willst und worüber du noch nicht sicher bist, ohne das Gegenüber für deine Wahrheit verantwortlich zu machen.',
-                'Benenne eine Abhängigkeit, Schuld, Machtfrage oder geteilte Ressource, die bisher im Halbdunkel lag. Dein Transfer ist nicht sofortige Lösung, sondern eine Wahrheit, die nicht länger heimlich regiert.',
+                'Führe ein klares Gespräch. Sage, was du willst, was du nicht willst und wobei du noch unsicher bist. Erwarte nicht, dass die andere Person deine Entscheidung für dich trifft.',
+                'Sprich ein gemeinsames Thema an, das bisher vermieden wurde – zum Beispiel Geld, Schulden, Besitz, Verantwortung, Sexualität oder die Frage, wer über was entscheidet. Du musst es nicht sofort lösen. Der erste Schritt ist, klar auszusprechen, was tatsächlich los ist und was du brauchst.',
                 'Tu etwas, das deine bisherige Perspektive real erweitert: eine Reise, ein Seminar, ein schwieriges Buch oder ein Gespräch außerhalb deiner Bubble. Formuliere danach, was du nun anders leben willst.',
-                'Definiere eine Verantwortung, die du bewusst annimmst – und eine, die du zurückgibst. Meisterschaft wächst nicht durch maximale Last, sondern durch klare Autorenschaft.',
-                'Bring eine Idee in eine Gemeinschaft, statt sie nur allein genial zu finden. Bitte um Resonanz, suche Verbündete und beobachte, ob deine Vision Beziehung aushält.',
-                'Schaffe einen stillen Raum ohne Input und ohne spirituelle Performance. Schreib danach auf, was wirklich da war – einschließlich Leere, Widerstand oder Müdigkeit. Auch das Unspektakuläre gehört zu deiner Intuition.',
+                'Wähle eine Verantwortung, die du bewusst übernimmst, und eine Aufgabe, die du abgibst. Du wirst nicht besser, indem du möglichst viel trägst, sondern indem du für die richtigen Dinge zuverlässig zuständig bist.',
+                'Teile eine Idee mit einer Gruppe, statt sie nur allein weiterzudenken. Bitte um ehrliches Feedback, suche Mitstreiter und prüfe, ob die Idee auch gemeinsam praktisch funktioniert.',
+                'Nimm dir 20 Minuten ohne Handy, Musik oder andere Ablenkung. Schreib danach ehrlich auf, was du gedacht und gefühlt hast – auch wenn es nur Müdigkeit, Unruhe oder Leere war.',
             ],
         },
         spirit: {
@@ -168,19 +168,19 @@
             question: 'Wo nimmt dein Wille Form an?',
             opening: [
                 'Spirit ist der Teil in dir, der nicht nur hofft. Er entscheidet, richtet sich aus und übernimmt Verantwortung für das, was entstehen soll.',
-                'Hier wartet deine innere Autorität. Nicht die lauteste Stimme – sondern die, die weiß, wofür du wirklich Ja sagen willst.',
+                'Spirit zeigt, welche Entscheidungen wirklich von dir kommen. Es geht nicht um die lauteste Meinung im Raum, sondern um das, wofür du selbst Verantwortung übernehmen möchtest.',
                 'Dein Spirit zeigt, wie aus einer Möglichkeit eine Richtung und aus einer Richtung ein gelebtes Leben wird.',
             ],
             signs: [
-                'Dein Wille ist direkt, schnell und initiierend. Du findest Klarheit häufig erst in der Bewegung. Wenn du zu lange auf den perfekten Plan wartest, verlierst du den Kontakt zu der Kraft, die eigentlich führen möchte.',
+                'Du triffst Entscheidungen oft besser, wenn du ins Handeln kommst. Warte nicht zu lange auf den perfekten Plan. Mache einen ersten kleinen Schritt und prüfe danach, ob die Richtung weiterhin stimmt.',
                 'Du willst, was Bestand hat. Entscheidungen reifen in dir körperlich und langsam, werden dann aber sehr tragfähig. Dein Spirit ist nicht sprunghaft – er baut Werte, Beziehungen und Werke, die bleiben können.',
                 'Dein Wille denkt, fragt und verknüpft. Mehrere Perspektiven sind kein Zeichen fehlender Klarheit, sondern Teil deiner Intelligenz. Entscheidend ist, irgendwann aus der interessanten Möglichkeit einen ausgesprochenen Satz zu machen.',
-                'Du entscheidest aus emotionaler Verbundenheit. Dein Spirit schützt, nährt und baut Zugehörigkeit. Wenn du fremde Bedürfnisse mit deiner eigenen Wahrheit verwechselst, wird der Kompass allerdings leise.',
+                'Gefühle und Beziehungen spielen bei deinen Entscheidungen eine große Rolle. Achte darauf, die Bedürfnisse anderer nicht automatisch für deine eigenen zu halten. Frage dich ausdrücklich: Was möchte ich?',
                 'Dein Wille möchte gestalten, führen und gesehen werden. Du bist am klarsten, wenn Herz und Handlung dieselbe Richtung haben. Anerkennung kann dich stärken – sie darf aber nicht die Quelle deiner Entscheidung werden.',
                 'Dein Spirit arbeitet präzise, nützlich und differenziert. Du erkennst, was verbessert werden kann, und kannst daraus echte Meisterschaft entwickeln. Perfektionismus wird erst dann zum Problem, wenn er jede Entscheidung vertagt.',
                 'Du willst in Beziehung zu etwas kommen: zu Menschen, Schönheit, Gerechtigkeit oder einer stimmigen Form. Dein Wille wägt ab. Seine Reife zeigt sich, wenn Harmonie nicht länger bedeutet, die eigene Position zu verschweigen.',
-                'Dein Wille ist kompromisslos, strategisch und transformierend. Halbherzige Entscheidungen erschöpfen dich mehr als radikale. Wenn du dich wirklich festlegst, kann dein Spirit ganze innere Landschaften neu ordnen.',
-                'Du entscheidest in Richtung Wachstum, Wahrheit und Sinn. Dein Spirit braucht eine Vision, die größer ist als reine Effizienz. Achte darauf, dass Begeisterung nicht nur den Start liebt, sondern auch eine Form bekommt.',
+                'Du entscheidest gründlich und möchtest dich dann vollständig festlegen. Unklare Zwischenlösungen kosten dich viel Kraft. Achte trotzdem darauf, nicht jede Entscheidung zu einem Alles-oder-nichts-Moment zu machen.',
+                'Du entscheidest dich gern für Möglichkeiten, die Wachstum, Lernen und Sinn versprechen. Damit aus Begeisterung etwas Reales wird, brauchst du anschließend einen Plan, einen Termin und einen konkreten nächsten Schritt.',
                 'Dein Wille ist konzentriert und langfristig. Verantwortung macht dich klarer, solange du sie bewusst wählst. Du kannst große Dinge tragen – musst aber nicht jede Schwere automatisch zu deinem Auftrag erklären.',
                 'Dein Spirit entscheidet frei, unkonventionell und zukunftsorientiert. Authentizität ist wichtiger als Anpassung. Die Kunst besteht darin, nicht nur gegen eine alte Form zu rebellieren, sondern eine bessere wirklich aufzubauen.',
                 'Dein Wille kommt als Ahnung, Bild oder innere Strömung. Du brauchst Räume, in denen das Leise hörbar wird. Sobald du deine Intuition erdest, kann aus einem scheinbar formlosen Traum eine überraschend klare Richtung werden.',
@@ -189,13 +189,13 @@
                 'Dein Wille will durch dich selbst sichtbar werden. Identität, Körper und Präsenz sind die Bühne, auf der du Entscheidungskraft entwickelst. Jede Entscheidung verändert hier auch dein Selbstbild: Du wirst nicht erst sicher und handelst dann – du erkennst dich zunehmend in dem, was du bewusst tust.',
                 'Spirit wird konkret, wenn du Werte definierst und Ressourcen aufbaust. Geld, Selbstwert und Besitz fragen dich: Was ist mir wichtig genug, um es zu nähren?',
                 'Deine Stimme ist ein Werkzeug des Willens. Schreiben, Lehren, Fragen und Austausch helfen dir, Richtung nicht nur zu denken, sondern auszusprechen. Sprache wird zur Handlung, sobald du dich festlegst, Wissen weitergibst oder einen Gedanken so formulierst, dass andere tatsächlich darauf reagieren können.',
-                'Dein Spirit baut von innen nach außen. Familie, Herkunft, Zuhause und emotionale Autonomie sind Felder bewusster Gestaltung. Deine Aufgabe ist nicht, jede Vergangenheit zu reparieren, sondern zu entscheiden, welche Regeln, Bindungen und Formen von Zugehörigkeit in deinem heutigen Leben weiterwirken dürfen.',
-                'Kreativität, Freude und Selbstausdruck sind keine Freizeitbeilage, sondern Ausdruck deiner bewussten Lebenskraft. Du willst etwas erschaffen, das deine Signatur trägt. Spirit fordert hier den Mut, aus privater Begabung ein sichtbares Werk zu machen – auch wenn Spiel dadurch plötzlich Verantwortung bekommt.',
+                'Wichtige Entscheidungen betreffen bei dir häufig Familie, Herkunft und Zuhause. Du musst deine Vergangenheit nicht reparieren. Du darfst aber bewusst entscheiden, welche alten Regeln und Erwartungen heute noch zu deinem Leben passen.',
+                'Kreativität, Freude und Selbstausdruck sind wichtige Entscheidungsfelder für dich. Du möchtest etwas Eigenes schaffen und zeigen. Der nächste Schritt besteht darin, aus einer privaten Idee ein sichtbares Projekt zu machen und dafür Verantwortung zu übernehmen.',
                 'Dein Wille zeigt sich im Alltag: in Routinen, Arbeit, Dienst und dem, was du verlässlich wiederholst. Große Absichten werden hier durch kleine Konsequenz wahr.',
                 'Beziehung ist ein Feld bewusster Entscheidung. Du entwickelst Richtung im Gegenüber – und lernst, Bindung nicht mit dem Verlust eigener Führung zu verwechseln. Verträge, Partnerschaften und klare Absprachen zeigen dir, ob zwei Willen wirklich gemeinsam gestalten oder nur auf gegenseitige Anpassung hoffen.',
-                'Spirit will in die Tiefe. Intimität, Macht, gemeinsame Ressourcen und Wandel fordern klare Entscheidungen und die Bereitschaft, Konsequenzen nicht zu beschönigen. Du wirst hier besonders wirksam, wenn du Abhängigkeit weder verleugnest noch romantisierst, sondern Verantwortung, Zustimmung und Risiko offen verhandelst.',
-                'Dein Wille sucht Weite, Wissen und eine tragfähige Wahrheit. Lehre, Reisen und Weltanschauung werden zu Feldern, in denen du bewusst Richtung gibst. Eine Überzeugung wird erst zu Spirit, wenn sie nicht nur inspiriert, sondern deine Entscheidungen, deine Ethik und deinen Umgang mit anderen sichtbar verändert.',
-                'Hier will Spirit wirken. Berufung, Führung, Verantwortung und Öffentlichkeit verlangen, dass du dich für eine Rolle entscheidest, statt nur auf Anerkennung zu warten. Sichtbarkeit ist dabei kein Selbstzweck: Sie wird zur Konsequenz daraus, dass du für eine bestimmte Wirkung wirklich Autorenschaft übernimmst.',
+                'Wichtige Entscheidungen betreffen bei dir häufig Intimität, Vertrauen, Geld, Besitz oder gemeinsame Verantwortung. Kläre offen, wer was entscheidet, bezahlt und übernimmt. Sprich auch über Zustimmung, Risiken und mögliche Abhängigkeiten.',
+                'Lernen, Reisen, Lehren und persönliche Überzeugungen beeinflussen deine Entscheidungen stark. Eine Idee ist für dich aber erst dann wirklich wichtig, wenn sie dein Verhalten und deinen Umgang mit anderen konkret verändert.',
+                'Beruf, Führung und öffentliche Verantwortung sind wichtige Entscheidungsfelder für dich. Warte nicht nur darauf, dass andere dein Potenzial erkennen. Definiere selbst, welche Rolle du übernehmen und welche konkrete Wirkung du erzielen möchtest.',
                 'Du gestaltest Zukunft mit anderen. Gruppen, Freundschaften, Community und gemeinsame Ideale sind Orte, an denen dein Wille gesellschaftliche Form annimmt. Deine Vision wird reifer, wenn sie Zusammenarbeit, Widerspruch und geteilte Verantwortung aushält – nicht nur Zustimmung zu deiner Idee.',
                 'Spirit wirkt im Verborgenen. Innere Arbeit, Rückzug und Spiritualität verlangen eine Führung, die nicht ständig von außen bestätigt werden kann. Entscheidungen reifen hier oft still; entscheidend ist, dass Rückzug irgendwann eine klare innere Ausrichtung hervorbringt und nicht zum dauerhaften Verschwinden wird.',
             ],
@@ -203,12 +203,12 @@
                 'Was entscheide ich, wenn ich mich selbst nicht länger aus meiner Entscheidung herausrechne?',
                 'Wofür bin ich bereit, langfristig Zeit, Geld oder Aufmerksamkeit bereitzustellen?',
                 'Welcher klare Satz würde aus meinen Gedanken eine Richtung machen?',
-                'Welche Entscheidung schützt meine innere Wahrheit – nicht nur den Frieden im Raum?',
+                'Welche Entscheidung entspricht meinen tatsächlichen Bedürfnissen – auch wenn dadurch ein Konflikt entstehen könnte?',
                 'Was würde ich wählen, wenn mein Herz führen dürfte, ohne um Applaus zu bitten?',
                 'Welche wiederholbare Handlung macht meine Absicht real?',
-                'Welche Wahrheit braucht meine Beziehung zu mir selbst und zu anderen?',
-                'Was muss enden, damit mein eigentliches Ja Kraft bekommt?',
-                'Welche größere Wahrheit soll meine nächste Entscheidung leiten?',
+                'Was muss ich in dieser Beziehung offen und ehrlich ansprechen?',
+                'Was muss ich beenden oder ablehnen, damit ich mich klar für das Wichtige entscheiden kann?',
+                'Welcher Wert oder welches langfristige Ziel soll meine nächste Entscheidung leiten?',
                 'Welche Verantwortung ist wirklich meine – und welche nur vertraute Schwere?',
                 'Welche neue Form entspricht der Zukunft, die ich längst sehen kann?',
                 'Wie kann ich meiner Intuition heute eine konkrete Form geben?',
@@ -216,25 +216,25 @@
             shadows: [
                 'Du kannst Entscheidung mit Geschwindigkeit verwechseln. Dann wird jedes Zögern zum Feind, Widerstand zur Provokation und Kooperation fühlt sich wie Kontrollverlust an. Dein Wille ist stark – aber nicht jede Tür, die sich öffnen lässt, ist deine Tür.',
                 'Deine Entschlossenheit kann zur stillen Verweigerung werden. Du bleibst bei einem Plan, Wert oder Versprechen, weil eine Kurskorrektur sich wie Verrat an dir selbst anfühlt. So schützt Beständigkeit irgendwann nicht mehr das Wesentliche, sondern nur noch das Bekannte.',
-                'Dein Geist kann jede Entscheidung so brillant von mehreren Seiten betrachten, dass keine Seite je Realität werden muss. Worte ersetzen dann Handlung, Optionen ersetzen Hingabe. Der Schatten ist die Erzählung, du seist noch nicht klar – obwohl du die Konsequenz längst kennst.',
-                'Du kannst deinen Willen über Fürsorge tarnen. Statt zu sagen, was du willst, machst du dich unentbehrlich, hoffst auf emotionale Gegenseitigkeit und ziehst dich verletzt zurück, wenn andere den unsichtbaren Vertrag nicht erfüllen. Schutz wird dann zu indirekter Führung.',
-                'Dein Wunsch zu gestalten kann sich an Anerkennung binden. Ohne Resonanz zweifelst du am Weg; mit Resonanz überspielst du vielleicht Zweifel, die ernst genommen werden sollten. Der Schatten ist nicht Ego, sondern ein Wille, der sein Publikum braucht, um sich selbst zu glauben.',
+                'Du kannst eine Entscheidung so lange von allen Seiten betrachten, dass du gar nicht mehr handelst. Vielleicht sagst du, du seist noch nicht sicher, obwohl du vor allem die Konsequenzen vermeiden möchtest. Lege einen Termin für deine Entscheidung fest.',
+                'Du könntest für andere sorgen, statt direkt zu sagen, was du selbst möchtest. Danach bist du enttäuscht, wenn niemand deine unausgesprochenen Erwartungen erfüllt. Formuliere deine Wünsche, bevor du Unterstützung anbietest.',
+                'Du könntest deine Entscheidung davon abhängig machen, wie andere darauf reagieren. Zustimmung ist angenehm, aber kein Beweis dafür, dass ein Weg richtig ist. Prüfe auch ohne Publikum, ob du diese Entscheidung vertreten kannst.',
                 'Dein Anspruch kann jede lebendige Idee in ein Optimierungsprojekt verwandeln. Du verbesserst so lange, bis der Moment zum Handeln vorbei ist, oder definierst deinen Wert über Nützlichkeit. Perfektionismus ist hier oft Angst in sehr kompetenter Kleidung.',
                 'Du kannst Entscheidung als endlose diplomatische Vorbereitung inszenieren. Alle Perspektiven werden gehört, nur deine eigene bleibt weichgezeichnet. Harmonie wird zur Machtstrategie, wenn niemand offen widersprechen darf und du trotzdem erwartest, verstanden zu werden.',
-                'Dein Wille kann Kontrolle mit Integrität verwechseln. Du testest Loyalität, hältst Informationen zurück oder entscheidest erst, wenn du maximale Sicherheit über die Motive aller Beteiligten hast. Dann schützt Tiefe nicht mehr Wahrheit, sondern Unverwundbarkeit.',
-                'Eine große Vision kann dich berauschen, bevor sie Verantwortung verlangt. Du sagst Ja zu Wachstum, Sinn und Freiheit – und unterschätzt Details, Grenzen oder die Menschen, die deine Versprechen mittragen. Überzeugung wird zum Schatten, wenn sie Korrektur nicht mehr verträgt.',
+                'Du könntest andere testen, Informationen zurückhalten oder eine Entscheidung hinauszögern, bis du dich vollkommen sicher fühlst. Das wirkt kontrolliert, verhindert aber Vertrauen. Sage direkt, was du wissen und klären möchtest.',
+                'Eine große Idee kann dich so begeistern, dass du Aufwand, Grenzen und betroffene Menschen unterschätzt. Bevor du zusagst, prüfe Zeit, Geld, Verantwortung und die konkreten Folgen für alle Beteiligten.',
                 'Du kannst deinen Wert an Belastbarkeit koppeln. Ziele werden härter, Zeitpläne enger und Bedürfnisse störender, weil Erfolg beweisen soll, dass du alles im Griff hast. Spirit wird dann zum inneren Vorstand, der permanent Leistung verlangt und niemals wirklich Feierabend macht.',
                 'Dein Zukunftsblick kann zur emotionalen Distanz werden. Du erkennst Systeme, Muster und bessere Lösungen, aber überspringst vielleicht die langsame menschliche Arbeit dazwischen. Rebellion ist noch keine Richtung; Anderssein noch keine gelebte Alternative.',
-                'Dein Wille kann im Nebel verschwinden. Du wartest auf Gewissheit, ein Zeichen oder den perfekten inneren Zustand und nennst das Intuition. Im Schatten übernimmst du fremde Visionen, rettest andere oder romantisierst Möglichkeiten, damit du dich nicht konkret festlegen musst.',
+                'Du könntest auf ein Zeichen oder den perfekten inneren Zustand warten, statt dich festzulegen. Prüfe, welche Fakten vorliegen, welche Entscheidung wirklich deine ist und bis wann du handeln möchtest.',
             ],
             transfers: [
                 'Triff eine Entscheidung, die deine Identität sichtbar macht: ein Satz, eine Grenze oder ein Auftritt. Erkläre sie nicht länger als nötig und beobachte, wie dein Körper auf klare Selbstführung reagiert.',
                 'Gib deiner Priorität ein reales Budget aus Zeit, Geld oder Aufmerksamkeit. Ein Wert, der keine Ressource erhält, ist noch keine Entscheidung.',
                 'Formuliere deine Richtung in einem einzigen klaren Satz und teile ihn mit jemandem. Streiche jede Einschränkung, die nur dazu dient, eine Hintertür offen zu halten.',
-                'Treffe eine Entscheidung für dein Zuhause, deine Familie oder deinen inneren Boden, die nicht nur Frieden bewahrt, sondern deine emotionale Autonomie stärkt.',
-                'Erschaffe etwas und zeige es, bevor du weißt, wie es aufgenommen wird. Dein Wille braucht Spielraum, aber auch den Moment, in dem Kreativität eine sichtbare Signatur bekommt.',
+                'Triff eine konkrete Entscheidung zu Zuhause oder Familie, die nicht nur Streit vermeidet, sondern auch deine eigenen Bedürfnisse schützt.',
+                'Erstelle etwas Eigenes und zeige es, bevor du weißt, wie andere reagieren. Lege einen konkreten Termin fest, an dem deine Idee sichtbar wird.',
                 'Übersetze deine Absicht in eine kleine wiederholbare Handlung. Lege Zeitpunkt, Dauer und Mindestversion fest – und miss Erfolg zunächst nur daran, ob du wiederkommst.',
-                'Vereinbare in einer Beziehung ausdrücklich, was ihr miteinander gestalten wollt. Gegenseitigkeit beginnt nicht bei Gedankenlesen, sondern bei zwei hörbaren Entscheidungen.',
+                'Sprecht in einer Beziehung ausdrücklich darüber, was ihr beide wollt. Haltet fest, was jede Person übernimmt und was nicht. Verlasst euch nicht darauf, dass der andere eure Erwartungen errät.',
                 'Benenne eine Machtfrage, Verpflichtung oder gemeinsame Ressource, über die du bisher nur indirekt verhandelst. Entscheide, welcher Teil wirklich deiner Verantwortung gehört.',
                 'Schreibe deine aktuelle Überzeugung als vorläufige These auf. Suche anschließend bewusst eine Perspektive, die sie erweitert oder korrigiert, und entscheide, was du tatsächlich daraus lebst.',
                 'Übernimm eine sichtbare Rolle oder definiere deine bestehende neu. Formuliere, wofür du verantwortlich bist, woran Wirkung erkennbar wird und was ausdrücklich nicht mehr zu deinem Auftrag gehört.',
@@ -249,36 +249,36 @@
             question: 'Was macht dich magnetisch und lebendig?',
             opening: [
                 'Eros ist dein tiefes Ja zum Leben. Nicht nur Sexualität, sondern der Moment, in dem Neugier, Lust und magnetische Lebenskraft durch dich hindurchgehen.',
-                'Hier wird dein Verlangen ehrlich. Was dich wirklich anzieht, belebt dich – und was dich belebt, macht dich spürbar.',
-                'Eros zeigt, wo du nicht nur funktionierst, sondern glühst. Wo dein Körper, dein Herz und deine kreative Kraft gleichzeitig wach werden.',
+                'Eros beschreibt, was dich stark anzieht und dir Lust, Neugier oder Energie gibt.',
+                'Dieser Punkt zeigt, bei welchen Menschen, Tätigkeiten und Erfahrungen du dich nicht nur pflichtbewusst, sondern wirklich wach und lebendig fühlst.',
             ],
             signs: [
                 'Dein Eros ist spontan, heiß und direkt. Spannung, Initiative und ein klares Ja lassen dich aufwachen. Zu viel Taktik kühlt dich ab – du willst Begegnung, die den Mut hat, wirklich zu beginnen.',
                 'Dein Begehren ist sinnlich, körperlich und langsam. Duft, Berührung, Geschmack und Verlässlichkeit bauen die Spannung auf. Je weniger du hetzt, desto tiefer kann dein Feuer werden.',
                 'Dein Eros geht über den Kopf. Worte, Humor, Nachrichten und geistige Beweglichkeit sind erotischer Treibstoff. Wenn das Gespräch aufhört zu leben, verliert häufig auch dein Begehren die Farbe.',
-                'Dein Eros ist weich, beschützend und tief. Sicherheit öffnet eine Hingabe, die unter Härte unsichtbar bleibt. Du willst nicht nur berührt, sondern emotional erkannt werden.',
+                'Emotionale Sicherheit ist für dein Begehren besonders wichtig. Du öffnest dich leichter, wenn du dich geschützt, verstanden und mit deinen Gefühlen ernst genommen fühlst.',
                 'Dein Eros strahlt. Romantik, Spiel, Kreativität und ein Gegenüber, das dein Feuer feiert, machen dich lebendig. Du willst nicht bloß gemocht – du willst mit ganzem Herzen gesehen werden.',
                 'Dein Begehren ist fein, aufmerksam und konkret. Kleine Gesten, gute Pflege und echte Präsenz können stärker wirken als jede große Show. Was du achtsam berührst, bekommt Bedeutung.',
-                'Schönheit, Blickkontakt und Resonanz entzünden dich. Dein Eros liebt Eleganz und Begegnung auf Augenhöhe. Harmonie wird sexy, solange sie nicht jede wilde Wahrheit aus dem Raum dekoriert.',
-                'Dein Eros ist intensiv, psychologisch und kompromisslos. Wahrheit, Tabu und vollständige Präsenz ziehen dich an. Lauwarm ermüdet dich – Tiefe kann dich verwandeln. Entscheidend ist, ob Intensität echte Intimität öffnet oder nur eine Bindung erzeugt, aus der niemand unverändert, aber auch niemand wirklich frei hervorgeht.',
+                'Schönheit, Blickkontakt, Eleganz und ein faires Miteinander ziehen dich an. Harmonie ist für dich erotisch. Sie sollte aber nicht dazu führen, dass wichtige Wünsche oder Konflikte verschwiegen werden.',
+                'Du fühlst dich von intensiven Menschen und tiefen Gesprächen stark angezogen. Vertrauen, Sexualität, Geheimnisse und Tabuthemen können wichtig sein. Prüfe, ob die Intensität echte Nähe schafft oder ob Kontrolle, Angst und Abhängigkeit die Verbindung zusammenhalten.',
                 'Freiheit, Abenteuer, Humor und neue Horizonte halten dein Feuer wach. Dein Eros braucht Raum und eine Begegnung, in der Wachstum nicht als Gefahr behandelt wird.',
                 'Dein Begehren ist konzentriert, reif und ausdauernd. Commitment, Kompetenz und klare Grenzen können tief erotisch wirken. Was langsam Vertrauen gewinnt, glüht bei dir häufig besonders lange.',
                 'Dein Eros ist frei, eigen und elektrisch. Ungewöhnliche Menschen und Verbindungen ohne enge Schubladen ziehen dich an. Nähe funktioniert am besten, wenn beide trotzdem ganz sie selbst bleiben dürfen.',
-                'Dein Eros ist mystisch, musikalisch und grenzenweich. Atmosphäre, Fantasie und seelische Resonanz öffnen dich. Die Kunst ist, Hingabe zu erleben, ohne dabei deine Konturen vollständig zu verlieren.',
+                'Musik, Atmosphäre, Fantasie und ein starkes Gefühl von Verbundenheit können dein Begehren wecken. Achte darauf, trotz großer Gefühle deine Grenzen und die Realität der anderen Person wahrzunehmen.',
             ],
             houses: [
                 'Dein Körper ist die Bühne. Andere können dein Feuer spüren, bevor du etwas sagst. Präsenz, Bewegung und Blickkontakt bringen Eros unmittelbar ins Leben. Dein Begehren wird besonders klar, wenn du nicht versuchst, begehrenswert zu wirken, sondern deine eigene körperliche Antwort ernst nimmst.',
                 'Lust entsteht über Sinne, Berührung, Stabilität und Genuss. Du begehrst, was greifbar ist und dir erlaubt, vollständig im Körper anzukommen. Zeit ist hier kein Hindernis, sondern ein erotischer Verstärker – sofern Langsamkeit nicht bloß eine elegante Form des Festhaltens wird.',
-                'Worte entzünden dich. Gespräche bis spät in die Nacht, Humor, Nachrichten und neugierige Fragen sind direkte Zugänge zu deiner Lebendigkeit. Entscheidend ist, ob Sprache wirkliche Nähe aufbaut oder nur genug Spannung erzeugt, damit niemand emotional still werden muss.',
+                'Gespräche bis spät in die Nacht, Humor, Nachrichten und neugierige Fragen können dich stark anziehen. Prüfe, ob daraus auch emotionale Nähe und verlässliches Verhalten entstehen – nicht nur spannende Worte.',
                 'Eros braucht einen geschützten Raum. Zuhause, Vertrautheit und emotionale Sicherheit öffnen eine Seite, die nicht für jede Öffentlichkeit bestimmt ist. Gerade deshalb müssen Geborgenheit und Grenze nebeneinander bestehen: Nähe verliert ihre Erotik, wenn sie zur vollständigen Verschmelzung wird.',
-                'Hier liebt Eros Spiel, Flirt, Kunst und Romantik. Kreativer Selbstausdruck ist Teil deiner magnetischen Signatur – Funkenflug ist ausdrücklich erlaubt. Dein Feuer wächst, wenn Freude nicht erst verdient werden muss und du riskierst, sichtbar begeistert statt nur souverän zu sein.',
+                'Spiel, Flirt, Kunst und Romantik machen dich in diesem Bereich lebendig. Zeige offen, wenn du begeistert bist. Du musst Freude nicht erst verdienen und auch nicht so tun, als wärst du immer souverän.',
                 'Eros lebt in Fürsorge, Ritualen und kleinen Gesten. Gemeinsamer Alltag kann tief sinnlich werden, wenn Aufmerksamkeit nicht mit bloßem Funktionieren verwechselt wird. Lust braucht hier keine große Inszenierung, wohl aber einen Moment, in dem Optimierung, Dienst und Nützlichkeit wirklich enden dürfen.',
-                'Du brauchst ein Gegenüber. Beziehung, Blickkontakt und echte Gegenseitigkeit stellen dein Feuer scharf. Dein Begehren wird größer, wenn jemand bewusst zurückschaut. Die erotische Aufgabe besteht darin, Resonanz zu genießen, ohne deine Wünsche so lange anzupassen, bis nur noch Harmonie übrig bleibt.',
-                'Eros will Tiefe, Nacktheit und Wahrheit. Intimität, Macht und Tabu sind keine Nebenthemen. Oberflächliche Begegnung verliert schnell ihre Spannung. Besonders wichtig sind ausgesprochene Zustimmung und Grenzen, damit Intensität nicht heimlich zur Prüfung, Kontrolle oder emotionalen Schuld wird.',
+                'Anziehung entsteht bei dir stark im direkten Kontakt mit einem anderen Menschen. Blickkontakt, Reaktion und echtes Interesse sind wichtig. Sage trotzdem klar, was du möchtest, statt deine Wünsche so lange anzupassen, bis es keinen Konflikt mehr gibt.',
+                'Du suchst intensive und ehrliche Intimität. Deshalb sind klare Zustimmung, Grenzen und offene Gespräche über Macht besonders wichtig. Starke Gefühle dürfen nicht dazu benutzt werden, die andere Person zu testen, zu kontrollieren oder unter Druck zu setzen.',
                 'Reisen, Lernen und geistige Abenteuer entzünden dich. Du willst ein Begehren, das deinen Horizont erweitert und nicht nur Bekanntes wiederholt. Die Verbindung bleibt lebendig, wenn Freiheit nicht Flucht bedeutet, sondern beide Menschen größer in ihr eigenes Leben zurückkehren lässt.',
-                'Wirkung, Verantwortung und sichtbare Kompetenz sind Teil deines erotischen Resonanzraums. Wenn du in deiner Rolle stehst, wird dein Charisma besonders deutlich. Der wichtige Unterschied: Begehrst du den Menschen, die gemeinsame Wirkung – oder die Sicherheit und Anerkennung, die sein Status verspricht?',
+                'Kompetenz, Verantwortung und berufliche Ausstrahlung können dich stark anziehen. Prüfe genau, was du begehrst: den Menschen selbst, eure gemeinsame Wirkung oder die Sicherheit und Anerkennung, die sein Status verspricht.',
                 'Freundschaft, Freiheit, Szenen und gemeinsame Visionen beleben Eros. Du begehrst Menschen, mit denen du Zukunft denken und trotzdem eigenständig bleiben kannst. Nähe wird besonders spannend, wenn sie aus Wahl entsteht – nicht aus sozialer Anpassung, emotionaler Unverfügbarkeit oder der Angst vor gewöhnlicher Bindung.',
-                'Dein Begehren ist feinstofflich und teilweise verborgen. Träume, Musik, Fantasie und Rückzug öffnen Türen zu einem Eros, der zuerst von der Seele wahrgenommen wird.',
+                'Musik, Fantasie, Träume und ungestörte Zeit können dein Begehren stark wecken. Nimm diese inneren Bilder ernst, aber prüfe in einer realen Beziehung immer auch Grenzen und Gegenseitigkeit.',
             ],
             jokers: [
                 'Was will mein Körper jetzt – bevor mein Kopf die Antwort sozial verträglich macht?',
@@ -286,9 +286,9 @@
                 'Welches Gespräch bringt meine Augen wieder zum Leuchten?',
                 'Wo brauche ich Sicherheit, um mich wirklich öffnen zu können?',
                 'Wo darf ich größer, verspielter und sichtbarer werden?',
-                'Welche kleine, achtsame Geste würde heute echte Lebendigkeit erzeugen?',
+                'Welche kleine Geste würde mir heute spürbar Freude oder Lust geben?',
                 'Welche Begegnung fühlt sich gleichzeitig schön, frei und gegenseitig an?',
-                'Welche Wahrheit macht mir Angst – und zugleich mein ganzes System wach?',
+                'Welchen Wunsch traue ich mich bisher nicht klar auszusprechen?',
                 'Welches Abenteuer erinnert mich daran, dass ich lebendig bin?',
                 'Welches klare Ja ist stark genug, um langsam tiefer zu werden?',
                 'Wo braucht Nähe mehr Freiheit statt mehr Kontrolle?',
@@ -297,52 +297,52 @@
             shadows: [
                 'Du kannst Begehren nur dann spüren, wenn etwas gejagt, erobert oder riskiert werden muss. Sobald Nähe verfügbar wird, sinkt die Spannung – oder du erzeugst Konflikt, damit wieder Hitze entsteht. Nicht jedes starke Kribbeln ist Kompatibilität; manchmal ist es nur Adrenalin mit gutem Marketing.',
                 'Genuss kann in Festhalten kippen. Du bleibst bei Menschen, Gewohnheiten oder Fantasien, weil dein Körper das Vertraute mit Sicherheit verwechselt. Sinnlichkeit wird dann zur Sedierung und Exklusivität zur Besitzfrage. Echte Langsamkeit bleibt lebendig; Stillstand wird nur bequem.',
-                'Du kannst dich in Worte, Flirt und Möglichkeiten verlieben, ohne je vollständig anzukommen. Die nächste Nachricht ist spannender als die emotionale Konsequenz der letzten. Der Schatten ist nicht Vielfalt, sondern eine Nervosität, die Tiefe sofort in Langeweile übersetzt.',
+                'Du könntest den Flirt und die nächste Nachricht spannender finden als eine echte, verbindliche Nähe. Sobald es ruhiger wird, wirkt die Verbindung vielleicht langweilig. Prüfe, ob wirklich etwas fehlt oder ob du nur an ständige neue Reize gewöhnt bist.',
                 'Dein Wunsch nach emotionaler Sicherheit kann Verschmelzung erzeugen. Du begehrst, was sich nach Zuhause anfühlt – auch wenn es eigentlich nur vertraute Verletzung ist. Fürsorge wird erotischer Vertrag, Rückzug zur Strafe und Nostalgie zum Filter über die Gegenwart.',
-                'Du willst gesehen werden, doch im Schatten wird jede Begegnung zur Bühne. Drama, Unerreichbarkeit oder besonders große Gesten halten das Feuer hoch, während leise Gegenseitigkeit fast zu gewöhnlich erscheint. Applaus kann Begehren spiegeln, aber keine intime Wahrheit ersetzen.',
-                'Deine Aufmerksamkeit für Details kann Berührung vertiefen – oder jeden Funken sezieren. Du optimierst dich, den anderen oder die Dynamik, bis Lust wie eine Aufgabe mit Qualitätskontrolle wirkt. Dienen wird zum Schatten, wenn du nur noch gebraucht, aber nicht mehr begehrt werden darfst.',
-                'Du kannst Ästhetik und Harmonie über Wahrheit stellen. Dann sieht die Verbindung besser aus, als sie sich anfühlt, und Begehren bleibt höflich, damit niemand ablehnt oder unbequem wird. Der Schatten ist Verführung ohne Position: viel Resonanz, wenig echtes Risiko.',
+                'Du möchtest deutlich gesehen und begehrt werden. Dadurch können Drama, große Gesten oder unerreichbare Menschen besonders spannend wirken. Prüfe, ob auch ruhige, verlässliche Nähe Platz hat, wenn niemand beeindruckt werden muss.',
+                'Du kannst so stark auf Details achten, dass Lust wie eine Aufgabe wird. Vielleicht versuchst du, dich selbst, die andere Person oder die Beziehung ständig zu verbessern. Frage dich, ob du gerade wirklich genießt oder nur dafür sorgst, gebraucht zu werden.',
+                'Du könntest eine Verbindung schöner darstellen, als sie sich tatsächlich anfühlt. Vielleicht bleibst du höflich und anziehend, sagst aber nicht klar, was du willst. Echte Nähe braucht eine eigene Position und die Möglichkeit, auch ein Nein zu hören.',
                 'Intensität kann zur Droge werden. Du prüfst, bindest, provozierst oder verschmilzt, um sicherzugehen, dass die Verbindung stark genug ist. Obsession fühlt sich dann wie Schicksal an. Wirkliche Intimität beginnt dort, wo Macht, Zustimmung und Angst ausgesprochen werden dürfen.',
                 'Freiheit kann zur Flucht vor Bindung werden. Du begehrst das Ferne, Neue oder Unerreichbare und verlierst Interesse, sobald Alltag und Wiederholung beginnen. Nicht jede Grenze ist ein Käfig; manchmal ist sie genau die Form, in der ein Feuer länger als eine Reise brennen kann.',
-                'Du kannst Begehren disziplinieren, bis nur noch kontrollierte Intensität übrig bleibt. Status, Kompetenz oder Unerreichbarkeit werden erotisch, weil sie Verletzlichkeit verzögern. Der Schatten ist eine perfekte Fassade, unter der Bedürfnisse erst dann erlaubt sind, wenn sie strategisch sinnvoll erscheinen.',
+                'Du könntest Gefühle und Begehren stark kontrollieren. Menschen mit Status, Kompetenz oder emotionalem Abstand wirken dann besonders anziehend, weil du selbst nicht sofort verletzlich sein musst. Übe, ein echtes Bedürfnis zu zeigen, ohne es vorher perfekt zu begründen.',
                 'Du willst Freiheit, kannst aber emotionale Distanz als Unabhängigkeit verkaufen. Unerreichbare, ungewöhnliche oder komplizierte Menschen halten dein System elektrisch, ohne dich wirklich zu binden. Rebellion gegen Normen ist nicht automatisch intime Ehrlichkeit.',
-                'Deine Fantasie kann einen Menschen in eine Projektionsfläche verwandeln. Du spürst Seelenverwandtschaft, Möglichkeit und Magie – und übersiehst Grenzen, Widersprüche oder fehlende Gegenseitigkeit. Hingabe wird gefährlich, wenn du dafür deine Wahrnehmung opfern musst.',
+                'Du könntest einen Menschen stärker idealisieren, als die reale Beziehung es rechtfertigt. Achte auf konkrete Handlungen, klare Grenzen und echtes gegenseitiges Interesse. Ein starkes Gefühl ersetzt keine verlässliche Realität.',
             ],
             transfers: [
                 'Tu etwas, das dich unmittelbar in deinen Körper bringt: Bewegung, Kleidung, Blickkontakt oder eine klare Initiative. Frage danach nicht nur „War ich mutig?“, sondern „War mein Ja wirklich meines?“',
                 'Plane ein langsames sinnliches Ritual ohne Bildschirm und ohne Leistung: Essen, Berührung, Musik oder Natur. Beobachte, wann Genuss auftaucht und wann du nur Gewohnheit wiederholst.',
                 'Beginne das Gespräch, das dich geistig und körperlich wach macht. Stelle eine echte Frage, sage etwas Riskantes und bleib lang genug, um die Antwort nicht sofort mit einem neuen Thema zu überholen.',
                 'Schaffe einen Raum, in dem Öffnung sicherer wird: Tür zu, Handy weg, klare Zeit, klare Grenze. Sag, was du brauchst, bevor du hoffst, dass jemand es errät.',
-                'Mach ein Date mit deiner eigenen Lebendigkeit: tanzen, flirten, fotografieren, malen, auftreten. Wähle etwas, bei dem du sichtbar wirst, ohne den Wert des Moments vom Applaus abhängig zu machen.',
+                'Plane eine Aktivität, die dir Freude und Energie gibt: tanzen, flirten, fotografieren, malen oder auftreten. Wähle etwas, das du auch dann genießen würdest, wenn niemand dafür applaudiert.',
                 'Bring Sinnlichkeit in eine alltägliche Handlung: Kochen, Duschen, Aufräumen, Pflege oder gemeinsame Routine. Nimm wahr, ob Aufmerksamkeit Lust erzeugt – oder ob du dich wieder nur nützlich machst.',
-                'Führe ein klares Gespräch über Anziehung, Grenzen und Gegenseitigkeit. Sag sowohl, was du willst, als auch, was du nicht mehr schönreden möchtest.',
+                'Führe ein klares Gespräch über Anziehung und Grenzen. Sage, was du möchtest, was du nicht möchtest und woran du echtes gegenseitiges Interesse erkennst.',
                 'Benenne eine Fantasie, Angst oder Machtfrage, die unter der Intimität liegt. Prüfe Zustimmung, Konsequenzen und gemeinsame Verantwortung, bevor Intensität die Führung übernimmt.',
                 'Wähle ein reales Abenteuer, das deinen Horizont erweitert, ohne dein bestehendes Leben abzuwerten. Freiheit wird reifer, wenn du auch zurückkommen und integrieren kannst.',
                 'Erlaube einem langsamen Ja, tiefer zu werden. Zeige ein Bedürfnis, das sich nicht durch Kompetenz lösen lässt, und beobachte, ob die Verbindung auch deine Weichheit tragen kann.',
                 'Verhandle Freiheit konkret: Zeit, Raum, Freundschaften, Sexualität, Erwartungen. Unabhängigkeit wird intim, wenn sie nicht als unangekündigter Rückzug daherkommt.',
-                'Gib einer Fantasie eine kreative Form – Musik, Text, Bild, Tanz – bevor du sie auf einen Menschen projizierst. Prüfe anschließend, was davon Sehnsucht, Wahrheit und tatsächliche Gegenseitigkeit ist.',
+                'Drücke eine Fantasie zuerst kreativ aus – zum Beispiel durch Musik, Schreiben, Malen oder Tanz. Prüfe danach, welcher Teil nur in deiner Vorstellung existiert und welcher Teil mit einem realen Menschen wirklich möglich und gegenseitig gewollt ist.',
             ],
         },
     };
 
     const CONJUNCTIONS = {
-        Sonne: 'Die Sonne macht diesen Punkt sichtbar und zentral. Was hier geschieht, will nicht im Schatten bleiben – es möchte bewusst verkörpert werden.',
-        Mond: 'Der Mond macht diesen Punkt körperlich, emotional und unmittelbar spürbar. Bedürfnisse, Rhythmen und Erinnerungen färben seine Wirkung stark.',
-        Merkur: 'Merkur bringt Sprache, Neugier und geistige Beweglichkeit hinein. Gespräche, Schreiben und Verstehen werden zu Aktivatoren.',
-        Venus: 'Venus verstärkt Anziehung, Genuss, Beziehung und ästhetisches Empfinden. Dieser Punkt öffnet sich über Resonanz statt über Druck.',
-        Mars: 'Mars gibt Hitze, Mut und Handlungskraft. Die Energie will nicht nur verstanden, sondern getan werden – direkt und deutlich.',
-        Jupiter: 'Jupiter vergrößert das Feld. Wachstum, Sinn, Vertrauen und manchmal auch Übertreibung machen diesen Punkt besonders weitreichend.',
-        Saturn: 'Saturn verdichtet und vertieft. Reife, Verzögerung, Verantwortung und Meisterschaft machen aus einem schnellen Impuls eine langfristige Aufgabe.',
-        Uranus: 'Uranus elektrisiert diesen Punkt. Freiheit, Überraschung und eine unkonventionelle Signatur lassen ihn anders arbeiten als erwartet.',
-        Neptun: 'Neptun macht die Wirkung fein, intuitiv und durchlässig. Vision und Sehnsucht sind stark – klare Grenzen helfen, die Gabe nicht in Projektion zu verlieren.',
-        Pluto: 'Pluto intensiviert radikal. Macht, Wahrheit, Obsession und tiefgreifende Wandlung können an diesem Punkt kaum oberflächlich gelebt werden.',
+        Sonne: 'Die Sonne macht dieses Thema besonders wichtig für dein Selbstbild. Du möchtest hier gesehen werden und dich klar ausdrücken.',
+        Mond: 'Der Mond verbindet dieses Thema stark mit deinen Gefühlen, Bedürfnissen und deinem Sicherheitsgefühl.',
+        Merkur: 'Merkur macht Gespräche, Fragen, Lernen und Schreiben in diesem Bereich besonders wichtig.',
+        Venus: 'Venus betont Beziehung, Anziehung, Genuss und die Frage, was dir wirklich wertvoll erscheint.',
+        Mars: 'Mars verstärkt deinen Handlungsdrang. Du möchtest hier schnell aktiv werden und brauchst klare Ziele und Grenzen.',
+        Jupiter: 'Jupiter verstärkt den Wunsch nach Wachstum und neuen Möglichkeiten. Achte darauf, dabei nicht mehr zu versprechen, als du tragen kannst.',
+        Saturn: 'Saturn verlangt Geduld, Verantwortung und klare Strukturen. Fortschritt kann länger dauern, dafür aber stabil werden.',
+        Uranus: 'Uranus verstärkt deinen Wunsch nach Freiheit und Veränderung. Ungewöhnliche Lösungen können hier besser funktionieren als der übliche Weg.',
+        Neptun: 'Neptun verstärkt Fantasie, Sehnsucht und Intuition. Prüfe gleichzeitig Fakten und Grenzen, damit du dir nichts schönredest.',
+        Pluto: 'Pluto macht dieses Thema intensiv. Fragen nach Vertrauen, Kontrolle, Macht und Abhängigkeit sollten hier offen besprochen werden.',
     };
 
     const ELEMENT_COPY = {
         Feuer: 'will Bewegung, Mut und gelebte Begeisterung',
         Erde: 'will Substanz, Verkörperung und etwas, das im Alltag trägt',
         Luft: 'will Sprache, Verbindung und einen freien geistigen Raum',
-        Wasser: 'will Resonanz, Intuition und emotionale Wahrhaftigkeit',
+        Wasser: 'braucht emotionale Sicherheit, ehrliche Gefühle und klare Grenzen',
     };
 
     const FOCUS = {
@@ -374,7 +374,7 @@
             label: 'Mich selbst besser verstehen',
             fortune: 'Fortune erklärt, welche Erfahrungen deinem System vermitteln: Hier darf ich ankommen. Oft ist das so selbstverständlich für dich, dass du seine unterstützende Kraft unterschätzt.',
             spirit: 'Spirit erklärt, wie du Autorin deines Lebens wirst. Er zeigt, welche Art von Entscheidung sich nach dir anfühlt – nicht nur nach Anpassung, Pflicht oder einer klugen Strategie.',
-            eros: 'Eros erklärt, woran du merkst, dass du nicht nur funktionierst. Seine Signatur zeigt sich dort, wo Lust, Neugier und Präsenz gleichzeitig zurückkehren.',
+            eros: 'Eros zeigt dir, woran du merkst, dass du nicht nur funktionierst. Achte darauf, bei welchen Menschen und Tätigkeiten Lust, Neugier und volle Aufmerksamkeit gleichzeitig zurückkehren.',
         },
     };
 
@@ -382,7 +382,7 @@
         Feuer: 'Du erkennst die stimmige Richtung daran, dass Mut, Bewegung und echte Begeisterung entstehen – ohne dass du permanent Drama oder Druck dafür brauchst.',
         Erde: 'Du erkennst die stimmige Richtung daran, dass sie im Alltag tragfähig wird: in Zeit, Körper, Geld, Verlässlichkeit und konkreten nächsten Schritten.',
         Luft: 'Du erkennst die stimmige Richtung daran, dass Denken und Austausch dich weiterbringen. Entscheidend ist, dass aus einer Idee irgendwann ein Gespräch, eine Wahl oder eine Handlung wird.',
-        Wasser: 'Du erkennst die stimmige Richtung an emotionaler Resonanz und einem leisen inneren Wissen. Wichtig ist, Gefühl nicht mit Wunschdenken oder fehlenden Grenzen zu verwechseln.',
+        Wasser: 'Du erkennst eine passende Richtung daran, dass sie sich emotional sicher und ehrlich anfühlt. Prüfe trotzdem Fakten und Grenzen, damit du ein starkes Gefühl nicht mit einer sicheren Entscheidung verwechselst.',
     };
 
     const form = document.getElementById('fortune-form');
@@ -627,14 +627,15 @@
         if (!detail.conjunctions.length) { return ''; }
         const lot = LOTS[key];
         const list = detail.conjunctions.map(item => `<li><strong>${escapeHtml(item.planet)} · ${item.distance.toFixed(1)}° Orbis</strong><br>${CONJUNCTIONS[item.planet]}</li>`).join('');
+        const planetNames = detail.conjunctions.map(item => escapeHtml(item.planet)).join(' und ');
         const headline = detail.conjunctions.length === 1
             ? `${escapeHtml(detail.conjunctions[0].planet)} verstärkt deinen ${lot.name}-Punkt.`
             : `Mehrere Planeten verstärken deinen ${lot.name}-Punkt.`;
         return `
             <section class="fortune-layer">
-                <p class="fortune-layer-label">Extra emphasis · a stronger signal</p>
+                <p class="fortune-layer-label">Zusätzlicher Einfluss</p>
                 <h3>${headline}</h3>
-                <p>Diese Nähe macht das Thema im Alltag deutlicher und unmittelbarer spürbar.</p>
+                <p>${planetNames} ${detail.conjunctions.length === 1 ? 'steht' : 'stehen'} sehr nah an deinem ${lot.name}-Punkt. Deshalb ${detail.conjunctions.length === 1 ? 'spielt dieser Planet' : 'spielen diese Planeten'} in diesem Teil deines persönlichen Readings eine größere Rolle.</p>
                 <ul class="fortune-conjunction-list">${list}</ul>
             </section>`;
     }
@@ -642,10 +643,15 @@
     function focusMarkup(key, detail, focus) {
         const selected = FOCUS[focus];
         if (!selected) { return ''; }
+        const headline = key === 'fortune'
+            ? `Was dir beim Thema ${selected.label} Sicherheit gibt.`
+            : key === 'spirit'
+                ? `Welche Entscheidung beim Thema ${selected.label} bei dir liegt.`
+                : `Was dir beim Thema ${selected.label} Lust und Energie gibt.`;
         return `
             <section class="fortune-facets">
-                <p class="fortune-layer-label">Your question · ${selected.label}</p>
-                <h3>Was das für deine aktuelle Situation bedeutet.</h3>
+                <p class="fortune-layer-label">Dein Thema · ${selected.label}</p>
+                <h3>${headline}</h3>
                 <div class="fortune-facet-grid">
                     <article>
                         <span>↘</span>
@@ -658,16 +664,26 @@
 
     function personalLayersMarkup(key, detail, focus) {
         const lot = LOTS[key];
+        const shadowHeadline = key === 'fortune'
+            ? 'Was dir den Halt nehmen kann.'
+            : key === 'spirit'
+                ? 'Was eine klare Entscheidung verhindern kann.'
+                : 'Was du mit echter Nähe oder Lust verwechseln könntest.';
+        const actionHeadline = key === 'fortune'
+            ? 'So stärkst du deinen Halt.'
+            : key === 'spirit'
+                ? 'So kommst du zu einer klaren Entscheidung.'
+                : 'So bringst du mehr Lust und Energie in dein Leben.';
         return `
             ${focusMarkup(key, detail, focus)}
             <aside class="fortune-shadow-truth">
-                <p class="fortune-layer-label">The honest part · no sugarcoating</p>
-                <h3>Wo deine Stärke gegen dich arbeiten kann.</h3>
+                <p class="fortune-layer-label">Worauf du achten solltest</p>
+                <h3>${shadowHeadline}</h3>
                 <p>${lot.shadows[detail.signIndex]}</p>
             </aside>
             <section class="fortune-transfer">
-                <p class="fortune-layer-label">Transfer · take it into your life</p>
-                <h3>Probier es im echten Leben aus.</h3>
+                <p class="fortune-layer-label">Konkreter nächster Schritt</p>
+                <h3>${actionHeadline}</h3>
                 <ol>
                     <li><span>01 · Experiment</span><p>${lot.transfers[detail.house - 1]}</p></li>
                 </ol>
@@ -684,17 +700,17 @@
             const previousLot = LOTS[previousKey];
             return `
                 <section class="fortune-layer">
-                    <p class="fortune-layer-label">The shared ruler · what connects</p>
+                    <p class="fortune-layer-label">Gemeinsamer astrologischer Herrscher</p>
                     <h3>${detail.ruler} verbindet ${previousLot.name} und ${lot.name}.</h3>
-                    <p>${detail.ruler} führt auch deinen ${previousLot.name}-Punkt. Das bedeutet: Beide Kräfte öffnen sich über ${PLANET_STRATEGY[detail.ruler]}. Bei dir steht ${detail.ruler} im Zeichen ${detail.rulerSign.name} und im ${detail.rulerHouse}. Haus. Dadurch treten bei beiden <strong>${detail.rulerSign.essence}</strong> stärker hervor. Der konkrete Lebensbereich ist <strong>${HOUSES[detail.rulerHouse - 1]}</strong>.</p>
+                    <p>In der Astrologie wird sowohl ${previousLot.name} als auch ${lot.name} bei dir mit ${detail.ruler} verbunden. Deshalb hilft dir bei beiden Themen dieselbe Vorgehensweise: ${PLANET_STRATEGY[detail.ruler]}. ${detail.ruler} steht in deinem Horoskop im ${detail.rulerHouse}. Haus. Praktisch betrifft das besonders den Lebensbereich <strong>${HOUSES[detail.rulerHouse - 1]}</strong>.</p>
                 </section>`;
         }
 
         return `
             <section class="fortune-layer">
-                <p class="fortune-layer-label">The ruler · how it becomes real</p>
-                <h3>${detail.ruler} zeigt, wie sich dieser Punkt öffnet.</h3>
-                <p>Das Zeichen ${detail.sign.name} wird traditionell ${RULER_BY[detail.ruler]} regiert. Deshalb führt dein Weg hier über ${PLANET_STRATEGY[detail.ruler]}. Bei dir steht ${detail.ruler} auf ${degreeLabel(detail.rulerLongitude)} im ${detail.rulerHouse}. Haus. Dadurch treten <strong>${detail.rulerSign.essence}</strong> stärker hervor. Konkret wird dieser Weg vor allem im Bereich <strong>${HOUSES[detail.rulerHouse - 1]}</strong>.</p>
+                <p class="fortune-layer-label">So setzt du dieses Thema um</p>
+                <h3>${detail.ruler} beschreibt deine praktische Vorgehensweise.</h3>
+                <p>In der traditionellen Astrologie gehört das Zeichen ${detail.sign.name} zu ${detail.ruler}. Für dich heißt das: Dieses Thema wird leichter, wenn du beginnst, ${PLANET_STRATEGY[detail.ruler]}. ${detail.ruler} steht in deinem Horoskop im ${detail.rulerHouse}. Haus. Deshalb spielt der Bereich <strong>${HOUSES[detail.rulerHouse - 1]}</strong> dabei eine besonders wichtige Rolle.</p>
                 <p class="fortune-ruler-shadow"><strong>Achte darauf:</strong> ${PLANET_SHADOW[detail.ruler]}</p>
             </section>`;
     }
@@ -711,19 +727,19 @@
             <article class="fortune-reading-section" id="reading-${key}">
                 <aside class="fortune-reading-aside">
                     <p class="fortune-kicker">${lot.name} · ${degreeLabel(detail.longitude)}</p>
-                    <h2>Your<br><em>${key === 'fortune' ? 'Flow.' : key === 'spirit' ? 'Will.' : 'Fire.'}</em></h2>
+                    <h2>Dein<br><em>${key === 'fortune' ? 'Halt.' : key === 'spirit' ? 'Wille.' : 'Verlangen.'}</em></h2>
                     <p>${lot.question}</p>
                 </aside>
                 <div class="fortune-reading-body">
                     <p class="fortune-reading-lead">${opening}</p>
                     <section class="fortune-layer">
-                        <p class="fortune-layer-label">The sign · How</p>
+                        <p class="fortune-layer-label">Das Zeichen · Wie du vorgehst</p>
                         <h3>${detail.sign.symbol} ${lot.name} in ${detail.sign.name}</h3>
                         <p>${lot.signs[detail.signIndex]}</p>
                     </section>
                     <blockquote class="fortune-pullquote"><span aria-hidden="true"></span>${pullQuote}</blockquote>
                     <section class="fortune-layer">
-                        <p class="fortune-layer-label">The house · Where</p>
+                        <p class="fortune-layer-label">Das Haus · Wo du es erlebst</p>
                         <h3>${detail.house}. Haus · ${HOUSES[detail.house - 1]}</h3>
                         <p>${lot.houses[detail.house - 1]}</p>
                     </section>
@@ -747,15 +763,15 @@
                 .sort((a, b) => a.orb - b.orb)[0];
             if (target.orb <= 4) {
                 const dynamic = target.angle === 0
-                    ? 'Die beiden Kräfte sind eng miteinander verschmolzen: Was die eine aktiviert, zieht die andere unmittelbar mit.'
+                    ? 'Die beiden Themen sind eng verbunden. Wenn eines davon wichtig wird, wird meistens auch das andere aktiviert.'
                     : target.angle === 60
-                        ? 'Zwischen ihnen liegt ein nutzbares Talent. Es öffnet sich jedoch erst, wenn du selbst eine Verbindung herstellst.'
+                        ? 'Diese beiden Themen können sich gut ergänzen. Du musst sie aber bewusst miteinander verbinden und praktisch nutzen.'
                         : target.angle === 90
-                            ? 'Hier sitzt produktive Reibung. Die beiden Bedürfnisse lassen sich nicht dauerhaft gegeneinander ausspielen; sie verlangen eine neue, erwachsenere Strategie.'
+                            ? 'Diese beiden Themen können miteinander in Konflikt geraten. Statt eines davon zu unterdrücken, brauchst du eine Lösung, die beide Bedürfnisse berücksichtigt.'
                             : target.angle === 120
-                                ? 'Die Energien verstehen einander fast mühelos. Genau deshalb lohnt es sich zu prüfen, ob du diese Gabe bewusst nutzt oder für selbstverständlich hältst.'
-                                : 'Die Kräfte stehen sich gegenüber und machen ein Entweder-oder besonders verführerisch. Integration beginnt, wenn beide Seiten gleichzeitig eine Stimme bekommen.';
-                found.push(`${pairLabels[first]} und ${pairLabels[second]} stehen in einer ${aspectNames[target.angle]} mit ${target.orb.toFixed(1)}° Orbis. ${dynamic}`);
+                                ? 'Diese beiden Themen unterstützen sich fast von selbst. Prüfe, ob du diesen Vorteil bewusst nutzt oder ihn bisher übersiehst.'
+                                : 'Diese beiden Themen ziehen oft in unterschiedliche Richtungen. Du musst dich nicht dauerhaft für eine Seite entscheiden; beide brauchen einen klaren Platz.';
+                found.push(`Zwischen ${pairLabels[first]} und ${pairLabels[second]} besteht astrologisch eine ${aspectNames[target.angle]}. Der Abstand zur exakten Verbindung beträgt ${target.orb.toFixed(1)}°. Das bedeutet: ${dynamic}`);
             }
         });
 
@@ -765,7 +781,7 @@
         });
         Object.entries(rulerGroups).forEach(([ruler, lots]) => {
             if (lots.length > 1) {
-                found.push(`${lots.join(' und ')} werden beide von ${ruler} geführt. Das ist wichtig: Mehr als eine deiner Kernkräfte öffnet sich über ${PLANET_STRATEGY[ruler]}. Wenn ${ruler} unter Druck gerät, kann deshalb auch derselbe Schatten an mehreren Stellen auftauchen. ${PLANET_SHADOW[ruler]}`);
+                found.push(`${lots.join(' und ')} haben bei dir denselben astrologischen Herrscher: ${ruler}. Deshalb hilft dir bei beiden Themen dieselbe Vorgehensweise: ${PLANET_STRATEGY[ruler]}. Gleichzeitig kann auch dieselbe Schwierigkeit in beiden Bereichen auftauchen. ${PLANET_SHADOW[ruler]}`);
             }
         });
         return found;
@@ -784,26 +800,26 @@
 
         if (allSameRuler) {
             return {
-                headline: 'Deine drei Lots haben einen gemeinsamen Schlüssel.',
-                intro: `${fortune.ruler} verbindet, was dich trägt, was du bewusst erschaffst und was dich lebendig macht. Dadurch wirkt dein Reading ungewöhnlich gebündelt: Wenn du den Zugang über ${PLANET_STRATEGY[fortune.ruler]} stärkst, bewegst du nicht nur einen einzelnen Bereich, sondern deine gesamte Drei-Lot-Matrix.`,
+                headline: 'Alle drei Punkte werden von demselben Planeten geprägt.',
+                intro: `Fortune, Spirit und Eros sind bei dir alle mit ${fortune.ruler} verbunden. Deshalb wirkt dieselbe Vorgehensweise in allen drei Bereichen: ${PLANET_STRATEGY[fortune.ruler]}. Wenn du das bewusst übst, stärkst du gleichzeitig deinen Halt, deine Entscheidungen und deine Lebensfreude.`,
             };
         }
         if (spiritErosMatch) {
             return {
-                headline: 'Was du willst und was dich lebendig macht, gehört zusammen.',
-                intro: `Spirit und Eros stehen beide im Zeichen ${spirit.sign.name} und im ${spirit.house}. Haus. Dein bewusster Wille und deine Lebenskraft sprechen deshalb dieselbe Sprache und werden im selben Lebensbereich aktiviert. Fortune im Zeichen ${fortune.sign.name} und im ${fortune.house}. Haus zeigt, was dich auf diesem Weg zusätzlich trägt.`,
+                headline: 'Was du willst, passt gut zu dem, was dich lebendig macht.',
+                intro: `Spirit und Eros stehen beide im Zeichen ${spirit.sign.name} und im ${spirit.house}. Haus. Das bedeutet: Deine bewussten Entscheidungen und deine Lust werden im selben Lebensbereich wichtig – bei dir im Bereich ${HOUSES[spirit.house - 1]}. Fortune im ${fortune.house}. Haus zeigt zusätzlich, wo du dafür Stabilität und Unterstützung findest.`,
             };
         }
         if (fortuneSpiritHouse) {
             return {
-                headline: 'Was dich trägt und was du erschaffst, beginnt am selben Ort.',
-                intro: `Fortune und Spirit stehen beide im ${fortune.house}. Haus – im Bereich ${HOUSES[fortune.house - 1]}. Was dir Halt gibt und wo du bewusst Verantwortung übernehmen willst, gehört damit eng zusammen. Eros im Zeichen ${eros.sign.name} und im ${eros.house}. Haus zeigt, wodurch dabei echte Lebendigkeit entsteht.`,
+                headline: 'Derselbe Lebensbereich gibt dir Halt und verlangt Entscheidungen.',
+                intro: `Fortune und Spirit stehen beide im ${fortune.house}. Haus. Bei dir geht es dabei konkret um ${HOUSES[fortune.house - 1]}. Was dir hier Sicherheit gibt, ist eng damit verbunden, was du selbst gestalten und entscheiden sollst. Eros im ${eros.house}. Haus zeigt zusätzlich, was dir dabei Lust und Energie gibt.`,
             };
         }
         if (spiritErosSign) {
             return {
-                headline: 'Dein Wille und dein Begehren sprechen dieselbe Sprache.',
-                intro: `Spirit und Eros stehen beide im Zeichen ${spirit.sign.name}. Was du bewusst wählen willst und was dich magnetisch anzieht, folgt damit einer ähnlichen inneren Logik. Weil sie in unterschiedlichen Häusern stehen, will diese Kraft jedoch in zwei verschiedenen Lebensbereichen konkret werden.`,
+                headline: 'Du willst oft genau das, was dich auch stark anzieht.',
+                intro: `Spirit und Eros stehen beide im Zeichen ${spirit.sign.name}. Deine Entscheidungen und deine Anziehung funktionieren deshalb auf eine ähnliche Art. Sie stehen aber in unterschiedlichen Häusern. Das heißt: Du erlebst diese Gemeinsamkeit in zwei verschiedenen Lebensbereichen und solltest beide getrennt ernst nehmen.`,
             };
         }
         if (sharedRuler) {
@@ -811,13 +827,13 @@
             const labels = { fortune: 'Fortune', spirit: 'Spirit', eros: 'Eros' };
             const ruler = chart.lots[first].ruler;
             return {
-                headline: `Zwei deiner wichtigsten Kräfte öffnen sich über ${ruler}.`,
-                intro: `${labels[first]} und ${labels[second]} werden beide von ${ruler} geführt. Damit verbindet ${PLANET_STRATEGY[ruler]} zwei Teile deines Readings, die auf den ersten Blick unterschiedlich wirken können. Der dritte Punkt setzt einen eigenen Akzent und verhindert, dass daraus eine Einbahnstraße wird.`,
+                headline: `${ruler} verbindet zwei Teile deines Readings.`,
+                intro: `${labels[first]} und ${labels[second]} haben bei dir denselben astrologischen Herrscher: ${ruler}. Deshalb hilft dir in beiden Bereichen dieselbe Vorgehensweise: ${PLANET_STRATEGY[ruler]}. Der dritte Punkt funktioniert anders und zeigt dir, welche zusätzliche Fähigkeit du ebenfalls brauchst.`,
             };
         }
         return {
-            headline: 'Was dich trägt, ist nicht automatisch das, was dich antreibt.',
-            intro: `Fortune steht im Zeichen ${fortune.sign.name} und im ${fortune.house}. Haus, Spirit im Zeichen ${spirit.sign.name} und im ${spirit.house}. Haus, Eros im Zeichen ${eros.sign.name} und im ${eros.house}. Haus. Deine drei Lots setzen unterschiedliche Schwerpunkte. Genau darin liegt ihre Stärke: Sie helfen dir zu unterscheiden, ob du gerade Halt, eine bewusste Entscheidung oder neue Lebendigkeit brauchst.`,
+            headline: 'Halt, Entscheidungen und Lebensfreude funktionieren bei dir unterschiedlich.',
+            intro: `Fortune steht bei dir in ${fortune.sign.name} im ${fortune.house}. Haus. Spirit steht in ${spirit.sign.name} im ${spirit.house}. Haus. Eros steht in ${eros.sign.name} im ${eros.house}. Haus. Deshalb brauchst du nicht für jedes Problem dieselbe Lösung. Frage dich zuerst: Brauche ich gerade mehr Sicherheit, eine klare Entscheidung oder etwas, das mir wieder Energie und Freude gibt?`,
         };
     }
 
@@ -831,18 +847,18 @@
         const spiritErosMatch = spirit.signIndex === eros.signIndex && spirit.house === eros.house;
 
         const paragraphOne = sameHouse
-            ? `Fortune und Spirit treffen sich in deinem ${fortune.house}. Haus. Das heißt: Was dich stabilisiert und was du bewusst gestalten willst, wird im selben Lebensbereich sichtbar – bei dir im Bereich ${HOUSES[fortune.house - 1]}. Wenn du dort Verantwortung übernimmst, musst du nicht zwischen Sicherheit und Richtung wählen.`
+            ? `Fortune und Spirit stehen beide in deinem ${fortune.house}. Haus. Das betrifft den Bereich ${HOUSES[fortune.house - 1]}. Genau dort findest du Sicherheit – und genau dort musst du auch selbst entscheiden. Warte deshalb nicht nur darauf, dass dieser Bereich dich trägt. Gestalte ihn aktiv mit.`
             : aligned
-                ? `Fortune und Spirit gehören beide zum Element ${fortune.sign.element}. Was dich trägt und wie du Entscheidungen triffst, folgt deshalb einer ähnlichen Grundbewegung: Es ${ELEMENT_COPY[fortune.sign.element]}. Das kann vieles erleichtern. Achte nur darauf, diese eine Stärke nicht zur einzigen erlaubten Strategie zu machen.`
-                : `Fortune im Zeichen ${fortune.sign.name} und Spirit im Zeichen ${spirit.sign.name} arbeiten unterschiedlich. Dein Flow ${ELEMENT_COPY[fortune.sign.element]}; dein Wille ${ELEMENT_COPY[spirit.sign.element]}. Du musst dich nicht für eine Seite entscheiden. Hilfreicher ist die Frage nach der Reihenfolge: Was stabilisiert dich zuerst – und welche klare Entscheidung kann daraus entstehen?`;
+                ? `Fortune und Spirit gehören beide zum Element ${fortune.sign.element}. Deshalb passen die Dinge, die dir Halt geben, grundsätzlich gut zu deiner Art, Entscheidungen zu treffen. Beides ${ELEMENT_COPY[fortune.sign.element]}. Nutze diese Stärke, aber bleibe offen dafür, dass manche Situationen trotzdem eine andere Vorgehensweise brauchen.`
+                : `Fortune steht in ${fortune.sign.name}, Spirit in ${spirit.sign.name}. Deshalb bekommst du nicht automatisch durch dieselben Dinge Halt und Klarheit. Was dich stabilisiert, ${ELEMENT_COPY[fortune.sign.element]}. Wenn du entscheidest, ${ELEMENT_COPY[spirit.sign.element]}. Gehe in dieser Reihenfolge vor: Sorge zuerst für Stabilität und entscheide danach.`;
 
         const paragraphTwo = spiritErosMatch
-            ? `Spirit und Eros stehen beide im Zeichen ${spirit.sign.name} und im ${spirit.house}. Haus. Wenn dich etwas wirklich lebendig macht, kann daraus besonders schnell ein klares Wollen entstehen. Umgekehrt verliert eine Entscheidung an Kraft, wenn sie zwar vernünftig aussieht, aber deine Lebendigkeit dauerhaft ausschließt.`
+            ? `Spirit und Eros stehen beide in ${spirit.sign.name} im ${spirit.house}. Haus. Was dir in diesem Lebensbereich Freude und Energie gibt, kann deshalb schnell zu einer klaren Entscheidung werden. Eine Entscheidung, die nur vernünftig aussieht, dich aber dauerhaft auslaugt, wird hier wahrscheinlich nicht lange funktionieren.`
             : spirit.sign.element === eros.sign.element
-                ? `Spirit und Eros teilen das Element ${spirit.sign.element}. Dein Wille und dein Begehren verstehen sich grundsätzlich. Der Unterschied liegt in ihren Häusern: Entscheiden und Begehren wollen bei dir in unterschiedlichen Lebensbereichen ernst genommen werden.`
-                : `Spirit arbeitet bei dir über das Element ${spirit.sign.element}, Eros über das Element ${eros.sign.element}. Deshalb fühlt sich nicht alles, was dich anzieht, sofort vernünftig oder umsetzbar an. Eros liefert Energie und Wahrheit über dein Begehren; Spirit entscheidet, welche Form du dieser Energie geben willst.`;
+                ? `Spirit und Eros gehören beide zum Element ${spirit.sign.element}. Was du bewusst willst und was dir Lust oder Energie gibt, passt daher oft gut zusammen. Weil beide Punkte in unterschiedlichen Häusern stehen, betrifft das bei dir jedoch verschiedene Lebensbereiche.`
+                : `Spirit gehört bei dir zum Element ${spirit.sign.element}, Eros zum Element ${eros.sign.element}. Deshalb ist nicht alles, was dich stark anzieht, automatisch vernünftig oder sofort umsetzbar. Nimm die Anziehung als Hinweis darauf, was dir Energie gibt. Entscheide anschließend bewusst, ob und wie du danach handeln möchtest.`;
 
-        const statement = `${personal}${name ? 'das' : 'Das'} trägt dich: ${fortune.sign.essence}. So findet dein Wille Richtung: ${spirit.sign.essence}. Das macht dich lebendig: ${eros.sign.essence}. Klarheit entsteht, wenn du diese drei Kräfte nicht verwechselst.`;
+        const statement = `${personal}${name ? 'das' : 'Das'} gibt dir Halt: ${fortune.sign.essence}. So triffst du klare Entscheidungen: ${spirit.sign.essence}. Das gibt dir Lust und Energie: ${eros.sign.essence}. Diese drei Bedürfnisse dürfen unterschiedlich sein.`;
         return { paragraphOne, paragraphTwo, insights: lotAspectInsights(chart), statement };
     }
 
@@ -857,7 +873,7 @@
             return 'Wo trägt mich das Leben bereits – und was will ich dort bewusst übernehmen?';
         }
         if (fortune.ruler === spirit.ruler && spirit.ruler === eros.ruler) {
-            return `Wie kann ich ${fortune.ruler} in meinem Leben stärken, ohne in seinen Schatten zu kippen?`;
+            return `Wie kann ich die positiven Eigenschaften von ${fortune.ruler} nutzen, ohne zu übertreiben oder mich dabei selbst zu verlieren?`;
         }
         return 'Brauche ich gerade mehr Halt, eine klare Entscheidung oder neue Lebendigkeit?';
     }
@@ -869,15 +885,15 @@
         const focusLead = FOCUS[focus] ? `Beziehe das auf dein aktuelles Thema „${FOCUS[focus].label}“: ` : '';
 
         if (spirit.signIndex === eros.signIndex && spirit.house === eros.house) {
-            return `${focusLead}Wähle etwas, das dich im Bereich ${HOUSES[spirit.house - 1]} spürbar lebendiger macht. Übersetze dieses Begehren innerhalb von sieben Tagen in ein konkretes Ja, Nein oder einen festen nächsten Schritt. Nutze anschließend den Bereich ${HOUSES[fortune.house - 1]}, um dir dafür Unterstützung und Boden zu schaffen.`;
+            return `${focusLead}Wähle im Bereich ${HOUSES[spirit.house - 1]} etwas, das dir spürbar Freude oder Energie gibt. Entscheide innerhalb der nächsten sieben Tage konkret: Sagst du Ja, sagst du Nein oder machst du einen festen nächsten Schritt? Organisiere dir danach im Bereich ${HOUSES[fortune.house - 1]} die Unterstützung, Zeit oder Sicherheit, die du dafür brauchst.`;
         }
         if (fortune.house === spirit.house) {
-            return `${focusLead}Wähle im Bereich ${HOUSES[fortune.house - 1]} eine Sache, die dich bereits trägt. Triff dort eine bewusste Entscheidung, statt nur auf den nächsten Impuls zu warten. Gib ihr anschließend über ${HOUSES[eros.house - 1]} mehr Lust, Energie oder kreative Spannung.`;
+            return `${focusLead}Wähle im Bereich ${HOUSES[fortune.house - 1]} eine Sache, die dir bereits Sicherheit oder Unterstützung gibt. Triff dazu eine konkrete Entscheidung. Plane anschließend im Bereich ${HOUSES[eros.house - 1]} etwas ein, das dir Freude, Lust oder neue Energie gibt.`;
         }
         if (fortune.ruler === spirit.ruler && spirit.ruler === eros.ruler) {
-            return `${focusLead}Alle drei Lots öffnen sich über ${fortune.ruler}. Wähle eine einzige Handlung, in der ${PLANET_STRATEGY[fortune.ruler]} konkret sichtbar werden. Prüfe nach sieben Tagen: Hat diese Handlung dir Halt, Richtung und Lebendigkeit gegeben – oder nur eines davon?`;
+            return `${focusLead}Alle drei Punkte werden bei dir mit ${fortune.ruler} verbunden. Wähle eine Handlung, mit der du konkret beginnst, ${PLANET_STRATEGY[fortune.ruler]}. Prüfe nach sieben Tagen: Hat dir das mehr Sicherheit, mehr Klarheit und mehr Energie gegeben?`;
         }
-        return `${focusLead}Arbeite in dieser Reihenfolge: Schaffe zuerst im Bereich ${HOUSES[fortune.house - 1]} mehr Halt. Triff dann im Bereich ${HOUSES[spirit.house - 1]} eine klare Entscheidung. Plane zum Schluss im Bereich ${HOUSES[eros.house - 1]} etwas, das nicht nur sinnvoll ist, sondern dich wirklich lebendig macht.`;
+        return `${focusLead}Gehe in drei Schritten vor. Sorge zuerst im Bereich ${HOUSES[fortune.house - 1]} für mehr Sicherheit oder Unterstützung. Triff danach im Bereich ${HOUSES[spirit.house - 1]} eine konkrete Entscheidung. Plane zum Schluss im Bereich ${HOUSES[eros.house - 1]} etwas, das dir wirklich Freude und Energie gibt.`;
     }
 
     function renderResults(chart, birthDate, place, name, focus, ambiguityCount) {
@@ -890,7 +906,7 @@
             return `<article class="fortune-lot-card"><span class="fortune-lot-symbol" aria-hidden="true">${lot.symbol}</span><p class="fortune-kicker">${lot.name} · ${lot.subtitle}</p><h3>${detail.sign.symbol} ${degreeLabel(detail.longitude)}<br>${detail.house}. Haus</h3><p>Herrscher: ${detail.ruler} · ${degreeLabel(detail.rulerLongitude)}</p><a href="#reading-${key}">Read ${lot.name} <span aria-hidden="true">↘</span></a></article>`;
         }).join('');
         const readings = Object.entries(chart.lots).map(([key, detail], index) => lotSection(key, detail, chart, seed + index, focus)).join('');
-        const action = `<article class="fortune-action"><span>Your integration · next seven days</span><p>${synthesisAction(chart, focus)}</p></article>`;
+        const action = `<article class="fortune-action"><span>Dein Plan für die nächsten sieben Tage</span><p>${synthesisAction(chart, focus)}</p></article>`;
         const insightMarkup = integration.insights.map(insight => `<p>${insight}</p>`).join('');
         const focusMeta = FOCUS[focus] ? `<span>Aktueller Fokus: ${FOCUS[focus].label}</span>` : '';
 
@@ -899,8 +915,8 @@
         resultsContent.innerHTML = `
             <section class="fortune-reveal">
                 <span class="fortune-result-planet" aria-hidden="true"></span>
-                <p class="fortune-kicker">The sky at the moment you arrived</p>
-                <p class="fortune-reveal-greeting">${name ? `${escapeHtml(name.trim())}, das ist das auffälligste Muster in deinem Reading:` : 'Das ist das auffälligste Muster in deinem Reading:'}</p>
+                <p class="fortune-kicker">Dein Horoskop zum Zeitpunkt deiner Geburt</p>
+                <p class="fortune-reveal-greeting">${name ? `${escapeHtml(name.trim())}, das fällt in deinem Ergebnis besonders auf:` : 'Das fällt in deinem Ergebnis besonders auf:'}</p>
                 <h2>${reveal.headline}</h2>
                 <p class="fortune-reveal-intro">${reveal.intro}</p>
                 <div class="fortune-meta"><span>${locationLabel(place)}</span><span>${timeZoneLabel(birthDate, place.timezone)}</span><span>${modeLabel}</span><span>Aszendent ${degreeLabel(chart.ascendant)}</span><span>Whole-Sign-Häuser</span>${focusMeta}${ambiguityNote}</div>
@@ -908,21 +924,21 @@
             </section>
             <div class="fortune-reading">${readings}</div>
             <section class="fortune-integration">
-                <p class="fortune-kicker">The synthesis · this is where it gets interesting</p>
-                <h2>So greifen deine drei Lots<br><em>ineinander.</em></h2>
+                <p class="fortune-kicker">Dein Gesamtbild</p>
+                <h2>So wirken deine drei Punkte<br><em>zusammen.</em></h2>
                 <div class="fortune-integration-grid">
                     <p class="fortune-integration-statement">${integration.statement}</p>
                     <div class="fortune-integration-copy"><p>${integration.paragraphOne}</p><p>${integration.paragraphTwo}</p>${insightMarkup}</div>
                 </div>
                 <section class="fortune-joker-guide" aria-labelledby="fortune-joker-title">
-                    <header><p class="fortune-kicker">Save this for later</p><h3 id="fortune-joker-title">${synthesisQuestion(chart)}</h3><p>Du brauchst nicht immer dein gesamtes Horoskop. Diese drei persönlichen Fragen bringen dich zurück zu dem, was dein Reading tatsächlich zeigt.</p></header>
+                    <header><p class="fortune-kicker">Drei Fragen für später</p><h3 id="fortune-joker-title">${synthesisQuestion(chart)}</h3><p>Wenn du unsicher bist, musst du nicht das gesamte Reading erneut lesen. Nutze diese drei Fragen, um zu prüfen, was dir gerade fehlt: Sicherheit, eine Entscheidung oder neue Energie.</p></header>
                     <div class="fortune-joker-cards">
                         <article><span>⊗</span><p>Fortune</p><h4>${LOTS.fortune.jokers[chart.lots.fortune.signIndex]}</h4></article>
                         <article><span>✦</span><p>Spirit</p><h4>${LOTS.spirit.jokers[chart.lots.spirit.signIndex]}</h4></article>
                         <article><span>♡</span><p>Eros</p><h4>${LOTS.eros.jokers[chart.lots.eros.signIndex]}</h4></article>
                     </div>
                 </section>
-                <section class="fortune-next-moves"><p class="fortune-kicker">Bring it down to earth</p><h3>Dein persönliches Integrations-Experiment.</h3><div class="fortune-actions fortune-actions-single">${action}</div></section>
+                <section class="fortune-next-moves"><p class="fortune-kicker">Jetzt konkret werden</p><h3>Das kannst du in den nächsten sieben Tagen tun.</h3><div class="fortune-actions fortune-actions-single">${action}</div></section>
                 <button class="fortune-again" id="fortune-again" type="button">Calculate another chart <span aria-hidden="true">↗</span></button>
             </section>`;
 

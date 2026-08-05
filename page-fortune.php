@@ -36,7 +36,7 @@ if (!defined('ABSPATH')) { exit; }
             <p class="fortune-kicker">Fortune · Spirit · Eros</p>
             <h1 id="fortune-title">Three points.<br>One <em>powerful</em><br>reading<span class="fortune-pink-dot">.</span></h1>
             <p class="fortune-intro">Entdecke, was dich trägt, was du bewusst erschaffst und was dich wirklich lebendig macht.</p>
-            <p class="fortune-editorial-note">Die drei hermetischen Lots verbinden Körper, Willen und Begehren zu einer persönlichen astrologischen Matrix – präzise berechnet und überraschend konkret gedeutet.</p>
+            <p class="fortune-editorial-note">Die drei astrologischen Punkte zeigen dir unterschiedliche Seiten deines Lebens: was dir Halt gibt, wie du Entscheidungen triffst und was dir Lust und Energie schenkt. Sie werden aus deinen Geburtsdaten berechnet und anschließend persönlich für dich erklärt.</p>
         </div>
 
         <div class="fortune-form-card">
@@ -102,7 +102,7 @@ if (!defined('ABSPATH')) { exit; }
             <h2>Not your whole chart.<br><em>The three points to remember.</em></h2>
         </header>
         <div class="fortune-lots-row">
-            <article><div class="fortune-lot-heading"><span>01</span><b aria-hidden="true">⊗</b></div><h3>Fortune</h3><p>Dein natürlicher Flow. Wo das Leben dir entgegenkommt und dich trägt.</p></article>
+            <article><div class="fortune-lot-heading"><span>01</span><b aria-hidden="true">⊗</b></div><h3>Fortune</h3><p>Was dir im Alltag Halt gibt und unter welchen Bedingungen dir vieles leichter gelingt.</p></article>
             <article><div class="fortune-lot-heading"><span>02</span><b aria-hidden="true">☉</b></div><h3>Spirit</h3><p>Dein bewusster Wille. Wo du entscheidest, gestaltest und Wirkung erzeugst.</p></article>
             <article><div class="fortune-lot-heading"><span>03</span><b aria-hidden="true">♡</b></div><h3>Eros</h3><p>Deine Lebenskraft. Was dich anzieht, entzündet und magnetisch macht.</p></article>
         </div>
@@ -119,7 +119,7 @@ if (!defined('ABSPATH')) { exit; }
 
     <section class="fortune-method">
         <p class="fortune-section-number">A note on the stars</p>
-        <p>Diese Deutung arbeitet mit den hellenistischen Lots of Fortune und Spirit sowie dem hermetischen Eros nach der Paulus-/Olympiodorus-Tradition aus Venus und Spirit. Tag- und Nachthoroskope werden unterschiedlich berechnet; die Häuser folgen Whole Sign Houses. Die Deutung ist ein Werkzeug für Selbsterkenntnis – kein festgeschriebenes Schicksal und kein Ersatz für medizinische, rechtliche oder finanzielle Beratung.</p>
+            <p>Diese Deutung nutzt drei traditionelle astrologische Berechnungen: Fortune, Spirit und Eros. Für Geburten am Tag und in der Nacht gelten unterschiedliche Formeln. Die Lebensbereiche werden nach dem Whole-Sign-Häusersystem berechnet. Das Ergebnis soll dir helfen, dich selbst besser zu verstehen. Es sagt kein festes Schicksal voraus und ersetzt keine medizinische, rechtliche oder finanzielle Beratung.</p>
     </section>
 </main>
 
