@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) { exit; }
 <a class="screen-reader-text" href="#fortune-main">Zum Inhalt springen</a>
 
 <header class="fortune-header" aria-label="Fortune Portal">
-    <a class="fortune-wordmark" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Sabrina Fritzsche – Startseite">
+    <a class="fortune-wordmark" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Sabrina Fritzsche Startseite">
         Sabrina Fritzsche<span>.</span>
     </a>
     <p>For the astro babes</p>
@@ -35,8 +35,8 @@ if (!defined('ABSPATH')) { exit; }
             </div>
             <p class="fortune-kicker">Fortune · Spirit · Eros</p>
             <h1 id="fortune-title">Three points.<br>One <em>powerful</em><br>reading<span class="fortune-pink-dot">.</span></h1>
-            <p class="fortune-intro">Entdecke, was dich trägt, was du bewusst erschaffst und was dich wirklich lebendig macht.</p>
-            <p class="fortune-editorial-note">Die drei astrologischen Punkte zeigen dir unterschiedliche Seiten deines Lebens: was dir Halt gibt, wie du Entscheidungen triffst und was dir Lust und Energie schenkt. Sie werden aus deinen Geburtsdaten berechnet und anschließend persönlich für dich erklärt.</p>
+            <p class="fortune-intro">Entdecke, was dich unterstützt, wie du klare Entscheidungen triffst und was dein echtes Begehren weckt.</p>
+            <p class="fortune-editorial-note">Die drei astrologischen Punkte zeigen dir unterschiedliche Seiten deines Lebens: welche Bedingungen dir Stabilität geben, wie du bewusst handelst und welche Menschen, Ideen oder Erfahrungen dich wirklich anziehen. Sie werden aus deinen Geburtsdaten berechnet und anschließend persönlich für dich erklärt.</p>
         </div>
 
         <div class="fortune-form-card">
@@ -107,11 +107,11 @@ if (!defined('ABSPATH')) { exit; }
             <p class="fortune-kicker">Your personal astrological shortcut</p>
             <h2>Not your whole chart.<br><em>The three points to remember.</em></h2>
         </header>
-        <p class="fortune-lots-explainer">Die drei Lots sind berechnete Punkte in deinem Geburtshoroskop. Sie sind keine Planeten. Jeder von ihnen beantwortet eine andere Frage: Was unterstützt dich? Was gestaltest du selbst? Und was macht dich wirklich lebendig?</p>
+        <p class="fortune-lots-explainer">Die drei Lots sind berechnete Punkte in deinem Geburtshoroskop. Sie sind keine Planeten. Jeder von ihnen beantwortet eine andere Frage: Was unterstützt dich? Wie setzt du deine Entscheidungen um? Was weckt dein Begehren?</p>
         <div class="fortune-lots-row">
-            <article><div class="fortune-lot-heading"><span>01 · Was trägt mich?</span><b aria-hidden="true">⊗</b></div><h3>Fortune</h3><p>Fortune zeigt, welche Menschen, Bedingungen und Lebensbereiche dir Stabilität geben. Du erkennst daran, was dich im Alltag unterstützt und wo du nicht ständig gegen dich selbst arbeiten musst.</p></article>
-            <article><div class="fortune-lot-heading"><span>02 · Was gestalte ich?</span><b aria-hidden="true">☉</b></div><h3>Spirit</h3><p>Spirit zeigt, wo deine eigenen Entscheidungen wichtig sind. Es geht um deinen Willen, deine Richtung und die Frage, wofür du bewusst Verantwortung übernehmen möchtest.</p></article>
-            <article><div class="fortune-lot-heading"><span>03 · Was belebt mich?</span><b aria-hidden="true">♡</b></div><h3>Eros</h3><p>Eros zeigt, was deine Neugier, Anziehung und Lebensfreude weckt. Das kann sich in Liebe und Sexualität zeigen, aber ebenso in kreativen Ideen, Menschen oder Aufgaben, die dir neue Energie geben.</p></article>
+            <article><div class="fortune-lot-heading"><span>01 · Was unterstützt mich?</span><b aria-hidden="true">⊗</b></div><h3>Fortune</h3><p>Fortune zeigt, welche Menschen, Bedingungen und Lebensbereiche dir Stabilität geben. Du erkennst daran, was dir im Alltag guttut und wo du nicht ständig gegen deine eigenen Bedürfnisse arbeiten musst.</p></article>
+            <article><div class="fortune-lot-heading"><span>02 · Wie handle ich bewusst?</span><b aria-hidden="true">☉</b></div><h3>Spirit</h3><p>Spirit beschreibt, wie du aus einem Wunsch eine klare Entscheidung machst. Du erkennst daran, welche Vorgehensweise dir hilft, wirklich ins Handeln zu kommen und Verantwortung für deine Entscheidung zu übernehmen.</p></article>
+            <article><div class="fortune-lot-heading"><span>03 · Was begehre ich?</span><b aria-hidden="true">♡</b></div><h3>Eros</h3><p>Eros zeigt, welche Menschen, Ideen und Erfahrungen deine Anziehung und Lebensfreude wecken. Das kann sich in Liebe und Sexualität zeigen, aber auch in kreativen Projekten, Freundschaften oder Aufgaben, die dich spürbar lebendiger machen.</p></article>
         </div>
     </section>
 
@@ -126,7 +126,7 @@ if (!defined('ABSPATH')) { exit; }
 
     <section class="fortune-method">
         <p class="fortune-section-number">A note on the stars</p>
-        <p>Diese Deutung nutzt drei traditionelle astrologische Berechnungen: Fortune, Spirit und Eros. Für Geburten am Tag und in der Nacht gelten unterschiedliche Formeln. Die Lebensbereiche werden nach dem Whole-Sign-Häusersystem berechnet. Das Ergebnis soll dir helfen, dich selbst besser zu verstehen. Es sagt kein festes Schicksal voraus und ersetzt keine medizinische, rechtliche oder finanzielle Beratung.</p>
+        <p>Diese Deutung nutzt drei traditionelle astrologische Berechnungen: Fortune, Spirit und Eros. Für Geburten am Tag und in der Nacht gelten unterschiedliche Formeln. Die Lebensbereiche werden nach dem Whole Sign Häusersystem berechnet. Das Ergebnis soll dir helfen, dich selbst besser zu verstehen. Es sagt kein festes Schicksal voraus und ersetzt keine medizinische, rechtliche oder finanzielle Beratung.</p>
     </section>
 </main>
 
