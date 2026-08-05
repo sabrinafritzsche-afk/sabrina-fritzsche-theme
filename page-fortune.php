@@ -119,7 +119,7 @@ if (!defined('ABSPATH')) { exit; }
 
     <section class="fortune-method">
         <p class="fortune-section-number">A note on the stars</p>
-            <p>Diese Deutung nutzt drei traditionelle astrologische Berechnungen: Fortune, Spirit und Eros. Für Geburten am Tag und in der Nacht gelten unterschiedliche Formeln. Die Lebensbereiche werden nach dem Whole-Sign-Häusersystem berechnet. Das Ergebnis soll dir helfen, dich selbst besser zu verstehen. Es sagt kein festes Schicksal voraus und ersetzt keine medizinische, rechtliche oder finanzielle Beratung.</p>
+        <p>Diese Deutung nutzt drei traditionelle astrologische Berechnungen: Fortune, Spirit und Eros. Für Geburten am Tag und in der Nacht gelten unterschiedliche Formeln. Die Lebensbereiche werden nach dem Whole-Sign-Häusersystem berechnet. Das Ergebnis soll dir helfen, dich selbst besser zu verstehen. Es sagt kein festes Schicksal voraus und ersetzt keine medizinische, rechtliche oder finanzielle Beratung.</p>
     </section>
 </main>
 
