@@ -31,9 +31,16 @@ function sf_assets() {
             true
         );
         wp_enqueue_script(
+            'sf-fortune-content',
+            get_template_directory_uri() . '/assets/js/fortune-content.js',
+            [],
+            $theme_version,
+            true
+        );
+        wp_enqueue_script(
             'sf-fortune',
             get_template_directory_uri() . '/assets/js/fortune.js',
-            ['sf-astronomy-engine'],
+            ['sf-astronomy-engine', 'sf-fortune-content'],
             $theme_version,
             true
         );
