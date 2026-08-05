@@ -378,6 +378,41 @@
         },
     };
 
+    const FOCUS_DETAILS = {
+        work: [
+            { value: 'visibility', label: 'Ich möchte sichtbarer werden', context: 'Du möchtest mit deiner Arbeit stärker gesehen oder gehört werden.', today: 'Notiere in einem Satz, wofür du mit deiner Arbeit stehen möchtest. Teile diesen Satz heute mit einer Person oder verwende ihn in einer Nachricht, einem Profil oder einer Präsentation.', month: 'Zeige vier Wochen lang jede Woche einmal sichtbar, woran du arbeitest oder wofür du stehst. Notiere anschließend, welche Reaktionen wirklich relevant waren und welche nur kurzfristige Aufmerksamkeit gebracht haben.' },
+            { value: 'direction', label: 'Ich suche eine neue Richtung', context: 'Du möchtest beruflich etwas verändern, weißt aber noch nicht genau, welcher Weg zu dir passt.', today: 'Schreibe zwei Listen: Was soll in deiner Arbeit auf keinen Fall so bleiben? Und was möchtest du in Zukunft häufiger erleben? Begrenze jede Liste auf drei Punkte.', month: 'Teste in den nächsten vier Wochen eine mögliche Richtung im Kleinen: durch ein Gespräch, einen Probetag, ein Mini-Projekt oder eine konkrete Recherche. Entscheide danach anhand der Erfahrung, nicht nur anhand deiner Vorstellung.' },
+            { value: 'overload', label: 'Ich bin überfordert oder erschöpft', context: 'Du möchtest verstehen, warum deine Arbeit gerade so viel Kraft kostet und was dich wieder stabilisieren könnte.', today: 'Wähle eine Aufgabe, die heute nicht zwingend erledigt werden muss. Verschiebe, delegiere oder streiche sie bewusst. Nutze die frei gewordene Zeit nicht für die nächste Aufgabe.', month: 'Beobachte vier Wochen lang einmal pro Woche: Welche Aufgaben geben dir Energie, welche kosten Kraft und welche gehören eigentlich nicht zu deiner Verantwortung? Verändere danach mindestens eine feste Aufgabe oder Grenze.' },
+            { value: 'conflict', label: 'Ich erlebe einen Konflikt', context: 'Du möchtest in einer beruflichen Spannung klarer erkennen, was du brauchst und welchen Teil du selbst beeinflussen kannst.', today: 'Trenne schriftlich drei Dinge: Was ist tatsächlich passiert? Was interpretierst du? Was brauchst du jetzt konkret? Formuliere daraus einen klaren Satz für das nächste Gespräch.', month: 'Führe innerhalb der nächsten vier Wochen ein klärendes Gespräch. Vereinbart am Ende nicht nur, was besser werden soll, sondern wer bis wann welchen konkreten Schritt übernimmt.' },
+            { value: 'own_path', label: 'Ich möchte etwas Eigenes aufbauen', context: 'Du möchtest eine eigene Idee, ein Angebot oder ein Projekt nicht länger nur im Kopf bewegen.', today: 'Beschreibe dein Vorhaben in drei Sätzen: Für wen ist es? Welches konkrete Problem löst es? Was ist der kleinste testbare nächste Schritt?', month: 'Teste dein Vorhaben in den nächsten vier Wochen mit echten Menschen. Führe mindestens drei Gespräche oder biete eine kleine erste Version an, bevor du weiter an Name, Design oder Perfektion arbeitest.' },
+        ],
+        love: [
+            { value: 'new_love', label: 'Ich wünsche mir eine Beziehung', context: 'Du möchtest eine Beziehung, in der Anziehung und echte Sicherheit zusammenpassen.', today: 'Notiere drei Eigenschaften, die sich in einer Beziehung im Alltag zeigen müssen. Beschreibe Verhalten statt abstrakter Begriffe wie „loyal“ oder „emotional verfügbar“.', month: 'Beobachte bei neuen Begegnungen vier Wochen lang nicht nur die Anziehung. Prüfe auch: Ist die Person verlässlich? Kannst du offen sprechen? Bleibst du in ihrer Nähe du selbst?' },
+            { value: 'relationship', label: 'Ich möchte meine Beziehung besser verstehen', context: 'Du möchtest verstehen, was eure Verbindung stärkt und an welcher Stelle ihr bewusster handeln müsst.', today: 'Beantworte für dich: Was funktioniert zwischen euch bereits gut? Was fehlt dir konkret? Was davon hast du bisher noch nicht klar ausgesprochen?', month: 'Plant vier Wochen lang ein festes Gespräch pro Woche. Jede Person beantwortet zwei Fragen: Was hat sich diese Woche gut angefühlt? Was brauchen wir nächste Woche anders?' },
+            { value: 'unclear', label: 'Ich stecke in einer unklaren Verbindung', context: 'Du möchtest wissen, ob eine intensive oder unklare Verbindung dir wirklich guttut.', today: 'Schreibe auf, was zwischen euch tatsächlich vereinbart ist und was du nur hoffst. Formuliere anschließend die eine Frage, deren ehrliche Antwort du brauchst.', month: 'Setze innerhalb der nächsten vier Wochen eine klare Grenze oder bitte um eine eindeutige Vereinbarung. Beurteile die Verbindung danach anhand des Verhaltens – nicht anhand von Versprechen oder Potenzial.' },
+            { value: 'separation', label: 'Ich verarbeite eine Trennung', context: 'Du möchtest nach einer Trennung wieder mehr Halt finden und deine eigene Richtung spüren.', today: 'Wähle eine kleine Handlung, die deinem Körper Sicherheit gibt: essen, schlafen, spazieren, jemanden anrufen oder einen belastenden Kontakt stummschalten. Heute musst du nicht alles verstehen.', month: 'Plane für die nächsten vier Wochen drei verlässliche Anker: eine Person, einen festen Termin und eine körperliche Routine. Prüfe danach, was dich wirklich stabilisiert hat.' },
+            { value: 'pattern', label: 'Ich erkenne ein wiederkehrendes Muster', context: 'Du möchtest verstehen, warum sich ein ähnliches Beziehungsmuster wiederholt und was du diesmal anders machen kannst.', today: 'Notiere die letzten drei Situationen, in denen dieses Muster aufgetaucht ist. Was war jeweils das erste Warnsignal, das du bemerkt, aber nicht ernst genommen hast?', month: 'Wähle für die nächsten vier Wochen eine neue Reaktion auf das erste Warnsignal: nachfragen, langsamer werden, eine Grenze nennen oder Abstand nehmen. Beobachte, was sich dadurch verändert.' },
+        ],
+        decision: [
+            { value: 'two_options', label: 'Ich schwanke zwischen zwei Möglichkeiten', context: 'Du möchtest zwei konkrete Möglichkeiten vergleichen, ohne dich in immer neuen Argumenten zu verlieren.', today: 'Bewerte beide Möglichkeiten von eins bis zehn: Wie viel Sicherheit geben sie dir? Wie viel davon kannst du selbst gestalten? Wie viel Energie geben sie dir?', month: 'Teste die bevorzugte Möglichkeit innerhalb von vier Wochen so realistisch wie möglich. Suche keine weiteren Meinungen, bevor du mindestens eine eigene Erfahrung damit gemacht hast.' },
+            { value: 'stay_go', label: 'Ich frage mich: bleiben oder gehen?', context: 'Du möchtest erkennen, ob eine bestehende Situation noch tragfähig ist oder ob eine Veränderung notwendig wird.', today: 'Beantworte ehrlich: Was müsste sich konkret verändern, damit Bleiben eine gute Entscheidung wäre? Und bis wann müsste diese Veränderung sichtbar sein?', month: 'Definiere für die nächsten vier Wochen zwei überprüfbare Bedingungen für das Bleiben. Wenn sie nicht eintreten, entscheide bewusst neu, statt die Frist still zu verlängern.' },
+            { value: 'timing', label: 'Ich weiß nicht, ob jetzt der richtige Zeitpunkt ist', context: 'Du kennst möglicherweise die Richtung, bist aber unsicher, ob du jetzt handeln solltest.', today: 'Trenne die Entscheidung vom Timing: Was willst du grundsätzlich? Welcher kleinste Schritt wäre heute möglich, ohne bereits alles festzulegen?', month: 'Lege einen konkreten Entscheidungstermin innerhalb der nächsten vier Wochen fest. Sammle bis dahin nur die Informationen, die deine Entscheidung wirklich verändern könnten.' },
+            { value: 'outside_expectations', label: 'Andere erwarten etwas von mir', context: 'Du möchtest unterscheiden, was wirklich deine Entscheidung ist und was du aus Pflicht, Angst oder Anpassung erwägst.', today: 'Vervollständige zwei Sätze: „Wenn niemand enttäuscht wäre, würde ich …“ und „Wenn ich mich selbst ernst nehme, muss ich …“', month: 'Triff in den nächsten vier Wochen eine kleine Entscheidung ohne Rechtfertigung. Beobachte, wer deine Grenze respektiert und wo du dich selbst sofort wieder erklärst.' },
+        ],
+        change: [
+            { value: 'chosen_change', label: 'Ich möchte selbst etwas verändern', context: 'Du spürst, dass eine Veränderung fällig ist, und möchtest sie bewusst beginnen.', today: 'Formuliere die Veränderung als sichtbares Verhalten: Was wirst du ab jetzt konkret tun, lassen oder anders entscheiden?', month: 'Wähle einen vierwöchigen Test statt eines endgültigen Versprechens. Lege vorher fest, woran du erkennst, ob die Veränderung dir mehr Halt, Klarheit und Energie gibt.' },
+            { value: 'unexpected_change', label: 'Die Veränderung wurde mir aufgezwungen', context: 'Eine Veränderung ist passiert, ohne dass du sie gewählt hast. Du möchtest wieder Einfluss und Orientierung gewinnen.', today: 'Teile ein Blatt in zwei Spalten: Was kann ich gerade nicht beeinflussen? Worüber kann ich heute entscheiden? Wähle genau einen Punkt aus der zweiten Spalte.', month: 'Baue in den nächsten vier Wochen eine neue verlässliche Struktur auf – einen Termin, eine Routine oder eine Unterstützung. Sie soll dir Halt geben, während noch nicht alles geklärt ist.' },
+            { value: 'letting_go', label: 'Ich muss etwas loslassen', context: 'Du weißt, dass etwas endet oder nicht mehr zu dir passt, obwohl ein Teil von dir noch daran festhält.', today: 'Benenne konkret, was du loslässt: die Person, die Rolle, die Hoffnung, den Plan oder eine frühere Version von dir. Unterschiedliche Verluste brauchen unterschiedliche Abschiede.', month: 'Entferne innerhalb der nächsten vier Wochen Schritt für Schritt eine praktische Bindung an das Alte. Schaffe gleichzeitig einen neuen Termin, Ort oder Kontakt, der Zukunft möglich macht.' },
+            { value: 'new_beginning', label: 'Ich stehe vor einem Neuanfang', context: 'Du möchtest einen neuen Abschnitt beginnen, ohne sofort wieder in alte Gewohnheiten zurückzufallen.', today: 'Entscheide, welche eine alte Gewohnheit du nicht in den neuen Abschnitt mitnehmen möchtest. Bestimme eine konkrete Alternative.', month: 'Überprüfe vier Wochen lang jeden Freitag: Was unterstützt den Neuanfang? Was zieht dich zurück? Welche eine Anpassung machst du in der kommenden Woche?' },
+        ],
+        self: [
+            { value: 'energy', label: 'Ich möchte meine Energie besser verstehen', context: 'Du möchtest klarer erkennen, wodurch du Kraft bekommst und wodurch du sie verlierst.', today: 'Notiere am Abend drei Momente: Wann hattest du mehr Energie, wann weniger und was ist unmittelbar davor passiert?', month: 'Führe diese kurze Beobachtung vier Wochen lang an drei Tagen pro Woche fort. Verändere danach eine wiederkehrende Situation, die dich zuverlässig auslaugt.' },
+            { value: 'needs', label: 'Ich möchte meine Bedürfnisse klarer spüren', context: 'Du möchtest deine eigenen Bedürfnisse früher erkennen und verständlicher aussprechen.', today: 'Halte kurz inne und ergänze: „Ich fühle …, weil mir … wichtig ist. Heute brauche ich konkret …“', month: 'Sprich vier Wochen lang jede Woche mindestens ein Bedürfnis aus, bevor Frust oder Rückzug entstehen. Bitte um etwas Konkretes, statt nur zu beschreiben, was falsch läuft.' },
+            { value: 'patterns', label: 'Ich möchte meine Muster verstehen', context: 'Du möchtest eine wiederkehrende Reaktion verstehen, die dir heute nicht mehr hilft.', today: 'Beschreibe eine aktuelle Situation in vier Schritten: Auslöser, erster Gedanke, Gefühl, Reaktion. Markiere den frühesten Punkt, an dem eine andere Reaktion möglich wäre.', month: 'Übe vier Wochen lang genau an diesem frühen Punkt eine neue Reaktion. Sie darf klein sein: zehn Minuten warten, nachfragen, Nein sagen oder Unterstützung holen.' },
+            { value: 'direction', label: 'Ich wünsche mir mehr innere Richtung', context: 'Du möchtest wieder klarer spüren, was dir wichtig ist und worauf du deine Kraft richten willst.', today: 'Schreibe drei Dinge auf, die in den nächsten zwölf Monaten wichtiger werden sollen. Streiche anschließend den Punkt, der vor allem gut aussieht, aber wenig mit dir zu tun hat.', month: 'Gib dem wichtigsten verbleibenden Punkt vier Wochen lang jede Woche einen festen Termin. Prüfe danach, ob deine Klarheit durch die praktische Erfahrung gewachsen ist.' },
+        ],
+    };
+
     const ELEMENT_PRACTICE = {
         Feuer: 'Du erkennst die stimmige Richtung daran, dass Mut, Bewegung und echte Begeisterung entstehen – ohne dass du permanent Drama oder Druck dafür brauchst.',
         Erde: 'Du erkennst die stimmige Richtung daran, dass sie im Alltag tragfähig wird: in Zeit, Körper, Geld, Verlässlichkeit und konkreten nächsten Schritten.',
@@ -396,9 +431,21 @@
     const loading = document.getElementById('fortune-loading');
     const results = document.getElementById('fortune-results');
     const resultsContent = document.getElementById('fortune-results-content');
+    const focusDetailField = document.getElementById('fortune-focus-detail');
+    const focusDetailOptions = document.getElementById('fortune-focus-detail-options');
     let selectedPlace = null;
     let searchTimer = null;
     let activeRequest = null;
+
+    function renderFocusDetails(focus) {
+        const details = FOCUS_DETAILS[focus] || [];
+        focusDetailOptions.innerHTML = details.map(item => `<label><input type="radio" name="focus-detail" value="${escapeHtml(item.value)}"><span>${escapeHtml(item.label)}</span></label>`).join('');
+        focusDetailField.hidden = !details.length;
+    }
+
+    form.querySelectorAll('input[name="focus"]').forEach(input => {
+        input.addEventListener('change', () => renderFocusDetails(input.value));
+    });
 
     function normalize(value) {
         const result = value % 360;
@@ -434,6 +481,10 @@
 
     function nameSeed(value) {
         return Array.from(value || 'stars').reduce((total, character) => total + character.charCodeAt(0), 0);
+    }
+
+    function focusDetailConfig(focus, focusDetail) {
+        return (FOCUS_DETAILS[focus] || []).find(item => item.value === focusDetail) || null;
     }
 
     function datePartsInZone(date, timeZone) {
@@ -640,7 +691,7 @@
             </section>`;
     }
 
-    function focusMarkup(key, detail, focus) {
+    function focusMarkup(key, detail, focus, focusDetail) {
         const selected = FOCUS[focus];
         if (!selected) { return ''; }
         const headline = key === 'fortune'
@@ -662,7 +713,7 @@
             </section>`;
     }
 
-    function personalLayersMarkup(key, detail, focus) {
+    function personalLayersMarkup(key, detail, focus, focusDetail) {
         const lot = LOTS[key];
         const shadowHeadline = key === 'fortune'
             ? 'Was dir den Halt nehmen kann.'
@@ -675,7 +726,7 @@
                 ? 'So kommst du zu einer klaren Entscheidung.'
                 : 'So bringst du mehr Lust und Energie in dein Leben.';
         return `
-            ${focusMarkup(key, detail, focus)}
+            ${focusMarkup(key, detail, focus, focusDetail)}
             <aside class="fortune-shadow-truth">
                 <p class="fortune-layer-label">Worauf du achten solltest</p>
                 <h3>${shadowHeadline}</h3>
@@ -715,7 +766,7 @@
             </section>`;
     }
 
-    function lotSection(key, detail, chart, seed, focus) {
+    function lotSection(key, detail, chart, seed, focus, focusDetail) {
         const lot = LOTS[key];
         const opening = lot.opening[(seed + detail.signIndex + detail.house) % lot.opening.length];
         const pullQuote = key === 'fortune'
@@ -745,7 +796,7 @@
                     </section>
                     ${rulerSectionMarkup(key, detail, chart)}
                     ${conjunctionSectionMarkup(key, detail)}
-                    ${personalLayersMarkup(key, detail, focus)}
+                    ${personalLayersMarkup(key, detail, focus, focusDetail)}
                 </div>
             </article>`;
     }
@@ -896,7 +947,40 @@
         return `${focusLead}Gehe in drei Schritten vor. Sorge zuerst im Bereich ${HOUSES[fortune.house - 1]} für mehr Sicherheit oder Unterstützung. Triff danach im Bereich ${HOUSES[spirit.house - 1]} eine konkrete Entscheidung. Plane zum Schluss im Bereich ${HOUSES[eros.house - 1]} etwas, das dir wirklich Freude und Energie gibt.`;
     }
 
-    function renderResults(chart, birthDate, place, name, focus, ambiguityCount) {
+    function quickSummaryMarkup(chart) {
+        const fortune = chart.lots.fortune;
+        const spirit = chart.lots.spirit;
+        const eros = chart.lots.eros;
+        return `
+            <section class="fortune-quick-summary" aria-labelledby="fortune-quick-title">
+                <header>
+                    <p class="fortune-kicker">Dein Reading in einer Minute</p>
+                    <h3 id="fortune-quick-title">Das solltest du zuerst wissen.</h3>
+                    <p>Du musst nicht jedes astrologische Detail behalten. Diese drei Aussagen sind der Kern deines Readings.</p>
+                </header>
+                <div class="fortune-quick-grid">
+                    <article><span>01 · Was dich trägt</span><h4>${fortune.sign.essence}</h4><p>Besonders wichtig wird das im Lebensbereich <strong>${HOUSES[fortune.house - 1]}</strong>.</p></article>
+                    <article><span>02 · Was du gestalten kannst</span><h4>${spirit.sign.essence}</h4><p>Hier liegt deine bewusste Aufgabe im Lebensbereich <strong>${HOUSES[spirit.house - 1]}</strong>.</p></article>
+                    <article><span>03 · Was dich lebendig macht</span><h4>${eros.sign.essence}</h4><p>Neue Energie entsteht besonders im Lebensbereich <strong>${HOUSES[eros.house - 1]}</strong>.</p></article>
+                </div>
+            </section>`;
+    }
+
+    function actionPlanMarkup(chart, focus, focusDetail) {
+        const selectedDetail = focusDetailConfig(focus, focusDetail);
+        const today = selectedDetail
+            ? selectedDetail.today
+            : `Nimm dir zehn Minuten und beantworte diese Frage schriftlich: ${synthesisQuestion(chart)} Schreibe zuerst deine eigene Antwort auf, bevor du jemanden um Rat fragst.`;
+        const month = selectedDetail
+            ? selectedDetail.month
+            : `Beobachte vier Wochen lang einmal pro Woche drei Dinge: Was hat dir Halt gegeben? Welche Entscheidung hast du selbst getroffen? Was hat dir neue Energie gegeben? Verändere danach eine wiederkehrende Situation, die bei allen drei Fragen schlecht abschneidet.`;
+        return `
+            <article class="fortune-action"><span>Heute · 10 Minuten</span><p>${today}</p></article>
+            <article class="fortune-action"><span>In den nächsten 7 Tagen</span><p>${synthesisAction(chart, focus)}</p></article>
+            <article class="fortune-action"><span>In den nächsten 4 Wochen</span><p>${month}</p></article>`;
+    }
+
+    function renderResults(chart, birthDate, place, name, focus, focusDetail, ambiguityCount) {
         const modeLabel = chart.isDay ? 'Taghoroskop' : 'Nachthoroskop';
         const seed = nameSeed(name);
         const reveal = revealNarrative(chart);
@@ -905,10 +989,13 @@
             const lot = LOTS[key];
             return `<article class="fortune-lot-card"><span class="fortune-lot-symbol" aria-hidden="true">${lot.symbol}</span><p class="fortune-kicker">${lot.name} · ${lot.subtitle}</p><h3>${detail.sign.symbol} ${degreeLabel(detail.longitude)}<br>${detail.house}. Haus</h3><p>Herrscher: ${detail.ruler} · ${degreeLabel(detail.rulerLongitude)}</p><a href="#reading-${key}">Read ${lot.name} <span aria-hidden="true">↘</span></a></article>`;
         }).join('');
-        const readings = Object.entries(chart.lots).map(([key, detail], index) => lotSection(key, detail, chart, seed + index, focus)).join('');
-        const action = `<article class="fortune-action"><span>Dein Plan für die nächsten sieben Tage</span><p>${synthesisAction(chart, focus)}</p></article>`;
+        const readings = Object.entries(chart.lots).map(([key, detail], index) => lotSection(key, detail, chart, seed + index, focus, focusDetail)).join('');
+        const actions = actionPlanMarkup(chart, focus, focusDetail);
         const insightMarkup = integration.insights.map(insight => `<p>${insight}</p>`).join('');
         const focusMeta = FOCUS[focus] ? `<span>Aktueller Fokus: ${FOCUS[focus].label}</span>` : '';
+        const selectedDetail = focusDetailConfig(focus, focusDetail);
+        const detailMeta = selectedDetail ? `<span>Aktuelle Situation: ${escapeHtml(selectedDetail.label)}</span>` : '';
+        const detailContext = selectedDetail ? `<p class="fortune-reveal-focus"><strong>Du hast ausgewählt:</strong> ${selectedDetail.context}</p>` : '';
 
         const ambiguityNote = ambiguityCount > 1 ? '<span>Die lokale Uhrzeit kam durch eine Zeitumstellung zweimal vor; verwendet wurde die frühere Instanz.</span>' : '';
 
@@ -919,9 +1006,11 @@
                 <p class="fortune-reveal-greeting">${name ? `${escapeHtml(name.trim())}, das fällt in deinem Ergebnis besonders auf:` : 'Das fällt in deinem Ergebnis besonders auf:'}</p>
                 <h2>${reveal.headline}</h2>
                 <p class="fortune-reveal-intro">${reveal.intro}</p>
-                <div class="fortune-meta"><span>${locationLabel(place)}</span><span>${timeZoneLabel(birthDate, place.timezone)}</span><span>${modeLabel}</span><span>Aszendent ${degreeLabel(chart.ascendant)}</span><span>Whole-Sign-Häuser</span>${focusMeta}${ambiguityNote}</div>
+                ${detailContext}
+                <div class="fortune-meta"><span>${locationLabel(place)}</span><span>${timeZoneLabel(birthDate, place.timezone)}</span><span>${modeLabel}</span><span>Aszendent ${degreeLabel(chart.ascendant)}</span><span>Whole-Sign-Häuser</span>${focusMeta}${detailMeta}${ambiguityNote}</div>
                 <div class="fortune-lot-grid">${cards}</div>
             </section>
+            ${quickSummaryMarkup(chart)}
             <div class="fortune-reading">${readings}</div>
             <section class="fortune-integration">
                 <p class="fortune-kicker">Dein Gesamtbild</p>
@@ -938,9 +1027,36 @@
                         <article><span>♡</span><p>Eros</p><h4>${LOTS.eros.jokers[chart.lots.eros.signIndex]}</h4></article>
                     </div>
                 </section>
-                <section class="fortune-next-moves"><p class="fortune-kicker">Jetzt konkret werden</p><h3>Das kannst du in den nächsten sieben Tagen tun.</h3><div class="fortune-actions fortune-actions-single">${action}</div></section>
+                <section class="fortune-next-moves"><p class="fortune-kicker">Jetzt konkret werden</p><h3>Dein persönlicher Plan für den Alltag.</h3><div class="fortune-actions">${actions}</div></section>
+                <section class="fortune-download" aria-labelledby="fortune-download-title">
+                    <div><p class="fortune-kicker">Keep your reading</p><h3 id="fortune-download-title">Nimm dein Reading mit.</h3><p>Über den Druckdialog kannst du dein vollständiges Reading als PDF speichern. Deine Geburtsdaten werden dabei nicht an uns übertragen oder gespeichert.</p></div>
+                    <button class="fortune-pdf" id="fortune-pdf" type="button">Reading als PDF speichern <span aria-hidden="true">↓</span></button>
+                </section>
+                <section class="fortune-result-signoff">
+                    <p>Das Wichtigste: Alles, was Du brauchst, ist schon da.</p>
+                    <p>Big hug.<br>Sabrina</p>
+                </section>
                 <button class="fortune-again" id="fortune-again" type="button">Calculate another chart <span aria-hidden="true">↗</span></button>
             </section>`;
+
+        document.getElementById('fortune-pdf').addEventListener('click', () => {
+            const previousTitle = document.title;
+            const fileName = name ? `Dein Fortune Reading · ${name.trim()}` : 'Dein Fortune Reading';
+            let restored = false;
+            let restoreTimer = null;
+            const restorePage = () => {
+                if (restored) { return; }
+                restored = true;
+                if (restoreTimer) { window.clearTimeout(restoreTimer); }
+                document.body.classList.remove('fortune-printing');
+                document.title = previousTitle;
+            };
+            document.title = fileName;
+            document.body.classList.add('fortune-printing');
+            window.addEventListener('afterprint', restorePage, { once: true });
+            restoreTimer = window.setTimeout(restorePage, 30000);
+            window.print();
+        });
 
         document.getElementById('fortune-again').addEventListener('click', () => {
             results.hidden = true;
@@ -957,6 +1073,8 @@
         const timeValue = document.getElementById('fortune-time').value;
         const focusInput = form.querySelector('input[name="focus"]:checked');
         const focus = focusInput ? focusInput.value : '';
+        const focusDetailInput = form.querySelector('input[name="focus-detail"]:checked');
+        const focusDetail = focusDetailInput ? focusDetailInput.value : '';
 
         if (!dateValue || !timeValue || !consentInput.checked || !selectedPlace) {
             if (!selectedPlace) { errorBox.textContent = 'Bitte wähle deinen Geburtsort aus der Vorschlagsliste aus.'; }
@@ -980,7 +1098,7 @@
             await new Promise(resolve => window.setTimeout(resolve, 650));
             const birthDate = candidates[0];
             const chart = calculateChart(birthDate, selectedPlace);
-            renderResults(chart, birthDate, selectedPlace, name, focus, candidates.length);
+            renderResults(chart, birthDate, selectedPlace, name, focus, focusDetail, candidates.length);
             loading.hidden = true;
             results.hidden = false;
             results.scrollIntoView({ behavior: 'smooth', block: 'start' });
