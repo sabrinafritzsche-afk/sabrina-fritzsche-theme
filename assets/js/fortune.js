@@ -36,6 +36,10 @@
     ];
 
     const RULERS = ['Mars', 'Venus', 'Merkur', 'Mond', 'Sonne', 'Merkur', 'Venus', 'Mars', 'Jupiter', 'Saturn', 'Saturn', 'Jupiter'];
+    const RULER_BY = {
+        Sonne: 'von der Sonne', Mond: 'vom Mond', Merkur: 'von Merkur', Venus: 'von Venus',
+        Mars: 'von Mars', Jupiter: 'von Jupiter', Saturn: 'von Saturn',
+    };
     const PLANET_BODY = {
         Sonne: Astro.Body.Sun,
         Mond: Astro.Body.Moon,
@@ -341,31 +345,44 @@
         Wasser: 'will Resonanz, Intuition und emotionale Wahrhaftigkeit',
     };
 
-    const ELEMENT_BODY = {
-        Feuer: 'Dein System reagiert häufig auf Stagnation: Bewegung, Ausdruck und eine spürbare Richtung bringen Energie zurück. Der Schatten ist Daueraktivierung – nicht jeder innere Funke verlangt sofort eine Handlung.',
-        Erde: 'Dein Körper liebt Verlässlichkeit, Rhythmus und etwas Greifbares. Unter Druck kannst du jedoch so lange festhalten oder funktionieren, bis der Körper die Grenze deutlicher formuliert als dein Kopf.',
-        Luft: 'Gedanken, Gespräche und neue Perspektiven können dich unmittelbar beleben. Wenn alles im Kopf bleibt, wird aus Beweglichkeit allerdings Zerstreuung – dann braucht Erkenntnis wieder Atem, Körper und eine konkrete Entscheidung.',
-        Wasser: 'Du nimmst Atmosphären und emotionale Unterströmungen stark auf. Rückzug und Resonanz können regulieren; ohne klare Grenzen trägst du jedoch schnell Gefühle weiter, die nicht vollständig deine sind.',
+    const FOCUS = {
+        work: {
+            label: 'Arbeit & Wirkung',
+            fortune: 'Für deine Frage zu Arbeit und Wirkung zeigt Fortune, unter welchen Bedingungen du nicht ständig gegen deine eigene Arbeitsweise ankämpfen musst.',
+            spirit: 'Für deine berufliche Richtung zeigt Spirit, welche Entscheidungen du bewusst vertreten und in eine klare Rolle übersetzen kannst.',
+            eros: 'Für Arbeit und Wirkung zeigt Eros, welche Themen, Menschen und Aufgaben deine Energie anheben – und welche dich trotz äußerem Erfolg innerlich leer lassen.',
+        },
+        love: {
+            label: 'Liebe & Beziehungen',
+            fortune: 'Für Liebe und Beziehungen zeigt Fortune, welche Form von Verbindung dich wirklich trägt. Gemeint ist nicht nur Anziehung, sondern eine Dynamik, in der du dich sicherer, freier und mehr bei dir fühlst.',
+            spirit: 'Für Liebe und Beziehungen zeigt Spirit, wie du Bindung aktiv mitgestaltest: was du wählst, aussprichst und nicht länger dem Zufall oder dem Gegenüber überlässt.',
+            eros: 'Für Liebe und Beziehungen wird Eros besonders direkt. Er beschreibt, was dein Begehren weckt – und hilft dir zugleich zu unterscheiden, ob eine starke Anziehung dich nährt oder nur intensiv beschäftigt.',
+        },
+        decision: {
+            label: 'Eine Entscheidung',
+            fortune: 'Bei einer Entscheidung zeigt Fortune, welche Bedingungen dich stabilisieren. Die richtige Wahl muss nicht mühelos sein, aber sie sollte dich nicht dauerhaft von deiner natürlichen Kraft abschneiden.',
+            spirit: 'Bei einer Entscheidung ist Spirit der deutlichste Punkt. Er zeigt nicht, was alle anderen für vernünftig halten, sondern wie dein eigener Wille zu einer tragfähigen Richtung wird.',
+            eros: 'Bei einer Entscheidung zeigt Eros, welche Option echte Lebendigkeit enthält. Das ist ein wichtiges Signal – aber kein Freifahrtschein für jeden starken Impuls.',
+        },
+        change: {
+            label: 'Veränderung & Neuanfang',
+            fortune: 'In einer Veränderung zeigt Fortune, worauf du dich verlassen kannst, während das Alte seine Form verliert. Hier liegt der Teil deines Lebens, der dich auffängt, ohne dich festzuhalten.',
+            spirit: 'In einer Veränderung zeigt Spirit, wo du selbst führen musst. Nicht jede Entwicklung passiert von allein; an diesem Punkt braucht das Neue eine bewusste Entscheidung von dir.',
+            eros: 'In einer Veränderung zeigt Eros, was dich nach vorn zieht. Er macht sichtbar, ob du wirklich zu etwas Neuem willst – oder nur möglichst schnell vom Alten weg.',
+        },
+        self: {
+            label: 'Mich selbst besser verstehen',
+            fortune: 'Fortune erklärt, welche Erfahrungen deinem System vermitteln: Hier darf ich ankommen. Oft ist das so selbstverständlich für dich, dass du seine unterstützende Kraft unterschätzt.',
+            spirit: 'Spirit erklärt, wie du Autorin deines Lebens wirst. Er zeigt, welche Art von Entscheidung sich nach dir anfühlt – nicht nur nach Anpassung, Pflicht oder einer klugen Strategie.',
+            eros: 'Eros erklärt, woran du merkst, dass du nicht nur funktionierst. Seine Signatur zeigt sich dort, wo Lust, Neugier und Präsenz gleichzeitig zurückkehren.',
+        },
     };
 
-    const MODE_SHADOW = {
-        kardinal: 'Du kannst versuchen, Unsicherheit durch Initiative zu kontrollieren: lieber noch etwas beginnen, entscheiden oder organisieren, als einen Moment lang nicht zu wissen. Führung wird dann zur Flucht vor Empfänglichkeit.',
-        fix: 'Deine Stärke ist Bindung – und genau dort liegt der blinde Fleck. Du kannst an Menschen, Rollen oder Strategien festhalten, weil Loslassen sich wie Machtverlust anfühlt, obwohl das Leben längst eine neue Form verlangt.',
-        veränderlich: 'Du erkennst Möglichkeiten und Zwischentöne, doch genau das kann klare Konsequenzen verdünnen. Anpassung wird zum Schatten, wenn du jede Perspektive verstehst, nur deine eigene Position nicht mehr verkörperst.',
-    };
-
-    const LOT_SHADOW = {
-        fortune: 'Fortune ist kein Versprechen, dass alles leicht wird. Sein Schatten zeigt sich dort, wo du „Flow“ mit Passivität verwechselst, auf Rettung wartest oder deine Lebensumstände zu einer endgültigen Identität erklärst.',
-        spirit: 'Spirit ist nicht automatisch Purpose und schon gar nicht moralische Überlegenheit. Sein Schatten ist ein Wille, der alles kontrollieren, optimieren oder erzwingen will – und dabei nicht mehr bemerkt, wofür er ursprünglich losgegangen ist.',
-        eros: 'Eros ist nicht nur sexy. Begehren kann projizieren, idealisieren, konsumieren und süchtig nach Intensität werden. Nicht alles, was dich elektrisiert, nährt dich; manchmal zeigt die Anziehung genau die Stelle, an der du dich selbst verlassen würdest.',
-    };
-
-    const ACTIONS = {
-        day: [
-            'Tu heute eine kleine Sache, die deinem Fortune-Haus konkret mehr Raum gibt. Kein symbolischer Großakt – eine Handlung, die dein Körper und dein Alltag tatsächlich bemerken.',
-            'Sprich innerhalb der nächsten sieben Tage ein klares Ja oder Nein aus, das zu deinem Spirit passt. Richtung entsteht, wenn eine Möglichkeit eine Konsequenz bekommt.',
-            'Plane für die nächsten sechs Monate ein Vorhaben, in dem dein Eros nicht nur Belohnung am Rand ist, sondern eine echte Quelle von Energie und Gestaltung.',
-        ],
+    const ELEMENT_PRACTICE = {
+        Feuer: 'Du erkennst die stimmige Richtung daran, dass Mut, Bewegung und echte Begeisterung entstehen – ohne dass du permanent Drama oder Druck dafür brauchst.',
+        Erde: 'Du erkennst die stimmige Richtung daran, dass sie im Alltag tragfähig wird: in Zeit, Körper, Geld, Verlässlichkeit und konkreten nächsten Schritten.',
+        Luft: 'Du erkennst die stimmige Richtung daran, dass Denken und Austausch dich weiterbringen. Entscheidend ist, dass aus einer Idee irgendwann ein Gespräch, eine Wahl oder eine Handlung wird.',
+        Wasser: 'Du erkennst die stimmige Richtung an emotionaler Resonanz und einem leisen inneren Wissen. Wichtig ist, Gefühl nicht mit Wunschdenken oder fehlenden Grenzen zu verwechseln.',
     };
 
     const form = document.getElementById('fortune-form');
@@ -417,12 +434,6 @@
 
     function nameSeed(value) {
         return Array.from(value || 'stars').reduce((total, character) => total + character.charCodeAt(0), 0);
-    }
-
-    function greeting(name, variant) {
-        if (!name) { return ['Oh, du wundervoller Mensch …', 'Yes – da bist du.', 'The sky remembers.'][variant % 3]; }
-        const safe = escapeHtml(name.trim());
-        return [`Oh ${safe} …`, `Yes ${safe}, this is you.`, `${safe}! Der Himmel erinnert sich.`][variant % 3];
     }
 
     function datePartsInZone(date, timeZone) {
@@ -612,65 +623,90 @@
         }
     });
 
-    function conjunctionMarkup(detail) {
-        if (!detail.conjunctions.length) {
-            return '<p>Kein Planet steht innerhalb des gewählten 3°-Orbis direkt an diesem Lot. Das macht den Punkt nicht schwach: Zeichen, Haus und Herrscher erzählen bereits seine vollständige Grundgeschichte.</p>';
-        }
-        const list = detail.conjunctions.map(item => `<li><strong>${escapeHtml(item.planet)} · ${item.distance.toFixed(1)}°</strong><br>${CONJUNCTIONS[item.planet]}</li>`).join('');
-        return `<p>${detail.conjunctions.length === 1 ? 'Ein Planet sitzt wie ein VIP direkt an diesem Lot und verstärkt seine Signatur.' : 'Mehrere Planeten verdichten diesen Lot zu einem besonders starken Resonanzpunkt.'}</p><ul class="fortune-conjunction-list">${list}</ul>`;
+    function conjunctionSectionMarkup(key, detail) {
+        if (!detail.conjunctions.length) { return ''; }
+        const lot = LOTS[key];
+        const list = detail.conjunctions.map(item => `<li><strong>${escapeHtml(item.planet)} · ${item.distance.toFixed(1)}° Orbis</strong><br>${CONJUNCTIONS[item.planet]}</li>`).join('');
+        const headline = detail.conjunctions.length === 1
+            ? `${escapeHtml(detail.conjunctions[0].planet)} verstärkt deinen ${lot.name}-Punkt.`
+            : `Mehrere Planeten verstärken deinen ${lot.name}-Punkt.`;
+        return `
+            <section class="fortune-layer">
+                <p class="fortune-layer-label">Extra emphasis · a stronger signal</p>
+                <h3>${headline}</h3>
+                <p>Diese Nähe macht das Thema im Alltag deutlicher und unmittelbarer spürbar.</p>
+                <ul class="fortune-conjunction-list">${list}</ul>
+            </section>`;
     }
 
-    function lifeFacetsMarkup(key, detail) {
-        const lot = LOTS[key];
-        const houseField = HOUSES[detail.house - 1].toLowerCase();
-        const specificShadow = lot.shadows ? lot.shadows[detail.signIndex] : MODE_SHADOW[detail.sign.mode];
-        const specificTransfer = lot.transfers ? lot.transfers[detail.house - 1] : `Wähle eine kleine Handlung im Feld ${houseField}, die deiner Erkenntnis eine sichtbare Form gibt.`;
-        const relationshipCopy = key === 'fortune'
-            ? `In Beziehungen zeigt Fortune, welche Begegnungen und Dynamiken dich tatsächlich tragen. Mit ${detail.sign.essence} und dem Fokus auf ${houseField} brauchst du Verbindung, die Substanz hat – nicht nur Chemie, Potenzial oder ein schönes Narrativ. Achte darauf, Unterstützung nicht mit Abhängigkeit und Loyalität nicht mit Selbstverlassen zu verwechseln.`
-            : key === 'spirit'
-                ? `In Beziehungen will Spirit nicht nur fühlen, sondern wählen. ${detail.sign.essence} beschreibt, wie du Bindung bewusst mitgestaltest; das ${detail.house}. Haus zeigt, wo deine Entscheidungen Konsequenzen bekommen. Sexy wird es dort, wo du weder dominierst noch dich unsichtbar machst, sondern ein klares Begehren und ein klares Nein aushältst.`
-                : `Eros beschreibt, was dein Begehren aufweckt – aber nicht automatisch, was langfristig gut für dich ist. ${detail.sign.essence} färbt deine Anziehung, während das ${detail.house}. Haus die Bühne dafür zeigt. Die ehrlichste Frage lautet nicht nur „Will ich das?“, sondern auch: „Wer werde ich, wenn ich diesem Begehren folge?“`;
-        const workCopy = key === 'fortune'
-            ? `Im Beruf und im Umgang mit Geld entsteht Flow nicht durch blindes Glück, sondern wenn deine Umgebung zu deiner natürlichen Arbeitsweise passt. ${detail.ruler} als Herrscher verlangt ${PLANET_STRATEGY[detail.ruler]}. Wenn du dauerhaft gegen diese Logik arbeitest, kann selbst äußerer Erfolg teuer werden; wenn du sie respektierst, werden Timing, Menschen und Ressourcen spürbar kooperativer.`
-            : key === 'spirit'
-                ? `Spirit zeigt die Art von Wirkung, für die du bewusst Verantwortung übernehmen kannst. Über ${detail.ruler} führt der Weg durch ${PLANET_STRATEGY[detail.ruler]}. Das ist nicht zwingend ein Jobtitel: Es ist die Qualität von Entscheidung, die du in Arbeit, Führung, Geld und Sichtbarkeit immer wieder trainierst.`
-                : `Eros ist im Arbeitsleben deine magnetische Energie: die Themen, Menschen und Ideen, bei denen du mehr Präsenz hast als Pflichtgefühl. Über ${detail.ruler} will diese Energie durch ${PLANET_STRATEGY[detail.ruler]} Form bekommen. Der Test: Macht dich das Vorhaben auf Dauer lebendiger – oder brauchst du ständig den nächsten Kick, um dich überhaupt noch zu spüren?`;
+    function focusMarkup(key, detail, focus) {
+        const selected = FOCUS[focus];
+        if (!selected) { return ''; }
         return `
             <section class="fortune-facets">
-                <p class="fortune-layer-label">Where it lands · real life</p>
-                <h3>Not just a placement. A pattern.</h3>
+                <p class="fortune-layer-label">Your question · ${selected.label}</p>
+                <h3>Was das für deine aktuelle Situation bedeutet.</h3>
                 <div class="fortune-facet-grid">
-                    <article><span>♡</span><h4>Love & relationships</h4><p>${relationshipCopy}</p></article>
-                    <article><span>↗</span><h4>Work, money & impact</h4><p>${workCopy}</p></article>
-                    <article><span>◌</span><h4>Body & daily life</h4><p>${ELEMENT_BODY[detail.sign.element]} Das ist eine astrologische Reflexion, keine medizinische Aussage.</p></article>
+                    <article>
+                        <span>↘</span>
+                        <h4>${detail.house}. Haus</h4>
+                        <p>${selected[key]} Bei dir führt dieses Thema in das ${detail.house}. Haus – in den Bereich <strong>${HOUSES[detail.house - 1]}</strong>. ${ELEMENT_PRACTICE[detail.sign.element]}</p>
+                    </article>
                 </div>
-            </section>
+            </section>`;
+    }
+
+    function personalLayersMarkup(key, detail, focus) {
+        const lot = LOTS[key];
+        return `
+            ${focusMarkup(key, detail, focus)}
             <aside class="fortune-shadow-truth">
                 <p class="fortune-layer-label">The honest part · no sugarcoating</p>
-                <h3>Where this can get messy.</h3>
-                <p>${LOT_SHADOW[key]}</p><p>${specificShadow}</p><p>${MODE_SHADOW[detail.sign.mode]}</p>
+                <h3>Wo deine Stärke gegen dich arbeiten kann.</h3>
+                <p>${lot.shadows[detail.signIndex]}</p>
             </aside>
             <section class="fortune-transfer">
                 <p class="fortune-layer-label">Transfer · take it into your life</p>
-                <h3>Don’t just understand it. Catch it in the wild.</h3>
+                <h3>Probier es im echten Leben aus.</h3>
                 <ol>
-                    <li><span>01 · Notice</span><p>Beobachte sieben Tage lang Situationen rund um <strong>${houseField}</strong>. Wann wird deine Energie weiter – und wann beginnst du, dich zusammenzuziehen oder zu beweisen?</p></li>
-                    <li><span>02 · Interrupt</span><p>Erkenne den Moment, in dem deine Stärke in ihr Schattenmuster kippt. Unterbrich nicht dich selbst – unterbrich die automatische Strategie.</p></li>
-                    <li><span>03 · Practice</span><p>${specificTransfer}</p></li>
-                    <li><span>04 · Choose</span><p>${lot.jokers[detail.signIndex]} Schreib die Antwort nicht astrologisch schön. Schreib sie so, dass daraus eine echte Entscheidung werden kann.</p></li>
+                    <li><span>01 · Experiment</span><p>${lot.transfers[detail.house - 1]}</p></li>
                 </ol>
             </section>`;
     }
 
-    function lotSection(key, detail, name, seed) {
+    function rulerSectionMarkup(key, detail, chart) {
+        const order = ['fortune', 'spirit', 'eros'];
+        const currentIndex = order.indexOf(key);
+        const previousKey = order.slice(0, currentIndex).find(candidate => chart.lots[candidate].ruler === detail.ruler);
+        const lot = LOTS[key];
+
+        if (previousKey) {
+            const previousLot = LOTS[previousKey];
+            return `
+                <section class="fortune-layer">
+                    <p class="fortune-layer-label">The shared ruler · what connects</p>
+                    <h3>${detail.ruler} verbindet ${previousLot.name} und ${lot.name}.</h3>
+                    <p>${detail.ruler} führt auch deinen ${previousLot.name}-Punkt. Das bedeutet: Beide Kräfte öffnen sich über ${PLANET_STRATEGY[detail.ruler]}. Bei dir steht ${detail.ruler} im Zeichen ${detail.rulerSign.name} und im ${detail.rulerHouse}. Haus. Dadurch treten bei beiden <strong>${detail.rulerSign.essence}</strong> stärker hervor. Der konkrete Lebensbereich ist <strong>${HOUSES[detail.rulerHouse - 1]}</strong>.</p>
+                </section>`;
+        }
+
+        return `
+            <section class="fortune-layer">
+                <p class="fortune-layer-label">The ruler · how it becomes real</p>
+                <h3>${detail.ruler} zeigt, wie sich dieser Punkt öffnet.</h3>
+                <p>Das Zeichen ${detail.sign.name} wird traditionell ${RULER_BY[detail.ruler]} regiert. Deshalb führt dein Weg hier über ${PLANET_STRATEGY[detail.ruler]}. Bei dir steht ${detail.ruler} auf ${degreeLabel(detail.rulerLongitude)} im ${detail.rulerHouse}. Haus. Dadurch treten <strong>${detail.rulerSign.essence}</strong> stärker hervor. Konkret wird dieser Weg vor allem im Bereich <strong>${HOUSES[detail.rulerHouse - 1]}</strong>.</p>
+                <p class="fortune-ruler-shadow"><strong>Achte darauf:</strong> ${PLANET_SHADOW[detail.ruler]}</p>
+            </section>`;
+    }
+
+    function lotSection(key, detail, chart, seed, focus) {
         const lot = LOTS[key];
         const opening = lot.opening[(seed + detail.signIndex + detail.house) % lot.opening.length];
-        const rulerPosition = `${degreeLabel(detail.rulerLongitude)} im ${detail.rulerHouse}. Haus`;
         const pullQuote = key === 'fortune'
-            ? `Du musst hier nicht härter arbeiten. Du darfst lernen, zu erkennen, was dich bereits trägt.`
+            ? 'Du musst hier nicht härter arbeiten. Du darfst genauer erkennen, was dich bereits trägt.'
             : key === 'spirit'
-                ? `Dein Wille wird stark, sobald aus einem inneren Vielleicht ein bewusstes Ja wird.`
-                : `Was dich wirklich lebendig macht, ist keine Ablenkung. Es ist Information.`;
+                ? 'Dein Wille wird stark, sobald aus einem inneren Vielleicht ein bewusstes Ja wird.'
+                : 'Was dich wirklich lebendig macht, ist keine Ablenkung. Es ist Information.';
         return `
             <article class="fortune-reading-section" id="reading-${key}">
                 <aside class="fortune-reading-aside">
@@ -679,7 +715,7 @@
                     <p>${lot.question}</p>
                 </aside>
                 <div class="fortune-reading-body">
-                    <p class="fortune-reading-lead">${greeting(name, seed + detail.house)} ${opening}</p>
+                    <p class="fortune-reading-lead">${opening}</p>
                     <section class="fortune-layer">
                         <p class="fortune-layer-label">The sign · How</p>
                         <h3>${detail.sign.symbol} ${lot.name} in ${detail.sign.name}</h3>
@@ -691,30 +727,14 @@
                         <h3>${detail.house}. Haus · ${HOUSES[detail.house - 1]}</h3>
                         <p>${lot.houses[detail.house - 1]}</p>
                     </section>
-                    <section class="fortune-layer">
-                        <p class="fortune-layer-label">The ruler · Through what</p>
-                        <h3>${detail.ruler} holds the key</h3>
-                        <p>Das Zeichen ${detail.sign.name} wird traditionell von ${detail.ruler} regiert. Dein Zugang öffnet sich deshalb über ${PLANET_STRATEGY[detail.ruler]}. In deinem Horoskop steht ${detail.ruler} auf ${rulerPosition}. Das verlagert den Schlüssel zusätzlich in die Welt von <strong>${detail.rulerSign.essence}</strong> und in den Lebensbereich <strong>${HOUSES[detail.rulerHouse - 1]}</strong>.</p><p class="fortune-ruler-shadow"><strong>Watch this:</strong> ${PLANET_SHADOW[detail.ruler]}</p>
-                    </section>
-                    <section class="fortune-layer">
-                        <p class="fortune-layer-label">Planets at the Lot · 3° orb</p>
-                        <h3>Who is sitting with ${lot.name}?</h3>
-                        ${conjunctionMarkup(detail)}
-                    </section>
-                    ${lifeFacetsMarkup(key, detail)}
-                    <div class="fortune-polarity" aria-label="Potenzial und Schattenseite">
-                        <section><p class="fortune-layer-label">When it flows</p><h3>In your power</h3><p>${detail.sign.essence} wird zu einer Ressource, die du nicht beweisen musst – du verkörperst sie.</p></section>
-                        <section><p class="fortune-layer-label">Watch the shadow</p><h3>The plot twist</h3><p>Dieselbe Kraft kippt, wenn sie zur Pflicht, zur Kontrolle oder zur einzigen erlaubten Strategie wird.</p></section>
-                    </div>
-                    <aside class="fortune-joker">
-                        <p class="fortune-layer-label">Your ${lot.name} Joker</p>
-                        <blockquote>${lot.jokers[detail.signIndex]}</blockquote>
-                    </aside>
+                    ${rulerSectionMarkup(key, detail, chart)}
+                    ${conjunctionSectionMarkup(key, detail)}
+                    ${personalLayersMarkup(key, detail, focus)}
                 </div>
             </article>`;
     }
 
-    function lotAspectCopy(chart) {
+    function lotAspectInsights(chart) {
         const pairs = [['fortune', 'spirit'], ['spirit', 'eros'], ['fortune', 'eros']];
         const aspectNames = { 0: 'Konjunktion', 60: 'Sextil', 90: 'Quadrat', 120: 'Trigon', 180: 'Opposition' };
         const pairLabels = { fortune: 'Fortune', spirit: 'Spirit', eros: 'Eros' };
@@ -735,13 +755,9 @@
                             : target.angle === 120
                                 ? 'Die Energien verstehen einander fast mühelos. Genau deshalb lohnt es sich zu prüfen, ob du diese Gabe bewusst nutzt oder für selbstverständlich hältst.'
                                 : 'Die Kräfte stehen sich gegenüber und machen ein Entweder-oder besonders verführerisch. Integration beginnt, wenn beide Seiten gleichzeitig eine Stimme bekommen.';
-                found.push(`${pairLabels[first]} und ${pairLabels[second]} bilden eine ${aspectNames[target.angle]} mit ${target.orb.toFixed(1)}° Orbis. ${dynamic}`);
+                found.push(`${pairLabels[first]} und ${pairLabels[second]} stehen in einer ${aspectNames[target.angle]} mit ${target.orb.toFixed(1)}° Orbis. ${dynamic}`);
             }
         });
-
-        if (!found.length) {
-            found.push('Zwischen den drei Lots liegt keine enge klassische Hauptverbindung innerhalb von 4°. Sie funktionieren deshalb nicht automatisch als ein Paket: Die Verbindung entsteht stärker über ihre Zeichen, Häuser und Herrscher – also durch gelebte Integration statt durch unmittelbaren astrologischen Gleichklang.');
-        }
 
         const rulerGroups = {};
         Object.entries(chart.lots).forEach(([key, detail]) => {
@@ -749,46 +765,134 @@
         });
         Object.entries(rulerGroups).forEach(([ruler, lots]) => {
             if (lots.length > 1) {
-                found.push(`${lots.join(' und ')} teilen mit ${ruler} denselben Gatekeeper. Dadurch läuft mehr als eine deiner Kernkräfte über ${PLANET_STRATEGY[ruler]}. Der gemeinsame Schatten: ${PLANET_SHADOW[ruler]}`);
+                found.push(`${lots.join(' und ')} werden beide von ${ruler} geführt. Das ist wichtig: Mehr als eine deiner Kernkräfte öffnet sich über ${PLANET_STRATEGY[ruler]}. Wenn ${ruler} unter Druck gerät, kann deshalb auch derselbe Schatten an mehreren Stellen auftauchen. ${PLANET_SHADOW[ruler]}`);
             }
         });
-        return found.join(' ');
+        return found;
+    }
+
+    function revealNarrative(chart) {
+        const fortune = chart.lots.fortune;
+        const spirit = chart.lots.spirit;
+        const eros = chart.lots.eros;
+        const allSameRuler = fortune.ruler === spirit.ruler && spirit.ruler === eros.ruler;
+        const spiritErosMatch = spirit.signIndex === eros.signIndex && spirit.house === eros.house;
+        const fortuneSpiritHouse = fortune.house === spirit.house;
+        const spiritErosSign = spirit.signIndex === eros.signIndex;
+        const sharedRuler = [['fortune', 'spirit'], ['spirit', 'eros'], ['fortune', 'eros']]
+            .find(([first, second]) => chart.lots[first].ruler === chart.lots[second].ruler);
+
+        if (allSameRuler) {
+            return {
+                headline: 'Deine drei Lots haben einen gemeinsamen Schlüssel.',
+                intro: `${fortune.ruler} verbindet, was dich trägt, was du bewusst erschaffst und was dich lebendig macht. Dadurch wirkt dein Reading ungewöhnlich gebündelt: Wenn du den Zugang über ${PLANET_STRATEGY[fortune.ruler]} stärkst, bewegst du nicht nur einen einzelnen Bereich, sondern deine gesamte Drei-Lot-Matrix.`,
+            };
+        }
+        if (spiritErosMatch) {
+            return {
+                headline: 'Was du willst und was dich lebendig macht, gehört zusammen.',
+                intro: `Spirit und Eros stehen beide im Zeichen ${spirit.sign.name} und im ${spirit.house}. Haus. Dein bewusster Wille und deine Lebenskraft sprechen deshalb dieselbe Sprache und werden im selben Lebensbereich aktiviert. Fortune im Zeichen ${fortune.sign.name} und im ${fortune.house}. Haus zeigt, was dich auf diesem Weg zusätzlich trägt.`,
+            };
+        }
+        if (fortuneSpiritHouse) {
+            return {
+                headline: 'Was dich trägt und was du erschaffst, beginnt am selben Ort.',
+                intro: `Fortune und Spirit stehen beide im ${fortune.house}. Haus – im Bereich ${HOUSES[fortune.house - 1]}. Was dir Halt gibt und wo du bewusst Verantwortung übernehmen willst, gehört damit eng zusammen. Eros im Zeichen ${eros.sign.name} und im ${eros.house}. Haus zeigt, wodurch dabei echte Lebendigkeit entsteht.`,
+            };
+        }
+        if (spiritErosSign) {
+            return {
+                headline: 'Dein Wille und dein Begehren sprechen dieselbe Sprache.',
+                intro: `Spirit und Eros stehen beide im Zeichen ${spirit.sign.name}. Was du bewusst wählen willst und was dich magnetisch anzieht, folgt damit einer ähnlichen inneren Logik. Weil sie in unterschiedlichen Häusern stehen, will diese Kraft jedoch in zwei verschiedenen Lebensbereichen konkret werden.`,
+            };
+        }
+        if (sharedRuler) {
+            const [first, second] = sharedRuler;
+            const labels = { fortune: 'Fortune', spirit: 'Spirit', eros: 'Eros' };
+            const ruler = chart.lots[first].ruler;
+            return {
+                headline: `Zwei deiner wichtigsten Kräfte öffnen sich über ${ruler}.`,
+                intro: `${labels[first]} und ${labels[second]} werden beide von ${ruler} geführt. Damit verbindet ${PLANET_STRATEGY[ruler]} zwei Teile deines Readings, die auf den ersten Blick unterschiedlich wirken können. Der dritte Punkt setzt einen eigenen Akzent und verhindert, dass daraus eine Einbahnstraße wird.`,
+            };
+        }
+        return {
+            headline: 'Was dich trägt, ist nicht automatisch das, was dich antreibt.',
+            intro: `Fortune steht im Zeichen ${fortune.sign.name} und im ${fortune.house}. Haus, Spirit im Zeichen ${spirit.sign.name} und im ${spirit.house}. Haus, Eros im Zeichen ${eros.sign.name} und im ${eros.house}. Haus. Deine drei Lots setzen unterschiedliche Schwerpunkte. Genau darin liegt ihre Stärke: Sie helfen dir zu unterscheiden, ob du gerade Halt, eine bewusste Entscheidung oder neue Lebendigkeit brauchst.`,
+        };
     }
 
     function integrationCopy(chart, name) {
         const fortune = chart.lots.fortune;
         const spirit = chart.lots.spirit;
         const eros = chart.lots.eros;
-        const personal = name ? escapeHtml(name.trim()) : 'Du';
+        const personal = name ? `${escapeHtml(name.trim())}, ` : '';
         const aligned = fortune.sign.element === spirit.sign.element;
-        const erosSupportsSpirit = eros.sign.element === spirit.sign.element || eros.sign.mode === spirit.sign.mode;
         const sameHouse = fortune.house === spirit.house;
+        const spiritErosMatch = spirit.signIndex === eros.signIndex && spirit.house === eros.house;
 
         const paragraphOne = sameHouse
-            ? `Fortune und Spirit treffen sich in deinem ${fortune.house}. Haus. Was dich trägt und was du bewusst gestalten willst, spielen damit auf derselben Lebensbühne. Wenn du in diesem Feld Verantwortung übernimmst, muss Flow nicht gegen deinen Willen arbeiten.`
+            ? `Fortune und Spirit treffen sich in deinem ${fortune.house}. Haus. Das heißt: Was dich stabilisiert und was du bewusst gestalten willst, wird im selben Lebensbereich sichtbar – bei dir im Bereich ${HOUSES[fortune.house - 1]}. Wenn du dort Verantwortung übernimmst, musst du nicht zwischen Sicherheit und Richtung wählen.`
             : aligned
-                ? `Fortune und Spirit sprechen beide die Sprache ${fortune.sign.element}. Dein natürlicher Flow ${ELEMENT_COPY[fortune.sign.element]}, und genau darüber findet auch dein Wille Richtung. Die beiden Kräfte verstehen einander – solange du ihre gemeinsame Energie nicht übertreibst.`
-                : `Fortune in ${fortune.sign.name} und Spirit in ${spirit.sign.name} verlangen zwei verschiedene Intelligenzen. Was dich trägt, ${ELEMENT_COPY[fortune.sign.element]}; was du bewusst erschaffst, ${ELEMENT_COPY[spirit.sign.element]}. Dein Sweet Spot entsteht nicht durch die Wahl einer Seite, sondern durch eine Reihenfolge: erst Boden und Resonanz, dann bewusste Richtung.`;
+                ? `Fortune und Spirit gehören beide zum Element ${fortune.sign.element}. Was dich trägt und wie du Entscheidungen triffst, folgt deshalb einer ähnlichen Grundbewegung: Es ${ELEMENT_COPY[fortune.sign.element]}. Das kann vieles erleichtern. Achte nur darauf, diese eine Stärke nicht zur einzigen erlaubten Strategie zu machen.`
+                : `Fortune im Zeichen ${fortune.sign.name} und Spirit im Zeichen ${spirit.sign.name} arbeiten unterschiedlich. Dein Flow ${ELEMENT_COPY[fortune.sign.element]}; dein Wille ${ELEMENT_COPY[spirit.sign.element]}. Du musst dich nicht für eine Seite entscheiden. Hilfreicher ist die Frage nach der Reihenfolge: Was stabilisiert dich zuerst – und welche klare Entscheidung kann daraus entstehen?`;
 
-        const paragraphTwo = erosSupportsSpirit
-            ? `Eros unterstützt deinen Spirit unmittelbar: Begehren und Wille teilen eine verwandte Energie. Wenn dich etwas wirklich lebendig macht, steigt auch deine Entscheidungskraft. Deine Aufgabe ist weniger, Motivation herzustellen, als dein echtes Feuer von kurzfristiger Ablenkung zu unterscheiden.`
-            : `Eros bringt mit ${eros.sign.element} eine zusätzliche Kraft in die Matrix. Dein Verlangen will ${ELEMENT_COPY[eros.sign.element]}, während Spirit über ${spirit.sign.element} führt. Genau diese Reibung kann fruchtbar sein: Eros zeigt, wofür es sich lohnt, die gewohnte Strategie deines Willens zu erweitern.`;
+        const paragraphTwo = spiritErosMatch
+            ? `Spirit und Eros stehen beide im Zeichen ${spirit.sign.name} und im ${spirit.house}. Haus. Wenn dich etwas wirklich lebendig macht, kann daraus besonders schnell ein klares Wollen entstehen. Umgekehrt verliert eine Entscheidung an Kraft, wenn sie zwar vernünftig aussieht, aber deine Lebendigkeit dauerhaft ausschließt.`
+            : spirit.sign.element === eros.sign.element
+                ? `Spirit und Eros teilen das Element ${spirit.sign.element}. Dein Wille und dein Begehren verstehen sich grundsätzlich. Der Unterschied liegt in ihren Häusern: Entscheiden und Begehren wollen bei dir in unterschiedlichen Lebensbereichen ernst genommen werden.`
+                : `Spirit arbeitet bei dir über das Element ${spirit.sign.element}, Eros über das Element ${eros.sign.element}. Deshalb fühlt sich nicht alles, was dich anzieht, sofort vernünftig oder umsetzbar an. Eros liefert Energie und Wahrheit über dein Begehren; Spirit entscheidet, welche Form du dieser Energie geben willst.`;
 
-        const statement = `${personal}, du bist hier, um über ${fortune.sign.essence} zu empfangen, durch ${spirit.sign.essence} bewusst zu gestalten und mit ${eros.sign.essence} ganz ins Leben zu kommen.`;
-        const paragraphThree = lotAspectCopy(chart);
-        return { paragraphOne, paragraphTwo, paragraphThree, statement };
+        const statement = `${personal}${name ? 'das' : 'Das'} trägt dich: ${fortune.sign.essence}. So findet dein Wille Richtung: ${spirit.sign.essence}. Das macht dich lebendig: ${eros.sign.essence}. Klarheit entsteht, wenn du diese drei Kräfte nicht verwechselst.`;
+        return { paragraphOne, paragraphTwo, insights: lotAspectInsights(chart), statement };
     }
 
-    function renderResults(chart, birthDate, place, name, ambiguityCount) {
+    function synthesisQuestion(chart) {
+        const fortune = chart.lots.fortune;
+        const spirit = chart.lots.spirit;
+        const eros = chart.lots.eros;
+        if (spirit.signIndex === eros.signIndex && spirit.house === eros.house) {
+            return 'Was macht mich wirklich lebendig – und welche konkrete Entscheidung folgt daraus?';
+        }
+        if (fortune.house === spirit.house) {
+            return 'Wo trägt mich das Leben bereits – und was will ich dort bewusst übernehmen?';
+        }
+        if (fortune.ruler === spirit.ruler && spirit.ruler === eros.ruler) {
+            return `Wie kann ich ${fortune.ruler} in meinem Leben stärken, ohne in seinen Schatten zu kippen?`;
+        }
+        return 'Brauche ich gerade mehr Halt, eine klare Entscheidung oder neue Lebendigkeit?';
+    }
+
+    function synthesisAction(chart, focus) {
+        const fortune = chart.lots.fortune;
+        const spirit = chart.lots.spirit;
+        const eros = chart.lots.eros;
+        const focusLead = FOCUS[focus] ? `Beziehe das auf dein aktuelles Thema „${FOCUS[focus].label}“: ` : '';
+
+        if (spirit.signIndex === eros.signIndex && spirit.house === eros.house) {
+            return `${focusLead}Wähle etwas, das dich im Bereich ${HOUSES[spirit.house - 1]} spürbar lebendiger macht. Übersetze dieses Begehren innerhalb von sieben Tagen in ein konkretes Ja, Nein oder einen festen nächsten Schritt. Nutze anschließend den Bereich ${HOUSES[fortune.house - 1]}, um dir dafür Unterstützung und Boden zu schaffen.`;
+        }
+        if (fortune.house === spirit.house) {
+            return `${focusLead}Wähle im Bereich ${HOUSES[fortune.house - 1]} eine Sache, die dich bereits trägt. Triff dort eine bewusste Entscheidung, statt nur auf den nächsten Impuls zu warten. Gib ihr anschließend über ${HOUSES[eros.house - 1]} mehr Lust, Energie oder kreative Spannung.`;
+        }
+        if (fortune.ruler === spirit.ruler && spirit.ruler === eros.ruler) {
+            return `${focusLead}Alle drei Lots öffnen sich über ${fortune.ruler}. Wähle eine einzige Handlung, in der ${PLANET_STRATEGY[fortune.ruler]} konkret sichtbar werden. Prüfe nach sieben Tagen: Hat diese Handlung dir Halt, Richtung und Lebendigkeit gegeben – oder nur eines davon?`;
+        }
+        return `${focusLead}Arbeite in dieser Reihenfolge: Schaffe zuerst im Bereich ${HOUSES[fortune.house - 1]} mehr Halt. Triff dann im Bereich ${HOUSES[spirit.house - 1]} eine klare Entscheidung. Plane zum Schluss im Bereich ${HOUSES[eros.house - 1]} etwas, das nicht nur sinnvoll ist, sondern dich wirklich lebendig macht.`;
+    }
+
+    function renderResults(chart, birthDate, place, name, focus, ambiguityCount) {
         const modeLabel = chart.isDay ? 'Taghoroskop' : 'Nachthoroskop';
         const seed = nameSeed(name);
+        const reveal = revealNarrative(chart);
         const integration = integrationCopy(chart, name);
         const cards = Object.entries(chart.lots).map(([key, detail]) => {
             const lot = LOTS[key];
             return `<article class="fortune-lot-card"><span class="fortune-lot-symbol" aria-hidden="true">${lot.symbol}</span><p class="fortune-kicker">${lot.name} · ${lot.subtitle}</p><h3>${detail.sign.symbol} ${degreeLabel(detail.longitude)}<br>${detail.house}. Haus</h3><p>Herrscher: ${detail.ruler} · ${degreeLabel(detail.rulerLongitude)}</p><a href="#reading-${key}">Read ${lot.name} <span aria-hidden="true">↘</span></a></article>`;
         }).join('');
-        const readings = Object.entries(chart.lots).map(([key, detail], index) => lotSection(key, detail, name, seed + index)).join('');
-        const actions = ACTIONS.day.map((action, index) => `<article class="fortune-action"><span>0${index + 1} · ${['Today', 'This week', 'This season'][index]}</span><p>${action}</p></article>`).join('');
+        const readings = Object.entries(chart.lots).map(([key, detail], index) => lotSection(key, detail, chart, seed + index, focus)).join('');
+        const action = `<article class="fortune-action"><span>Your integration · next seven days</span><p>${synthesisAction(chart, focus)}</p></article>`;
+        const insightMarkup = integration.insights.map(insight => `<p>${insight}</p>`).join('');
+        const focusMeta = FOCUS[focus] ? `<span>Aktueller Fokus: ${FOCUS[focus].label}</span>` : '';
 
         const ambiguityNote = ambiguityCount > 1 ? '<span>Die lokale Uhrzeit kam durch eine Zeitumstellung zweimal vor; verwendet wurde die frühere Instanz.</span>' : '';
 
@@ -796,29 +900,29 @@
             <section class="fortune-reveal">
                 <span class="fortune-result-planet" aria-hidden="true"></span>
                 <p class="fortune-kicker">The sky at the moment you arrived</p>
-                <p class="fortune-reveal-greeting">${name ? `Oh ${escapeHtml(name.trim())} …` : 'Your cosmic shortcut …'}</p>
-                <h2>Your three Lots<br><em>are here.</em></h2>
-                <p class="fortune-reveal-intro">Drei Punkte. Drei sehr unterschiedliche Kräfte. Und zusammen eine erstaunlich klare Antwort darauf, was dich trägt, was du erschaffst und was dich wirklich lebendig macht.</p>
-                <div class="fortune-meta"><span>${locationLabel(place)}</span><span>${timeZoneLabel(birthDate, place.timezone)}</span><span>${modeLabel}</span><span>Aszendent ${degreeLabel(chart.ascendant)}</span><span>Whole-Sign-Häuser</span>${ambiguityNote}</div>
+                <p class="fortune-reveal-greeting">${name ? `${escapeHtml(name.trim())}, das ist das auffälligste Muster in deinem Reading:` : 'Das ist das auffälligste Muster in deinem Reading:'}</p>
+                <h2>${reveal.headline}</h2>
+                <p class="fortune-reveal-intro">${reveal.intro}</p>
+                <div class="fortune-meta"><span>${locationLabel(place)}</span><span>${timeZoneLabel(birthDate, place.timezone)}</span><span>${modeLabel}</span><span>Aszendent ${degreeLabel(chart.ascendant)}</span><span>Whole-Sign-Häuser</span>${focusMeta}${ambiguityNote}</div>
                 <div class="fortune-lot-grid">${cards}</div>
             </section>
             <div class="fortune-reading">${readings}</div>
             <section class="fortune-integration">
                 <p class="fortune-kicker">The synthesis · this is where it gets interesting</p>
-                <h2>Now for<br><em>the Juice.</em></h2>
+                <h2>So greifen deine drei Lots<br><em>ineinander.</em></h2>
                 <div class="fortune-integration-grid">
                     <p class="fortune-integration-statement">${integration.statement}</p>
-                    <div class="fortune-integration-copy"><p>${integration.paragraphOne}</p><p>${integration.paragraphTwo}</p><p>${integration.paragraphThree}</p></div>
+                    <div class="fortune-integration-copy"><p>${integration.paragraphOne}</p><p>${integration.paragraphTwo}</p>${insightMarkup}</div>
                 </div>
                 <section class="fortune-joker-guide" aria-labelledby="fortune-joker-title">
-                    <header><p class="fortune-kicker">Save this for later</p><h3 id="fortune-joker-title">Your three-Lot Joker.</h3><p>Wenn alles zu viel wird, brauchst du nicht dein gesamtes Horoskop. Stell dir einfach diese drei Fragen.</p></header>
+                    <header><p class="fortune-kicker">Save this for later</p><h3 id="fortune-joker-title">${synthesisQuestion(chart)}</h3><p>Du brauchst nicht immer dein gesamtes Horoskop. Diese drei persönlichen Fragen bringen dich zurück zu dem, was dein Reading tatsächlich zeigt.</p></header>
                     <div class="fortune-joker-cards">
-                        <article><span>⊗</span><p>Fortune</p><h4>Was trägt mich – ohne dass ich es erzwingen muss?</h4></article>
-                        <article><span>✦</span><p>Spirit</p><h4>Was will ich bewusst wählen und erschaffen?</h4></article>
-                        <article><span>♡</span><p>Eros</p><h4>Was macht mich gerade wirklich lebendig?</h4></article>
+                        <article><span>⊗</span><p>Fortune</p><h4>${LOTS.fortune.jokers[chart.lots.fortune.signIndex]}</h4></article>
+                        <article><span>✦</span><p>Spirit</p><h4>${LOTS.spirit.jokers[chart.lots.spirit.signIndex]}</h4></article>
+                        <article><span>♡</span><p>Eros</p><h4>${LOTS.eros.jokers[chart.lots.eros.signIndex]}</h4></article>
                     </div>
                 </section>
-                <section class="fortune-next-moves"><p class="fortune-kicker">Bring it down to earth</p><h3>Three moves. No cosmic homework.</h3><div class="fortune-actions">${actions}</div></section>
+                <section class="fortune-next-moves"><p class="fortune-kicker">Bring it down to earth</p><h3>Dein persönliches Integrations-Experiment.</h3><div class="fortune-actions fortune-actions-single">${action}</div></section>
                 <button class="fortune-again" id="fortune-again" type="button">Calculate another chart <span aria-hidden="true">↗</span></button>
             </section>`;
 
@@ -835,6 +939,8 @@
         const name = document.getElementById('fortune-name').value.trim();
         const dateValue = document.getElementById('fortune-date').value;
         const timeValue = document.getElementById('fortune-time').value;
+        const focusInput = form.querySelector('input[name="focus"]:checked');
+        const focus = focusInput ? focusInput.value : '';
 
         if (!dateValue || !timeValue || !consentInput.checked || !selectedPlace) {
             if (!selectedPlace) { errorBox.textContent = 'Bitte wähle deinen Geburtsort aus der Vorschlagsliste aus.'; }
@@ -858,7 +964,7 @@
             await new Promise(resolve => window.setTimeout(resolve, 650));
             const birthDate = candidates[0];
             const chart = calculateChart(birthDate, selectedPlace);
-            renderResults(chart, birthDate, selectedPlace, name, candidates.length);
+            renderResults(chart, birthDate, selectedPlace, name, focus, candidates.length);
             loading.hidden = true;
             results.hidden = false;
             results.scrollIntoView({ behavior: 'smooth', block: 'start' });

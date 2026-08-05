@@ -73,6 +73,18 @@ if (!defined('ABSPATH')) { exit; }
                     <p class="fortune-place-confirmation" id="fortune-place-confirmation" aria-live="polite"></p>
                 </div>
 
+                <fieldset class="fortune-focus fortune-field-full">
+                    <legend>Was beschäftigt dich gerade? <span>optional</span></legend>
+                    <p>Wähle ein Thema, wenn du dein Reading auf deine aktuelle Situation beziehen möchtest.</p>
+                    <div class="fortune-focus-options">
+                        <label><input type="radio" name="focus" value="work"><span>Arbeit &amp; Wirkung</span></label>
+                        <label><input type="radio" name="focus" value="love"><span>Liebe &amp; Beziehungen</span></label>
+                        <label><input type="radio" name="focus" value="decision"><span>Eine Entscheidung</span></label>
+                        <label><input type="radio" name="focus" value="change"><span>Veränderung &amp; Neuanfang</span></label>
+                        <label><input type="radio" name="focus" value="self"><span>Mich selbst besser verstehen</span></label>
+                    </div>
+                </fieldset>
+
                 <div class="fortune-field-full">
                     <button class="fortune-submit" type="submit">
                         <span>Calculate my Lots</span><span aria-hidden="true">→</span>
