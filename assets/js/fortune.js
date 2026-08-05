@@ -429,6 +429,8 @@
     Object.assign(FOCUS, copy.focus || {});
     Object.assign(FOCUS_DETAILS, copy.focusDetails || {});
     Object.assign(LOTS, copy.lots || {});
+    const ACTION_STYLE = copy.actionStyle || {};
+    const ACTION_AREA = copy.actionArea || {};
 
     const form = document.getElementById('fortune-form');
     if (!form) { return; }
@@ -963,6 +965,17 @@
             </section>`;
     }
 
+    function personalActionNote(key, chart) {
+        const detail = chart.lots[key];
+        const style = ACTION_STYLE[key] && ACTION_STYLE[key][detail.signIndex]
+            ? ACTION_STYLE[key][detail.signIndex]
+            : ELEMENT_PRACTICE[detail.sign.element];
+        const area = ACTION_AREA[key] && ACTION_AREA[key][detail.house - 1]
+            ? ACTION_AREA[key][detail.house - 1]
+            : `Beziehe diese Aufgabe besonders auf den Lebensbereich ${HOUSES[detail.house - 1]}.`;
+        return `<p class="fortune-action-personal"><strong>Persönlich für dich: ${detail.sign.name} im ${detail.house}. Haus.</strong> ${area} ${style}</p>`;
+    }
+
     function actionPlanMarkup(chart, focus, focusDetail) {
         const selectedDetail = focusDetailConfig(focus, focusDetail);
         const today = selectedDetail
@@ -975,9 +988,9 @@
             ? selectedDetail.month
             : `Setze diesen Impuls innerhalb der nächsten vier Wochen bewusst um: ${LOTS.eros.transfers[chart.lots.eros.house - 1]} Notiere anschließend, was du tatsächlich erlebt hast und was du daraus für deinen Alltag beibehalten möchtest.`;
         return `
-            <article class="fortune-action"><span>Heute</span><p>${today}</p></article>
-            <article class="fortune-action"><span>In den nächsten sieben Tagen</span><p>${week}</p></article>
-            <article class="fortune-action"><span>In den nächsten vier Wochen</span><p>${month}</p></article>`;
+            <article class="fortune-action"><span>Heute</span><p>${today}</p>${personalActionNote('fortune', chart)}</article>
+            <article class="fortune-action"><span>In den nächsten sieben Tagen</span><p>${week}</p>${personalActionNote('spirit', chart)}</article>
+            <article class="fortune-action"><span>In den nächsten vier Wochen</span><p>${month}</p>${personalActionNote('eros', chart)}</article>`;
     }
 
     function renderResults(chart, birthDate, place, name, focus, focusDetail, ambiguityCount) {

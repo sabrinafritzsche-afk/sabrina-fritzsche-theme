@@ -516,6 +516,8 @@ body.fortune-page::before {
 .fortune-action { background: #e7e0d5; border: 1px solid rgba(21, 21, 21, .17); padding: 30px; }
 .fortune-action span { color: #7d5c2d; display: block; font-size: 9px; font-weight: 700; letter-spacing: .18em; margin-bottom: 28px; text-transform: uppercase; }
 .fortune-action p { font-family: Arial, sans-serif; font-size: 17px; line-height: 1.7; margin: 0; }
+.fortune-action .fortune-action-personal { border-top: 1px solid rgba(21, 21, 21, .16); color: #4e4942; font-size: 15px; margin-top: 24px; padding-top: 20px; }
+.fortune-action-personal strong { color: #151515; display: block; margin-bottom: 7px; }
 
 .fortune-download { align-items: end; border-bottom: 1px solid rgba(21, 21, 21, .35); border-top: 1px solid rgba(21, 21, 21, .35); display: grid; gap: 8vw; grid-template-columns: 1fr auto; margin-top: 95px; padding: 48px 0; }
 .fortune-download h3 { font-family: Georgia, serif; font-size: clamp(30px, 3vw, 42px); font-weight: 400; line-height: 1.1; margin: 0 0 18px; }
