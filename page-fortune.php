@@ -85,6 +85,12 @@ if (!defined('ABSPATH')) { exit; }
                     </div>
                 </fieldset>
 
+                <fieldset class="fortune-focus fortune-focus-detail fortune-field-full" id="fortune-focus-detail" hidden>
+                    <legend>Was beschreibt deine Situation am besten? <span>optional</span></legend>
+                    <p>Damit können wir die Hinweise noch genauer auf deinen Alltag beziehen.</p>
+                    <div class="fortune-focus-options" id="fortune-focus-detail-options"></div>
+                </fieldset>
+
                 <div class="fortune-field-full">
                     <button class="fortune-submit" type="submit">
                         <span>Calculate my Lots</span><span aria-hidden="true">→</span>
@@ -101,10 +107,11 @@ if (!defined('ABSPATH')) { exit; }
             <p class="fortune-kicker">Your personal astrological shortcut</p>
             <h2>Not your whole chart.<br><em>The three points to remember.</em></h2>
         </header>
+        <p class="fortune-lots-explainer">Die drei Lots sind berechnete Punkte in deinem Geburtshoroskop. Sie sind keine Planeten. Jeder von ihnen beantwortet eine andere Frage: Was unterstützt dich? Was gestaltest du selbst? Und was macht dich wirklich lebendig?</p>
         <div class="fortune-lots-row">
-            <article><div class="fortune-lot-heading"><span>01</span><b aria-hidden="true">⊗</b></div><h3>Fortune</h3><p>Was dir im Alltag Halt gibt und unter welchen Bedingungen dir vieles leichter gelingt.</p></article>
-            <article><div class="fortune-lot-heading"><span>02</span><b aria-hidden="true">☉</b></div><h3>Spirit</h3><p>Dein bewusster Wille. Wo du entscheidest, gestaltest und Wirkung erzeugst.</p></article>
-            <article><div class="fortune-lot-heading"><span>03</span><b aria-hidden="true">♡</b></div><h3>Eros</h3><p>Deine Lebenskraft. Was dich anzieht, entzündet und magnetisch macht.</p></article>
+            <article><div class="fortune-lot-heading"><span>01 · Was trägt mich?</span><b aria-hidden="true">⊗</b></div><h3>Fortune</h3><p>Fortune zeigt, welche Menschen, Bedingungen und Lebensbereiche dir Stabilität geben. Du erkennst daran, was dich im Alltag unterstützt und wo du nicht ständig gegen dich selbst arbeiten musst.</p></article>
+            <article><div class="fortune-lot-heading"><span>02 · Was gestalte ich?</span><b aria-hidden="true">☉</b></div><h3>Spirit</h3><p>Spirit zeigt, wo deine eigenen Entscheidungen wichtig sind. Es geht um deinen Willen, deine Richtung und die Frage, wofür du bewusst Verantwortung übernehmen möchtest.</p></article>
+            <article><div class="fortune-lot-heading"><span>03 · Was belebt mich?</span><b aria-hidden="true">♡</b></div><h3>Eros</h3><p>Eros zeigt, was deine Neugier, Anziehung und Lebensfreude weckt. Das kann sich in Liebe und Sexualität zeigen, aber ebenso in kreativen Ideen, Menschen oder Aufgaben, die dir neue Energie geben.</p></article>
         </div>
     </section>
 
@@ -124,8 +131,14 @@ if (!defined('ABSPATH')) { exit; }
 </main>
 
 <footer class="fortune-footer">
-    <p>Made with stardust, precision & a little bit of juice.</p>
-    <p>© <?php echo esc_html(wp_date('Y')); ?> Sabrina Fritzsche</p>
+    <div class="fortune-footer-meta">
+        <p>Made with stardust, precision & a little bit of juice.</p>
+        <p>© <?php echo esc_html(wp_date('Y')); ?> Sabrina Fritzsche</p>
+    </div>
+    <div class="fortune-signoff">
+        <p>Das Wichtigste: Alles, was Du brauchst, ist schon da.</p>
+        <p>Big hug.<br>Sabrina</p>
+    </div>
 </footer>
 
 <?php wp_footer(); ?>
