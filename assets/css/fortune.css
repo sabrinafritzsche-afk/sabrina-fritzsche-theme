@@ -355,20 +355,20 @@ body.fortune-page::before {
 .fortune-reveal-greeting {
     color: var(--fortune-cream);
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(24px, 2.3vw, 34px);
-    line-height: 1.2;
+    font-size: clamp(21px, 1.8vw, 28px);
+    line-height: 1.35;
     margin: 0 0 18px;
 }
 
 .fortune-reveal h2 {
     color: var(--fortune-cream);
-    font-size: clamp(48px, 5vw, 74px);
-    line-height: .96;
+    font-size: clamp(42px, 4.2vw, 62px);
+    line-height: 1.02;
     max-width: 1050px;
 }
 
 .fortune-reveal h2 em { color: var(--fortune-blue); }
-.fortune-reveal-intro { color: var(--fortune-muted); font-family: Georgia, serif; font-size: clamp(19px, 1.8vw, 27px); line-height: 1.5; margin: 38px 0 58px; max-width: 760px; }
+.fortune-reveal-intro { color: var(--fortune-muted); font-family: Georgia, serif; font-size: clamp(18px, 1.45vw, 22px); line-height: 1.62; margin: 34px 0 54px; max-width: 820px; }
 .fortune-meta { border-bottom: 1px solid var(--fortune-line); border-top: 1px solid var(--fortune-line); display: flex; flex-wrap: wrap; gap: 16px 34px; padding: 18px 0; }
 .fortune-meta span { color: var(--fortune-muted); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
 
@@ -409,16 +409,16 @@ body.fortune-page::before {
 }
 
 .fortune-reading-aside { position: sticky; top: 35px; align-self: start; }
-.fortune-reading-aside h2 { color: var(--fortune-cream); font-size: clamp(43px, 4.5vw, 68px); line-height: .94; }
+.fortune-reading-aside h2 { color: var(--fortune-cream); font-size: clamp(39px, 3.8vw, 56px); line-height: .98; }
 .fortune-reading-aside h2 em { color: var(--fortune-blue); display: block; }
-.fortune-reading-aside > p:last-child { color: var(--fortune-muted); font-family: Georgia, serif; font-size: 21px; line-height: 1.45; margin: 30px 0 0; max-width: 360px; }
+.fortune-reading-aside > p:last-child { color: var(--fortune-muted); font-family: Georgia, serif; font-size: 19px; line-height: 1.55; margin: 26px 0 0; max-width: 360px; }
 
 .fortune-reading-body { max-width: 760px; }
-.fortune-reading-lead { color: var(--fortune-cream); font-family: Georgia, serif; font-size: clamp(25px, 2.4vw, 36px); line-height: 1.34; margin: 0 0 60px; }
+.fortune-reading-lead { color: var(--fortune-cream); font-family: Georgia, serif; font-size: clamp(22px, 2vw, 29px); line-height: 1.48; margin: 0 0 54px; }
 .fortune-layer { border-top: 1px solid var(--fortune-line); padding: 34px 0 30px; }
 .fortune-layer-label { color: var(--fortune-gold); font-size: 9px; font-weight: 700; letter-spacing: .2em; margin: 0 0 13px; text-transform: uppercase; }
-.fortune-layer h3 { color: var(--fortune-cream); font-family: Georgia, serif; font-size: 30px; font-weight: 400; margin: 0 0 18px; }
-.fortune-layer p:not(.fortune-layer-label) { color: #d5cfc6; font-size: 16px; line-height: 1.75; margin: 0; }
+.fortune-layer h3 { color: var(--fortune-cream); font-family: Georgia, serif; font-size: clamp(24px, 2vw, 28px); font-weight: 400; line-height: 1.2; margin: 0 0 18px; }
+.fortune-layer p:not(.fortune-layer-label) { color: #d5cfc6; font-size: 17px; line-height: 1.72; margin: 0; }
 .fortune-layer .fortune-ruler-shadow { border-left: 2px solid #f05d7b; color: #cbbfc3; margin-top: 22px; padding-left: 18px; }
 .fortune-layer .fortune-ruler-shadow strong { color: #f58aa0; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
 .fortune-conjunction-list { list-style: none; margin: 18px 0 0; padding: 0; }
@@ -428,7 +428,7 @@ body.fortune-page::before {
     border: 0;
     color: var(--fortune-cream);
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(28px, 3vw, 42px);
+    font-size: clamp(25px, 2.5vw, 34px);
     line-height: 1.25;
     margin: 45px 0 55px;
     padding: 0 0 0 42px;
@@ -440,26 +440,26 @@ body.fortune-page::before {
 .fortune-facets { border-top: 1px solid var(--fortune-line); margin-top: 18px; padding-top: 42px; }
 .fortune-facets > h3,
 .fortune-shadow-truth h3,
-.fortune-transfer > h3 { color: var(--fortune-cream); font-family: Georgia, serif; font-size: clamp(31px, 3.2vw, 45px); font-weight: 400; line-height: 1.08; margin: 0 0 38px; }
+.fortune-transfer > h3 { color: var(--fortune-cream); font-family: Georgia, serif; font-size: clamp(27px, 2.6vw, 36px); font-weight: 400; line-height: 1.16; margin: 0 0 32px; }
 .fortune-facet-grid { border-top: 1px solid var(--fortune-line); }
 .fortune-facet-grid article { display: grid; gap: 25px; grid-template-columns: 45px 190px 1fr; padding: 31px 0; }
 .fortune-facet-grid article + article { border-top: 1px solid var(--fortune-line); }
 .fortune-facet-grid span { color: var(--fortune-gold); font-family: Georgia, serif; font-size: 25px; }
 .fortune-facet-grid h4 { color: var(--fortune-cream); font-family: Georgia, serif; font-size: 21px; font-weight: 400; line-height: 1.25; margin: 0; }
-.fortune-facet-grid p { color: #d5cfc6; font-size: 15px; line-height: 1.75; margin: 0; }
+.fortune-facet-grid p { color: #d5cfc6; font-size: 17px; line-height: 1.72; margin: 0; }
 
 .fortune-shadow-truth { background: linear-gradient(135deg, #32151f, #19121b); border: 1px solid rgba(240, 93, 123, .28); margin: 55px 0; padding: 42px; position: relative; }
 .fortune-shadow-truth::before { background: #f05d7b; border-radius: 50%; content: ''; height: 13px; position: absolute; right: 28px; top: 28px; width: 13px; }
 .fortune-shadow-truth .fortune-layer-label { color: #f58aa0; }
 .fortune-shadow-truth h3 { margin-bottom: 25px; }
-.fortune-shadow-truth > p:not(.fortune-layer-label) { color: #eadce0; font-family: Georgia, serif; font-size: 19px; line-height: 1.65; margin: 0 0 18px; }
+.fortune-shadow-truth > p:not(.fortune-layer-label) { color: #eadce0; font-family: Georgia, serif; font-size: 18px; line-height: 1.7; margin: 0 0 18px; }
 .fortune-shadow-truth > p:last-child { margin-bottom: 0; }
 
 .fortune-transfer { border-top: 1px solid var(--fortune-line); padding: 48px 0 15px; }
 .fortune-transfer ol { list-style: none; margin: 0; padding: 0; }
 .fortune-transfer li { border-top: 1px solid var(--fortune-line); display: grid; gap: 30px; grid-template-columns: 120px 1fr; padding: 27px 0; }
 .fortune-transfer li > span { color: var(--fortune-gold); font-size: 9px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
-.fortune-transfer li p { color: #d5cfc6; font-size: 15px; line-height: 1.75; margin: 0; }
+.fortune-transfer li p { color: #d5cfc6; font-size: 17px; line-height: 1.72; margin: 0; }
 .fortune-transfer li strong { color: var(--fortune-cream); font-weight: 400; }
 
 .fortune-integration {
@@ -470,17 +470,17 @@ body.fortune-page::before {
 }
 
 .fortune-integration .fortune-kicker { color: #8c6326; }
-.fortune-integration h2 { color: var(--ink); font-size: clamp(48px, 5.5vw, 82px); line-height: .92; max-width: 1050px; }
+.fortune-integration h2 { color: var(--ink); font-size: clamp(42px, 4.4vw, 64px); line-height: 1; max-width: 1050px; }
 .fortune-integration h2 em { color: var(--blue); }
 .fortune-integration-grid { display: grid; gap: 8vw; grid-template-columns: .8fr 1.2fr; margin-top: 90px; }
-.fortune-integration-statement { border-left: 5px solid var(--orange); font-family: Georgia, serif; font-size: clamp(28px, 3.2vw, 46px); line-height: 1.25; margin: 0; padding-left: 30px; }
-.fortune-integration-copy p { font-family: Georgia, serif; font-size: 21px; line-height: 1.65; margin: 0 0 28px; }
+.fortune-integration-statement { border-left: 5px solid var(--orange); font-family: Georgia, serif; font-size: clamp(24px, 2.5vw, 34px); line-height: 1.35; margin: 0; padding-left: 30px; }
+.fortune-integration-copy p { font-family: Georgia, serif; font-size: 18px; line-height: 1.72; margin: 0 0 28px; }
 
 .fortune-joker-guide { background: #111018; color: var(--fortune-cream); margin: 110px -3vw 0; overflow: hidden; padding: 70px 3vw 55px; position: relative; }
 .fortune-joker-guide::after { border: 1px solid rgba(215, 173, 98, .32); border-radius: 50%; content: ''; height: 310px; position: absolute; right: -155px; top: -155px; width: 310px; }
 .fortune-joker-guide header { display: grid; gap: 5vw; grid-template-columns: .45fr .9fr 1fr; position: relative; z-index: 1; }
 .fortune-joker-guide header .fortune-kicker { color: var(--fortune-gold); }
-.fortune-joker-guide h3 { font-family: Georgia, serif; font-size: clamp(34px, 3.6vw, 52px); font-weight: 400; line-height: 1; margin: 0; }
+.fortune-joker-guide h3 { font-family: Georgia, serif; font-size: clamp(31px, 3.1vw, 44px); font-weight: 400; line-height: 1.12; margin: 0; }
 .fortune-joker-guide header > p:last-child { color: var(--fortune-muted); font-size: 15px; line-height: 1.7; margin: 0; max-width: 430px; }
 .fortune-joker-cards { border-top: 1px solid var(--fortune-line); display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 55px; }
 .fortune-joker-cards article { border-right: 1px solid var(--fortune-line); min-height: 255px; padding: 28px 34px 25px 0; }
@@ -488,16 +488,16 @@ body.fortune-page::before {
 .fortune-joker-cards article:last-child { border-right: 0; }
 .fortune-joker-cards span { color: var(--fortune-gold); font-family: Georgia, serif; font-size: 29px; }
 .fortune-joker-cards p { color: var(--fortune-rose); font-size: 9px; font-weight: 700; letter-spacing: .2em; margin: 48px 0 15px; text-transform: uppercase; }
-.fortune-joker-cards h4 { color: var(--fortune-cream); font-family: Georgia, serif; font-size: 23px; font-weight: 400; line-height: 1.35; margin: 0; }
+.fortune-joker-cards h4 { color: var(--fortune-cream); font-family: Georgia, serif; font-size: 20px; font-weight: 400; line-height: 1.45; margin: 0; }
 
 .fortune-next-moves { margin-top: 110px; }
-.fortune-next-moves > h3 { font-family: Georgia, serif; font-size: clamp(36px, 4vw, 58px); font-weight: 400; line-height: 1.05; margin: 0; }
+.fortune-next-moves > h3 { font-family: Georgia, serif; font-size: clamp(32px, 3.2vw, 46px); font-weight: 400; line-height: 1.12; margin: 0; }
 
 .fortune-actions { display: grid; gap: 1px; grid-template-columns: repeat(3, 1fr); margin-top: 80px; }
 .fortune-actions-single { grid-template-columns: minmax(0, 1fr); }
 .fortune-action { background: #e7e0d5; border: 1px solid rgba(21, 21, 21, .17); padding: 30px; }
 .fortune-action span { color: #7d5c2d; display: block; font-size: 9px; font-weight: 700; letter-spacing: .18em; margin-bottom: 28px; text-transform: uppercase; }
-.fortune-action p { font-family: Arial, sans-serif; font-size: 15px; line-height: 1.65; margin: 0; }
+.fortune-action p { font-family: Arial, sans-serif; font-size: 17px; line-height: 1.7; margin: 0; }
 
 .fortune-again { align-items: center; background: transparent; border: 1px solid var(--ink); color: var(--ink); cursor: pointer; display: flex; font-size: 10px; font-weight: 700; gap: 35px; letter-spacing: .15em; margin-top: 45px; padding: 17px 20px; text-transform: uppercase; }
 .fortune-again-dark { border-color: rgba(245, 239, 229, .45); color: var(--fortune-cream); }
@@ -533,16 +533,16 @@ body.fortune-page::before {
     .fortune-result-planet { height: 72px; right: -8px; top: 68px; width: 72px; }
     .fortune-result-planet::after { inset: -10px -22px; }
     .fortune-reveal-greeting { font-size: 24px; }
-    .fortune-reveal h2 { font-size: 48px; }
+    .fortune-reveal h2 { font-size: 42px; }
     .fortune-lot-grid { display: block; margin-top: 55px; }
     .fortune-lot-card { min-height: 240px; }
     .fortune-reading { padding: 0 22px 90px; }
     .fortune-reading-section { display: block; padding: 85px 0; }
     .fortune-reading-aside { position: static; }
-    .fortune-reading-aside h2 { font-size: 52px; }
+    .fortune-reading-aside h2 { font-size: 44px; }
     .fortune-reading-aside > p:last-child { margin-bottom: 55px; }
-    .fortune-reading-lead { font-size: 27px; }
-    .fortune-pullquote { font-size: 29px; padding-left: 34px; }
+    .fortune-reading-lead { font-size: 24px; }
+    .fortune-pullquote { font-size: 26px; padding-left: 34px; }
     .fortune-pullquote span { height: 11px; width: 11px; }
     .fortune-facet-grid article { display: block; padding: 28px 0; }
     .fortune-facet-grid span { display: block; margin-bottom: 18px; }
@@ -552,7 +552,7 @@ body.fortune-page::before {
     .fortune-transfer li { display: block; }
     .fortune-transfer li > span { display: block; margin-bottom: 14px; }
     .fortune-integration { margin: 0; padding: 90px 22px; }
-    .fortune-integration h2 { font-size: 52px; }
+    .fortune-integration h2 { font-size: 43px; }
     .fortune-integration-grid { display: block; margin-top: 60px; }
     .fortune-integration-statement { margin-bottom: 55px; }
     .fortune-joker-guide { margin: 85px -10px 0; padding: 60px 24px 45px; }
@@ -684,7 +684,7 @@ body.fortune-page::before {
 
 .fortune-landing-copy h1 {
     color: var(--fortune-cream);
-    font-size: clamp(47px, 5vw, 74px);
+    font-size: clamp(45px, 4.6vw, 68px);
     line-height: .96;
 }
 
@@ -713,7 +713,7 @@ body.fortune-page::before {
 .fortune-editorial-note {
     border-left: 2px solid var(--fortune-gold);
     color: var(--fortune-muted);
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.7;
     margin: 0;
     max-width: 590px;
@@ -765,7 +765,7 @@ body.fortune-page::before {
 
 .fortune-form-card > h2 {
     color: var(--ink);
-    font-size: clamp(30px, 2.7vw, 41px);
+    font-size: clamp(29px, 2.4vw, 36px);
     line-height: 1.06;
     position: relative;
 }
@@ -834,7 +834,7 @@ body.fortune-page::before {
 
 .fortune-lots-intro h2 {
     color: var(--ink);
-    font-size: clamp(40px, 4.3vw, 64px);
+    font-size: clamp(38px, 3.8vw, 56px);
     line-height: 1;
 }
 
@@ -860,7 +860,7 @@ body.fortune-page::before {
 .fortune-lots-row article:nth-child(1) .fortune-lot-heading b { color: #ac7e3b; }
 .fortune-lots-row article:nth-child(2) .fortune-lot-heading b { color: #777fc4; }
 .fortune-lots-row h3 { font-family: Georgia, serif; font-size: 35px; font-weight: 400; margin: 27px 0 15px; }
-.fortune-lots-row p { color: #5f5b58; font-size: 15px; line-height: 1.65; margin: 0; max-width: 340px; }
+.fortune-lots-row p { color: #5f5b58; font-size: 16px; line-height: 1.68; margin: 0; max-width: 340px; }
 
 @media (max-width: 1050px) {
     .fortune-landing { gap: 55px; grid-template-columns: minmax(0, 1fr) minmax(390px, .9fr); padding-left: 4vw; padding-right: 4vw; }
@@ -886,7 +886,7 @@ body.fortune-page::before {
     .fortune-form-card .fortune-consent { margin-bottom: 0; }
     .fortune-lots-intro { padding: 85px 22px 95px; }
     .fortune-lots-intro header { display: block; }
-    .fortune-lots-intro h2 { font-size: 43px; margin-top: 40px; }
+    .fortune-lots-intro h2 { font-size: 39px; margin-top: 40px; }
     .fortune-lots-row { display: block; margin-top: 60px; }
     .fortune-lots-row article,
     .fortune-lots-row article + article { border-bottom: 1px solid rgba(21, 21, 21, .24); border-right: 0; padding: 28px 0 32px; }
